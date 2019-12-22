@@ -1,0 +1,11 @@
+# Font style metadata
+name = "font_style_v1"
+
+# Optional Google font URL
+google_fonts = "Montserrat:400,700|Lora:400,700|EB Garamond|Roboto+Mono|Roboto:400,400italic,700"
+
+# Font families
+heading_font = "Lora"
+body_font = "EB Garamond"
+nav_font = "Lora"
+mono_font = "Roboto Mono"

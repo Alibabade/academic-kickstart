@@ -24,7 +24,7 @@ education:
   courses:
   - course: PhD in Computer Science
     institution: Bournemouth University, UK
-    year: 2016 - present
+    year: present
   - course: visiting PhD student
     institution: University of Malaga, Spain
     year: Oct - Nov 2019
@@ -33,10 +33,10 @@ education:
     year: Apr - Oct 2017 
   - course: MEng in Computer Science
     institution: Jilin University, China
-    year: 2013 - 2016
+    year: 2016
   - course: BSc in Computer Science
     institution: Jilin University, China
-    year: 2009 - 2013
+    year: 2013
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
