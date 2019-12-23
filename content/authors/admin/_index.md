@@ -34,7 +34,7 @@ education:
   - course: MEng in Computer Science
     institution: Jilin University, China
     year: 2016
-  - course: BSc in Computer Science
+  - course: BSci in Computer Science
     institution: Jilin University, China
     year: 2013
 
