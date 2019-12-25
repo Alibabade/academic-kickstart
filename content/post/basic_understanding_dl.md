@@ -56,4 +56,35 @@ https://www.freecodecamp.org/news/an-introduction-to-bag-of-words-and-how-to-cod
 4. covariance: $cov(x,y) = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i-\mu_x)*(y_i -\mu_y)}$
 
 
+## Cross Entropy
+
+### Amount of information that an event gives
+In general, the amount of information should be greater when an event with low probability happens. For example, event A: China won the table-tennis world champion; event B: Eygpt won the table-tennis world champion. Obviously, event B will give people more information if it happens. The reason behind this is that event A has great probability to happen while event B is rather rare, so people will get more information if event B happens.
+
+The amount of information that an event gives is denoted as following equation:
+
+$$f(x) = -log(p(x))$$
+where $p(x)$ denotes the probability that event $x$ happens.
+
+### Entropy
+For a given event $X$, there may be several possible situations/results, and each situation/result has its own probability, then the amount of information that this event gives is denoted as:
+$$f(X)= -\Sigma_{i=1}^{n}p(x_i)log(p(x_i))$$   
+where $n$ denotes the number of situations/results and $p(x_i)$ is the probability of situation/result $x_i$ happens. 
+
+### Kullback-Leibler (KL) divergence
+The KL divergence aims to describe the difference between two probability distributions. For instance, for a given event $X$ consisting of a series events $\{x_1,x_2,...,x_n\}$, if there are two probability distributions of possible situations/results: $P=\{p(x_1),p(x_2),...,p(x_n)\}$ and $Q=\{q(x_1),q(x_2),...,q(x_n)\}$, then the KL divergence distance between $P$ and $Q$ is formulated as:
+
+$$D_{KL}(P||Q) = \Sigma_{i=1}^n p(x_i)log(\frac{p(x_i)}{q(x_i)})$$
+further, 
+$$D_{KL}(P||Q) = \Sigma_{i=1}^n p(x_i)log(p(x_i)) - \Sigma_{i=1}^n p(x_i)log(q(x_i))$$
+where $Q$ is closer to $P$ when $D_{KL}(P||Q)$ is smaller.
+
+### Cross Entropy
+
+In machine learning or deep learning, let $y=\{p(x_1),p(x_2),...,p(x_n)\}$ denote the groundturth probability distribution, and $\widetilde{y}=\{q(x_1),q(x_2),...,q(x_n)\}$ present the predicted probability distribution, then KL divergence is just a good way to compute the distance between predicted distribution and groudtruth. Thus, the loss could be just formulated as:
+$$Loss(y,\widetilde{y}) = \Sigma_{i=1}^n p(x_i)log(p(x_i)) - \Sigma_{i=1}^n p(x_i)log(q(x_i))$$
+where the first term $\Sigma_{i=1}^n p(x_i)log(p(x_i))$ is a constant, then the $Loss(y,\widetilde{y})$ is only related to the second term $- \Sigma_{i=1}^n p(x_i)log(q(x_i))$ which is called **Cross Entropy** as a training loss.
+
+### Reference
+https://blog.csdn.net/tsyccnh/article/details/79163834
 

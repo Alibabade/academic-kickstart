@@ -47,4 +47,25 @@ Non-linear functions address the problems by two aspects:
 2. Non-linear functions form the layers with hidden neurons into a deep neural network which is capable of predicting for complicated tasks by learning from complex datasets. 
 
 There are several popular activation functions used in modern deep neural networks.
-### Sgimoid
+### Sigmoid/Logistic Regression
+$$f(x) = \frac{1}{1+e^{-x}}$$
+
+**Pros:** 
+1. **smooth gradient**, no jumping output values compared to binary function.
+2. **output value lies between 0 and 1**, normalizing output of each neuron.
+3. **right choice for probability prediction**, the probability of anything exists only between 0 and 1.
+
+**Cons:**
+1. **vanishing gradient**, the gradient barely changes when $x>2$ or $x<-2$.
+2. **computationally expensive**.
+
+### Softmax
+$$f(x_i)= \frac{x_i}{\Sigma_{j=1}^{n}{x_j}}$$
+
+**Pros:** capable of handling multiple classification and the sum of predicted probabilities is 1. **Cons:** only used for output layer.
+
+**Softmax is more suitable for multiple classification case when the predicted class must and only be one of categories. k-sigmoid/LR can be used to classify such multi-class problem that the predicted class could be multiple.** 
+
+### Tanh
+
+
