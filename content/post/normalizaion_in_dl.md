@@ -76,6 +76,9 @@ where the transformed output will have the same distribution of original inputs 
 2. NOT well for recurrent neural network as one hidden state may deal with a series of inputs, and each input has different mean and variance. To remember these mean and variance, it may need more BN to store them for each input.
 3. NOT well for noise-sensitive applications such as generative models and deep reinforcement learning. 
 
+### Rethink the resaon behind the effectiveness of BN
+**Why does the BN works so well in CNNs?** [This paper](https://arxiv.org/pdf/1805.11604.pdf) revisits the BN and proposes that the success of BN has little to do with reducing Internal Covariate Shift. Well, the ICS does exist in the deeper neural layers, but adding artifiical ICS after BN into a deep neural network, the added ICS does not affect the good performance of BN, which indicates that the performance of BN has little to do with ICS. Then what does the BN do to improve the training performance? The work mentioned above points out that BN smoothes the optimization landscape and makes the optimizer more easier to find the global minimic solution (c.f. Figure 4 in the paper). For more details, please refer to the paper. 
+
 
 ## Weight Normalization (WN)
 
@@ -131,12 +134,16 @@ Rethinking the instance normalization, [Nam et al. 2019](https://arxiv.org/pdf/1
 
 ## Switchable Normalization (SN)
 
-### Short description
 [Luo et al. 2018](https://arxiv.org/pdf/1811.07727v1.pdf) investigated into whether different layers in a CNN needs different normalization methods. Thus they proposed a Switchable Normalization which learns parameters to switch normalizers between BN, LN and IN. As for results, their experiments suggest that (1) using distinct normalizations in different layer indeed improves both learning and generation of a CNN;(2) the normalization choices are more related to depth and batch size but less relevant to parameter initialization, learning rate decay and solver;(3) different tasks and datasets influence tha normalization choices. Additionally, the experiments in general also suggest that IN works well in early layers, LN works better in later layers while BN is preferred in middle layers.
 
+## Spectral Normalization
+[Spectral normalization](https://arxiv.org/pdf/1802.05957.pdf) (another form of weight normalization) is designed to improve the training of GANs by tuning the Lipschitz constant of the discriminator. The Lipschitz constant is a constant $L$ used in the following equation:
+$$||f(x) - f(y)|| \leqslant L ||x-y||$$
+
+The Lipschitz constant is tuned by normalizing the weight matrices where is by their largest eigenvalue. And experiments show that spectral normalization stabilize the training by minimal tuning.
 
 ## Conclusion
-BN is a millstone research on training deep neural network which makes it much easier and more robust. However, the limitations like small batch size, noise-sensitie applications and distributed training still need to be fixed in further researches. And different applications/tasks may prefer different normalizations respect to accurancy. There is also something new like [Santurkar et al. 2019](https://arxiv.org/pdf/1805.11604.pdf) discovers that $l_1$ outperforms BN to some extend. New dimensions of normalization still need to be discovered.
+BN is a millstone research on training deep neural network which makes it much easier and more robust. However, the limitations like small batch size, noise-sensitie applications and distributed training still need to be fixed in further researches. And different applications/tasks may prefer different normalizations respect to accurancy. New dimensions of normalization still need to be discovered.
 
 
 ### Reference:
@@ -148,6 +155,7 @@ BN is a millstone research on training deep neural network which makes it much e
 6. BIN, https://arxiv.org/pdf/1805.07925.pdf
 7. SN, https://arxiv.org/pdf/1811.07727v1.pdf
 8. https://arxiv.org/pdf/1805.11604.pdf
-9. https://zhuanlan.zhihu.com/p/34879333
-10. https://mlexplained.com/2018/11/30/an-overview-of-normalization-methods-in-deep-learning/
+9. Spectral Normalization, https://arxiv.org/pdf/1802.05957.pdf
+10. https://zhuanlan.zhihu.com/p/34879333
+11. https://mlexplained.com/2018/11/30/an-overview-of-normalization-methods-in-deep-learning/
 

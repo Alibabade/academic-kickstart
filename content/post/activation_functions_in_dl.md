@@ -79,7 +79,7 @@ Derivative (with respect to $x$): $$tanh^{\'}(x) = 1 -tanh(x)^2$$
 
 **Cons:**
 1. **vanishing gradient**
-2. **computationally expensive** as it includes division and exp operation.
+2. **computationally expensive** as it includes division and exponential operation.
 
 ### Vanishing gradient
 Vanishing gradient means that the values of weights and biases are barely change along with the training.   
@@ -105,7 +105,7 @@ ReLU^{'}(x) = \begin{cases}
 
 **Cons:** 
 1. Dying ReLU problem. The backpropagation won't work when inputs approach zero or negative.
-However, to some extend, dying ReLU problem makes input values sparse which is helpful for neural network to learn more important values and perform better.  
+However, to some extent, dying ReLU problem makes input values sparse which is helpful for neural network to learn more important values and perform better.  
 2. Non differentiable at zero.
 3. Non zero centered.
 4. Don't avoid gradient explode
