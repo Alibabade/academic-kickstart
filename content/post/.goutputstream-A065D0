@@ -76,7 +76,7 @@ Con: computationally expensive when the source image is large
 Pro: less computation at the inference time
 Con: the model is **non-differentiable** and requires more complicated techniques such as variance reduction and reinforcement learning to train.([Luong et al., 2015](https://arxiv.org/pdf/1508.04025.pdf))
 
-[why hard attention is non-differentiable?](https://www.quora.com/Why-is-hard-attention-non-differentiable-in-NNs) Hard attention is non-differentiable because it’s stochastic. Both hard and soft attention calculate a context vector using a probability distribution (usually over some set of annotation vectors), but soft attention works by taking the expected context vector at that time (i.e. a weighted sum of the annotation vectors using the probability distribution as weights), which is a differentiable action. Hard attention, on the other hand, stochastically chooses a context vector; when the distribution is multinomial over a set of annotation vectors (similar to how soft attention works, but we aren’t calculating the expected context vector now), you just sample from the annotation vectors using the given distribution. The advantage of hard attention is that you can also attend to context spaces that aren’t multinomial (e.g. a Gaussian-distributed context space), which is very helpful when the context space is continuous rather than discrete (soft attention can only work over discrete spaces).
+[Why hard attention is non-differentiable?](https://www.quora.com/Why-is-hard-attention-non-differentiable-in-NNs) Hard attention is non-differentiable because it’s stochastic. Both hard and soft attention calculate a context vector using a probability distribution (usually over some set of annotation vectors), but soft attention works by taking the expected context vector at that time (i.e. a weighted sum of the annotation vectors using the probability distribution as weights), which is a differentiable action. Hard attention, on the other hand, stochastically chooses a context vector; when the distribution is multinomial over a set of annotation vectors (similar to how soft attention works, but we aren’t calculating the expected context vector now), you just sample from the annotation vectors using the given distribution. The advantage of hard attention is that you can also attend to context spaces that aren’t multinomial (e.g. a Gaussian-distributed context space), which is very helpful when the context space is continuous rather than discrete (soft attention can only work over discrete spaces).
 
 And since hard attention is non-differentiable, models using this method have to be trained using reinforcement learning.
 
@@ -84,9 +84,6 @@ And since hard attention is non-differentiable, models using this method have to
 [Luong et al. 2015](https://arxiv.org/pdf/1508.04025.pdf) proposed a global and local attention, where the global attention calculate the entire weighted sum of hidden states for a target output (which is similar to soft attention). While the local attention is more smiliar to the blend of soft and hard attention. For example, in their paper, the model first predict a aligned position for the current target word then a window centred around the source position is used to compute a context vector.
 
 {{< figure library="true" src="global_local_attention.png" title="Fig 1. The global and local attention architecture in Luong et al., 2015" lightbox="true" >}}
-
-
-
 ### Reference
-1. This attention blog heavily borrowed from Lilian Weng's blog, more details refer to https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html
+1. https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html
 

@@ -88,3 +88,10 @@ where the first term $\Sigma_{i=1}^n p(x_i)log(p(x_i))$ is a constant, then the 
 ### Reference
 https://blog.csdn.net/tsyccnh/article/details/79163834
 
+## Conv 1x1
+[Conv 1x1](https://arxiv.org/pdf/1409.4842.pdf) in Google Inception is quite useful when the filter dimension of input featues needs to be increased or decreased meanwhile keeping the spaital dimension, and reduces the convolution computation. For example, the input feautre dimension is $\(B, C, H, W\)$ where $B$ is batch size, $C$ is channel number, $H$ and $W$ are height and width. Using $M$ filters of Conv 1x1, then the output of Conv 1x1 is $\(B,M,H,W\)$, only channel number changes but spatial dimension ($H \times W$) is still the same as input. To demonstrate the computation efficiency using conv 1x1, take a look at next example. For instance, the output feature we want is $\(C, H, W\)$, using M filters of conv 3x3, then the compuation is $3^2C \times MHW$. Using conv 1x1, the computation is $1^2C \times MHW$, which is $\frac{1}{9}$ of using conv 3x3. 
+
+[Why do we need to decrease filter dimension or the number of feature maps?](https://machinelearningmastery.com/introduction-to-1x1-convolutions-to-reduce-the-complexity-of-convolutional-neural-networks/) The filters or the number of feature maps often increases along with the depth of the network, it is a common network design pattern. For example, the number of feature maps in VGG19, is 64,128,512 along with the depth of network. Further, some networks like Inception architecture may also concatenate the output feature maps from multiple fronter convolution layers, which also rapidly increases the number of feature maps to subsequent convolutional layers. 
+### Reference
+https://stats.stackexchange.com/questions/194142/what-does-1x1-convolution-mean-in-a-neural-network
+
