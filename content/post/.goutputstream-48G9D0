@@ -1,0 +1,37 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Archive_papers"
+subtitle: ""
+summary: "Archive for reording papers"
+authors: [admin]
+tags: [Academic]
+categories: [Computer Vison, Computer Graphics]
+date: 2020-01-05T12:57:22Z
+lastmod: 2020-01-05T12:57:22Z
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+## Deep Correlations for Texture Synthesis (TOG2017)
+### Motivation
+The texture synthesis using [deep feature maps](https://papers.nips.cc/paper/5633-texture-synthesis-using-convolutional-neural-networks.pdf) has difficulty to synthesize structure textures, which is a challenge to preserve the non-local structures. 
+### Core Ideas
+1. Introduce a structure matrix to represent the deep correlation among deep features. In another word, [Gatys et al.,2015](https://papers.nips.cc/paper/5633-texture-synthesis-using-convolutional-neural-networks.pdf) consider the Gram loss of deep features between channels, while acutally the structure information is included inside each feature channel. Thus  [Sendik et al., 2017](https://docs.wixstatic.com/ugd/b1fe6d_f4f1684f6ba647ffbf1148c3721fdfc4.pdf) propose an intra-feature based Gram loss, which is fomulated as: 
+
+$$ R^{l,n}_{i,j} = \sum_{q,m} w_{i,j} f^{l,n}_{q,m} f^{l,n}_{q-i,m-j} $$
