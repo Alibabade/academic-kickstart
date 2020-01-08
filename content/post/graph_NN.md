@@ -51,7 +51,14 @@ There are two concepts should be understood first before GCN.
 **Degree Matrix (D)**: this matrix ($N \times N$, N is the node number) is a diag matrix in which values in diag line means the degree of each node; **Adjacency Matrix (A)**: this matrix is also a $N \times N$ matrix in which value $A_{i,j}=1$ means there is an edge between node $i$ and $j$, otherwise $A_{i,j}=0$; 
 
 ### Simple GCN example
-Let's considering 
+Let's consider one simple GCN example, which has one GCN layer and one activation layer, the fomulation is as following:
+$$f(H^{l}, A) = \sigma(AH^{l}W^{l})$$ 
+where $W^l$ denotes the weight matrix in the $l$th layer and $\sigma(\dot)$ denotes the activation function like ReLU. This is the simplest expression of GCN example, but it's already much powerful (we will show example below). However, there are two basic limitations of this simple fomulation:
+1. there is no node self information as adjacency matrix $A$ does not contain any information of nodeself.
+2. there is no normalization of adjacency matrix. The fomulation $AH^{l}$ is actually a linear transformation which scales node feature vectors $H^l$ by summing the feaures of all neighbour nodes. The nodes having more neighbour nodes has more impact, which should be normalized.
+
+**Fix limitation 1.** We introduce the identity matrix $I$ into adjacency matrix $A$ to add nodeself information. For example, $\hat{A} = A + I_n$ where $I_n$ is the identity matrix with $n \times n$ size.
+**Fix limiation 2.** Normalizing $A$ means that all rows of $A$ should sum to be one, and we realize this by $D^{-1}A$ where $D$ is the diag degree matrix. In practise, we surprisingly find that using a symmetric normalization, e.g., $D^{-\frac{1}{2}}AD^{-\frac{1}{2}}$ is more 
 
 
 ## Reference
