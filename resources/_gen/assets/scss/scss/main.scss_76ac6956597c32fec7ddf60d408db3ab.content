@@ -2350,496 +2350,421 @@ input[type="button"].btn-block {
   padding-left: 0.5625rem; }
   .dropdown-toggle-split::after,
   .dropup .dropdown-toggle-split::after,
-  .dropright .dropdown-toggle-split::after {
-    margin-left: 0; }
-  .dropleft .dropdown-toggle-split::before {
-    margin-right: 0; }
+  .droprigt code.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 6
+8.
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem; }
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 68
+.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem; }
 
-.btn-group-vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; }
-  .btn-group-vertical > .btn,
-  .btn-group-vertical > .btn-group {
-    width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) {
-    margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0; }
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
-  margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
-  .btn-group-toggle > .btn input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    pointer-events: none; }
 
-.input-group {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%; }
-  .input-group > .form-control,
-  .input-group > .form-control-plaintext,
-  .input-group > .custom-select,
-  .input-group > .custom-file {
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    margin-bottom: 0; }
-    .input-group > .form-control + .form-control,
-    .input-group > .form-control + .custom-select,
-    .input-group > .form-control + .custom-file,
-    .input-group > .form-control-plaintext + .form-control,
-    .input-group > .form-control-plaintext + .custom-select,
-    .input-group > .form-control-plaintext + .custom-file,
-    .input-group > .custom-select + .form-control,
-    .input-group > .custom-select + .custom-select,
-    .input-group > .custom-select + .custom-file,
-    .input-group > .custom-file + .form-control,
-    .input-group > .custom-file + .custom-select,
-    .input-group > .custom-file + .custom-file {
-      margin-left: -1px; }
-  .input-group > .form-control:focus,
-  .input-group > .custom-select:focus,
-  .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
-    z-index: 3; }
-  .input-group > .custom-file .custom-file-input:focus {
-    z-index: 4; }
-  .input-group > .form-control:not(:last-child),
-  .input-group > .custom-select:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child),
-  .input-group > .custom-select:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
-  .input-group > .custom-file {
-    display: flex;
-    align-items: center; }
-    .input-group > .custom-file:not(:last-child) .custom-file-label,
-    .input-group > .custom-file:not(:last-child) .custom-file-label::after {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0; }
-    .input-group > .custom-file:not(:first-child) .custom-file-label {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0; }
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 68.
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 68.
 
-.input-group-prepend,
-.input-group-append {
-  display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
-    position: relative;
-    z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
-      z-index: 3; }
-  .input-group-prepend .btn + .btn,
-  .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .input-group-text + .input-group-text,
-  .input-group-prepend .input-group-text + .btn,
-  .input-group-append .btn + .btn,
-  .input-group-append .btn + .input-group-text,
-  .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
-    margin-left: -1px; }
 
-.input-group-prepend {
-  margin-right: -1px; }
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 68.
+LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 6
+8.
 
-.input-group-append {
-  margin-left: -1px; }
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <8.03> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 94.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-.input-group-text {
-  display: flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem; }
-  .input-group-text input[type="radio"],
-  .input-group-text input[type="checkbox"] {
-    margin-top: 0; }
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 94.
 
-.input-group-lg > .form-control:not(textarea),
-.input-group-lg > .custom-select {
-  height: calc(1.5em + 1rem + 2px); }
+Excluding 'comment' comment.
+<Figure/fig1.png, id=1, 906.38625pt x 880.28876pt>
+File: Figure/fig1.png Graphic file (type png)
+<use Figure/fig1.png>
+Package pdftex.def Info: Figure/fig1.png  used on input line 112.
+(pdftex.def)             Requested size: 252.94499pt x 245.6598pt.
+LaTeX Font Info:    Calculating math sizes for size <7.02625> on input line 128
+.
+ [1{C:/Users/liwan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-.input-group-lg > .form-control,
-.input-group-lg > .custom-select,
-.input-group-lg > .input-group-prepend > .input-group-text,
-.input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem; }
 
-.input-group-sm > .form-control:not(textarea),
-.input-group-sm > .custom-select {
-  height: calc(1.5em + 0.5rem + 2px); }
+ <./Figure/fig1.png>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 140.
+ [2]
+<Figure/overview_pipeline_v1.png, id=16, 807.61725pt x 144.54pt>
+File: Figure/overview_pipeline_v1.png Graphic file (type png)
+<use Figure/overview_pipeline_v1.png>
+Package pdftex.def Info: Figure/overview_pipeline_v1.png  used on input line 17
+1.
+(pdftex.def)             Requested size: 517.935pt x 92.69936pt.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 178
+.
+<Figure/network_normal_transfer2.png, id=18, 1669.23625pt x 589.20125pt>
+File: Figure/network_normal_transfer2.png Graphic file (type png)
+<use Figure/network_normal_transfer2.png>
+Package pdftex.def Info: Figure/network_normal_transfer2.png  used on input lin
+e 186.
+(pdftex.def)             Requested size: 517.935pt x 182.8213pt.
+ [3]
+<Figure/normal_minus.png, id=32, 1548.78625pt x 548.0475pt>
+File: Figure/normal_minus.png Graphic file (type png)
+<use Figure/normal_minus.png>
+Package pdftex.def Info: Figure/normal_minus.png  used on input line 266.
+(pdftex.def)             Requested size: 252.94499pt x 89.50406pt.
+ [4 <./Figure/overview_pipeline_v1.png> <./Figure/network_normal_transfer2.png>
+]
+<Figure/comparison_dtrf_bf_v1.PNG, id=38, 1138.2525pt x 396.7322pt>
+File: Figure/comparison_dtrf_bf_v1.PNG Graphic file (type png)
+<use Figure/comparison_dtrf_bf_v1.PNG>
+Package pdftex.def Info: Figure/comparison_dtrf_bf_v1.PNG  used on input line 2
+75.
+(pdftex.def)             Requested size: 252.94499pt x 88.15912pt.
+<Figure/comparison_on_normal_decomposition_v1.png, id=39, 986.18437pt x 723.452
+82pt>
+File: Figure/comparison_on_normal_decomposition_v1.png Graphic file (type png)
+<use Figure/comparison_on_normal_decomposition_v1.png>
+Package pdftex.def Info: Figure/comparison_on_normal_decomposition_v1.png  used
+ on input line 286.
+(pdftex.def)             Requested size: 252.94499pt x 185.55432pt.
+ [5 <./Figure/normal_minus.png> <./Figure/comparison_dtrf_bf_v1.PNG> <./Figure/
+comparison_on_normal_decomposition_v1.png>]
+<Figure/modeling.png, id=45, 561.89925pt x 149.358pt>
+File: Figure/modeling.png Graphic file (type png)
+<use Figure/modeling.png>
+Package pdftex.def Info: Figure/modeling.png  used on input line 315.
+(pdftex.def)             Requested size: 252.94499pt x 67.23553pt.
+<Figure/buddha2turtle.png, id=46, 761.84625pt x 292.09125pt>
+File: Figure/buddha2turtle.png Graphic file (type png)
+<use Figure/buddha2turtle.png>
+Package pdftex.def Info: Figure/buddha2turtle.png  used on input line 343.
+(pdftex.def)             Requested size: 252.94499pt x 96.97871pt.
+<Figure/pillow2turtle.png, id=47, 753.81625pt x 264.99pt>
+File: Figure/pillow2turtle.png Graphic file (type png)
+<use Figure/pillow2turtle.png>
+Package pdftex.def Info: Figure/pillow2turtle.png  used on input line 346.
+(pdftex.def)             Requested size: 252.94499pt x 88.91472pt.
 
-.input-group-sm > .form-control,
-.input-group-sm > .custom-select,
-.input-group-sm > .input-group-prepend > .input-group-text,
-.input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 343--347
+ [][] 
+ []
 
-.input-group-lg > .custom-select,
-.input-group-sm > .custom-select {
-  padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
-.input-group > .input-group-prepend > .input-group-text,
-.input-group > .input-group-append:not(:last-child) > .btn,
-.input-group > .input-group-append:not(:last-child) > .input-group-text,
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 343--347
+ [] 
+ []
 
-.input-group > .input-group-append > .btn,
-.input-group > .input-group-append > .input-group-text,
-.input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+<Figure/bunny2owl.png, id=48, 752.8125pt x 274.02374pt>
+File: Figure/bunny2owl.png Graphic file (type png)
+<use Figure/bunny2owl.png>
+Package pdftex.def Info: Figure/bunny2owl.png  used on input line 354.
+(pdftex.def)             Requested size: 252.94499pt x 92.07135pt.
+<Figure/bunny2dragon.png, id=49, 771.88374pt x 271.0125pt>
+File: Figure/bunny2dragon.png Graphic file (type png)
+<use Figure/bunny2dragon.png>
+Package pdftex.def Info: Figure/bunny2dragon.png  used on input line 357.
+(pdftex.def)             Requested size: 252.94499pt x 88.80995pt.
 
-.custom-control {
-  position: relative;
-  display: block;
-  min-height: 1.5rem;
-  padding-left: 1.5rem; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 354--358
+ [][] 
+ []
 
-.custom-control-inline {
-  display: inline-flex;
-  margin-right: 1rem; }
 
-.custom-control-input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0; }
-  .custom-control-input:checked ~ .custom-control-label::before {
-    color: #fff;
-    border-color: #dc7633;
-    background-color: #dc7633; }
-  .custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #efbfa0; }
-  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-    color: #fff;
-    background-color: #f6dccb;
-    border-color: #f6dccb; }
-  .custom-control-input:disabled ~ .custom-control-label {
-    color: #6c757d; }
-    .custom-control-input:disabled ~ .custom-control-label::before {
-      background-color: #e9ecef; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 354--358
+ [] 
+ []
 
-.custom-control-label {
-  position: relative;
-  margin-bottom: 0;
-  vertical-align: top; }
-  .custom-control-label::before {
-    position: absolute;
-    top: 0.25rem;
-    left: -1.5rem;
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    pointer-events: none;
-    content: "";
-    background-color: #fff;
-    border: #adb5bd solid 1px; }
-  .custom-control-label::after {
-    position: absolute;
-    top: 0.25rem;
-    left: -1.5rem;
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    content: "";
-    background: no-repeat 50% / 50% 50%; }
+<Figure/elephant-and-turtle.png, id=50, 743.77875pt x 169.63374pt>
+File: Figure/elephant-and-turtle.png Graphic file (type png)
+<use Figure/elephant-and-turtle.png>
+Package pdftex.def Info: Figure/elephant-and-turtle.png  used on input line 365
+.
+(pdftex.def)             Requested size: 252.94499pt x 57.68764pt.
+<Figure/elephant2turtle1_0.png, id=51, 555.07375pt x 208.78pt>
+File: Figure/elephant2turtle1_0.png Graphic file (type png)
+<use Figure/elephant2turtle1_0.png>
+Package pdftex.def Info: Figure/elephant2turtle1_0.png  used on input line 368.
 
-.custom-checkbox .custom-control-label::before {
-  border-radius: 0.25rem; }
+(pdftex.def)             Requested size: 252.94499pt x 95.14157pt.
+<Figure/elephant2turtle0_5.png, id=52, 518.93875pt x 170.6375pt>
+File: Figure/elephant2turtle0_5.png Graphic file (type png)
+<use Figure/elephant2turtle0_5.png>
+Package pdftex.def Info: Figure/elephant2turtle0_5.png  used on input line 371.
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"); }
+(pdftex.def)             Requested size: 252.94499pt x 83.17567pt.
+<Figure/elephant2turtle0_25.png, id=53, 511.9125pt x 165.61874pt>
+File: Figure/elephant2turtle0_25.png Graphic file (type png)
+<use Figure/elephant2turtle0_25.png>
+Package pdftex.def Info: Figure/elephant2turtle0_25.png  used on input line 374
+.
+(pdftex.def)             Requested size: 252.94499pt x 81.83368pt.
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #dc7633;
-  background-color: #dc7633; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 365--375
+ [][] 
+ []
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e"); }
 
-.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(220, 118, 51, 0.5); }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 365--375
+ [] 
+ []
 
-.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(220, 118, 51, 0.5); }
 
-.custom-radio .custom-control-label::before {
-  border-radius: 50%; }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 365--375
+ [] 
+ []
 
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); }
 
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(220, 118, 51, 0.5); }
+Overfull \hbox (2.66995pt too wide) in paragraph at lines 365--375
+ [] 
+ []
 
-.custom-switch {
-  padding-left: 2.25rem; }
-  .custom-switch .custom-control-label::before {
-    left: -2.25rem;
-    width: 1.75rem;
-    pointer-events: all;
-    border-radius: 0.5rem; }
-  .custom-switch .custom-control-label::after {
-    top: calc(0.25rem + 2px);
-    left: calc(-2.25rem + 2px);
-    width: calc(1rem - 4px);
-    height: calc(1rem - 4px);
-    background-color: #adb5bd;
-    border-radius: 0.5rem;
-    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-    @media (prefers-reduced-motion: reduce) {
-      .custom-switch .custom-control-label::after {
-        transition: none; } }
-  .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #fff;
-    transform: translateX(0.75rem); }
-  .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-    background-color: rgba(220, 118, 51, 0.5); }
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 380.
+[6 <./Figure/modeling.png> <./Figure/buddha2turtle.png> <./Figure/pillow2turtle
+.png>]
+<./Figure/parameter_analysis_sigma_s.png, id=61, 1690.315pt x 734.745pt>
+File: ./Figure/parameter_analysis_sigma_s.png Graphic file (type png)
+<use ./Figure/parameter_analysis_sigma_s.png>
+Package pdftex.def Info: ./Figure/parameter_analysis_sigma_s.png  used on input
+ line 392.
+(pdftex.def)             Requested size: 252.94499pt x 109.94913pt.
+<./Figure/modeling_parameters_v1.png, id=62, 1232.35406pt x 575.14874pt>
+File: ./Figure/modeling_parameters_v1.png Graphic file (type png)
+<use ./Figure/modeling_parameters_v1.png>
+Package pdftex.def Info: ./Figure/modeling_parameters_v1.png  used on input lin
+e 399.
+(pdftex.def)             Requested size: 517.935pt x 241.72757pt.
+<./Figure/lambda_b_effect_v1.PNG, id=63, 1292.57906pt x 513.41812pt>
+File: ./Figure/lambda_b_effect_v1.PNG Graphic file (type png)
+<use ./Figure/lambda_b_effect_v1.PNG>
+Package pdftex.def Info: ./Figure/lambda_b_effect_v1.PNG  used on input line 40
+7.
+(pdftex.def)             Requested size: 252.94499pt x 100.46474pt.
+<./Figure/standard_thickness_comparison_v1_2.png, id=64, 1215.79219pt x 641.396
+26pt>
+File: ./Figure/standard_thickness_comparison_v1_2.png Graphic file (type png)
+<use ./Figure/standard_thickness_comparison_v1_2.png>
+Package pdftex.def Info: ./Figure/standard_thickness_comparison_v1_2.png  used 
+on input line 461.
+(pdftex.def)             Requested size: 252.94499pt x 133.43468pt.
+<./Figure/comparison_ji14.png, id=65, 1081.03876pt x 792.9625pt>
+File: ./Figure/comparison_ji14.png Graphic file (type png)
+<use ./Figure/comparison_ji14.png>
+Package pdftex.def Info: ./Figure/comparison_ji14.png  used on input line 468.
+(pdftex.def)             Requested size: 252.94499pt x 185.53554pt.
+ [7 <./Figure/bunny2owl.png> <./Figure/bunny2dragon.png> <./Figure/elephant-and
+-turtle.png> <./Figure/elephant2turtle1_0.png> <./Figure/elephant2turtle0_5.png
+> <./Figure/elephant2turtle0_25.png> <./Figure/parameter_analysis_sigma_s.png>]
+LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 521
+.
 
-.custom-select {
-  display: inline-block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  vertical-align: middle;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  appearance: none; }
-  .custom-select:focus {
-    border-color: #efbfa0;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-    .custom-select:focus::-ms-value {
-      color: #495057;
-      background-color: #fff; }
-  .custom-select[multiple], .custom-select[size]:not([size="1"]) {
-    height: auto;
-    padding-right: 0.75rem;
-    background-image: none; }
-  .custom-select:disabled {
-    color: #6c757d;
-    background-color: #e9ecef; }
-  .custom-select::-ms-expand {
-    display: none; }
+Underfull \hbox (badness 3128) in paragraph at lines 552--553
+[]\OT1/ppl/b/n/9.53561 Limitation. \OT1/ppl/m/n/9.53561 Our cur-rent se-man-tic
+ nor-mal trans-fer
+ []
 
-.custom-select-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  font-size: 0.875rem; }
+[8 <./Figure/modeling_parameters_v1.png> <./Figure/lambda_b_effect_v1.PNG> <./F
+igure/standard_thickness_comparison_v1_2.png>] [9 <./Figure/comparison_ji14.png
+>]
 
-.custom-select-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  font-size: 1.25rem; }
+LaTeX Warning: File `./bio/meiliwang.png' not found on input line 887.
 
-.custom-file {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  margin-bottom: 0; }
 
-.custom-file-input {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  margin: 0;
-  opacity: 0; }
-  .custom-file-input:focus ~ .custom-file-label {
-    border-color: #efbfa0;
-    box-shadow: 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-  .custom-file-input:disabled ~ .custom-file-label {
-    background-color: #e9ecef; }
-  .custom-file-input:lang(en) ~ .custom-file-label::after {
-    content: "Browse"; }
-  .custom-file-input ~ .custom-file-label[data-browse]::after {
-    content: attr(data-browse); }
+! Package pdftex.def Error: File `./bio/meiliwang.png' not found: using draft s
+etting.
 
-.custom-file-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem; }
-  .custom-file-label::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    display: block;
-    height: calc(1.5em + 0.75rem);
-    padding: 0.375rem 0.75rem;
-    line-height: 1.5;
-    color: #495057;
-    content: "Browse";
-    background-color: #e9ecef;
-    border-left: inherit;
-    border-radius: 0 0.25rem 0.25rem 0; }
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.887 ...ratio]{./bio/meiliwang.png}}]{Meili Wang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-.custom-range {
-  width: 100%;
-  height: calc(1rem + 0.4rem);
-  padding: 0;
-  background-color: transparent;
-  appearance: none; }
-  .custom-range:focus {
-    outline: none; }
-    .custom-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-    .custom-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-    .custom-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(220, 118, 51, 0.25); }
-  .custom-range::-moz-focus-outer {
-    border: 0; }
-  .custom-range::-webkit-slider-thumb {
-    width: 1rem;
-    height: 1rem;
-    margin-top: -0.25rem;
-    background-color: #dc7633;
-    border: 0;
-    border-radius: 1rem;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    appearance: none; }
-    @media (prefers-reduced-motion: reduce) {
-      .custom-range::-webkit-slider-thumb {
-        transition: none; } }
-    .custom-range::-webkit-slider-thumb:active {
-      background-color: #f6dccb; }
-  .custom-range::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 0.5rem;
-    color: transparent;
-    cursor: pointer;
-    background-color: #dee2e6;
-    border-color: transparent;
-    border-radius: 1rem; }
-  .custom-range::-moz-range-thumb {
-    width: 1rem;
-    height: 1rem;
-    background-color: #dc7633;
-    border: 0;
-    border-radius: 1rem;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    appearance: none; }
-    @media (prefers-reduced-motion: reduce) {
-      .custom-range::-moz-range-thumb {
-        transition: none; } }
-    .custom-range::-moz-range-thumb:active {
-      background-color: #f6dccb; }
-  .custom-range::-moz-range-track {
-    width: 100%;
-    height: 0.5rem;
-    color: transparent;
-    cursor: pointer;
-    background-color: #dee2e6;
-    border-color: transparent;
-    border-radius: 1rem; }
-  .custom-range::-ms-thumb {
-    width: 1rem;
-    height: 1rem;
-    margin-top: 0;
-    margin-right: 0.2rem;
-    margin-left: 0.2rem;
-    background-color: #dc7633;
-    border: 0;
-    border-radius: 1rem;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    appearance: none; }
-    @media (prefers-reduced-motion: reduce) {
-      .custom-range::-ms-thumb {
-        transition: none; } }
-    .custom-range::-ms-thumb:active {
-      background-color: #f6dccb; }
-  .custom-range::-ms-track {
-    width: 100%;
-    height: 0.5rem;
-    color: transparent;
-    cursor: pointer;
-    background-color: transparent;
-    border-color: transparent;
-    border-width: 0.5rem; }
-  .custom-range::-ms-fill-lower {
-    background-color: #dee2e6;
-    border-radius: 1rem; }
-  .custom-range::-ms-fill-upper {
-    margin-right: 15px;
-    background-color: #dee2e6;
-    border-radius: 1rem; }
-  .custom-range:disabled::-webkit-slider-thumb {
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
+87.
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Warning: File `./bio/meiliwang.png' not found on input line 887.
+
+
+! Package pdftex.def Error: File `./bio/meiliwang.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.887 ...ratio]{./bio/meiliwang.png}}]{Meili Wang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/li_wang.png' not found on input line 892.
+
+
+! Package pdftex.def Error: File `./bio/li_wang.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.892 ...spectratio]{./bio/li_wang.png}}]{Li Wang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/li_wang.png' not found on input line 892.
+
+
+! Package pdftex.def Error: File `./bio/li_wang.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.892 ...spectratio]{./bio/li_wang.png}}]{Li Wang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/tj.png' not found on input line 900.
+
+
+! Package pdftex.def Error: File `./bio/tj.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900 ...epaspectratio]{./bio/tj.png}}]{Tao Jiang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/tj.png' not found on input line 900.
+
+
+! Package pdftex.def Error: File `./bio/tj.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900 ...epaspectratio]{./bio/tj.png}}]{Tao Jiang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/NanXiang_pic.jpg' not found on input line 904.
+
+
+! Package pdftex.def Error: File `./bio/NanXiang_pic.jpg' not found: using draf
+t setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.904 ...tio]{./bio/NanXiang_pic.jpg}}]{Nan Xiang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/NanXiang_pic.jpg' not found on input line 904.
+
+
+! Package pdftex.def Error: File `./bio/NanXiang_pic.jpg' not found: using draf
+t setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.904 ...tio]{./bio/NanXiang_pic.jpg}}]{Nan Xiang}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/mingqiangwei.png' not found on input line 908.
+
+
+! Package pdftex.def Error: File `./bio/mingqiangwei.png' not found: using draf
+t setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.908 ...{./bio/mingqiangwei.png}}]{Mingqiang Wei}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `./bio/mingqiangwei.png' not found on input line 908.
+
+
+! Package pdftex.def Error: File `./bio/mingqiangwei.png' not found: using draf
+t setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.908 ...{./bio/mingqiangwei.png}}]{Mingqiang Wei}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 908--910
+[]\OT1/phv/b/n/8.03 Mingqiang Wei \OT1/phv/m/n/8.03 re-ceived his Ph.D de-gree
+ []
+
+
+LaTeX Warning: File `./bio/xiaosong_yang.jpg' not found on input line 912.
+
+
+! Package pdftex.def Error: File `./bio/xiaosong_yang.jpg' not found: using dra
+ft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                    d::-webkit-slider-thumb {
     background-color: #adb5bd; }
   .custom-range:disabled::-webkit-slider-runnable-track {
     cursor: default; }
@@ -4468,2529 +4393,450 @@ a.close.disabled {
   .carousel-indicators li {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #fff;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: .5;
-    transition: opacity 0.6s ease; }
-    @media (prefers-reduced-motion: reduce) {
-      .carousel-indicators li {
-        transition: none; } }
-  .carousel-indicators .active {
-    opacity: 1; }
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center; }
-
-@keyframes spinner-border {
-  to {
-    transform: rotate(360deg); } }
-
-.spinner-border {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-bottom;
-  border: 0.25em solid currentColor;
-  border-right-color: transparent;
-  border-radius: 50%;
-  animation: spinner-border .75s linear infinite; }
-
-.spinner-border-sm {
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.2em; }
-
-@keyframes spinner-grow {
-  0% {
-    transform: scale(0); }
-  50% {
-    opacity: 1; } }
-
-.spinner-grow {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-bottom;
-  background-color: currentColor;
-  border-radius: 50%;
-  opacity: 0;
-  animation: spinner-grow .75s linear infinite; }
-
-.spinner-grow-sm {
-  width: 1rem;
-  height: 1rem; }
-
-.align-baseline {
-  vertical-align: baseline !important; }
-
-.align-top {
-  vertical-align: top !important; }
-
-.align-middle {
-  vertical-align: middle !important; }
-
-.align-bottom {
-  vertical-align: bottom !important; }
-
-.align-text-bottom {
-  vertical-align: text-bottom !important; }
-
-.align-text-top {
-  vertical-align: text-top !important; }
-
-.bg-primary {
-  background-color: #dc7633 !important; }
-
-a.bg-primary:hover, a.bg-primary:focus,
-button.bg-primary:hover,
-button.bg-primary:focus {
-  background-color: #bc5e20 !important; }
-
-.bg-secondary {
-  background-color: #6c757d !important; }
-
-a.bg-secondary:hover, a.bg-secondary:focus,
-button.bg-secondary:hover,
-button.bg-secondary:focus {
-  background-color: #545b62 !important; }
-
-.bg-success {
-  background-color: #28a745 !important; }
-
-a.bg-success:hover, a.bg-success:focus,
-button.bg-success:hover,
-button.bg-success:focus {
-  background-color: #1e7e34 !important; }
-
-.bg-info {
-  background-color: #17a2b8 !important; }
-
-a.bg-info:hover, a.bg-info:focus,
-button.bg-info:hover,
-button.bg-info:focus {
-  background-color: #117a8b !important; }
-
-.bg-warning {
-  background-color: #ffc107 !important; }
-
-a.bg-warning:hover, a.bg-warning:focus,
-button.bg-warning:hover,
-button.bg-warning:focus {
-  background-color: #d39e00 !important; }
-
-.bg-danger {
-  background-color: #dc3545 !important; }
-
-a.bg-danger:hover, a.bg-danger:focus,
-button.bg-danger:hover,
-button.bg-danger:focus {
-  background-color: #bd2130 !important; }
-
-.bg-light {
-  background-color: #f8f9fa !important; }
-
-a.bg-light:hover, a.bg-light:focus,
-button.bg-light:hover,
-button.bg-light:focus {
-  background-color: #dae0e5 !important; }
-
-.bg-dark {
-  background-color: #343a40 !important; }
-
-a.bg-dark:hover, a.bg-dark:focus,
-button.bg-dark:hover,
-button.bg-dark:focus {
-  background-color: #1d2124 !important; }
-
-.bg-white {
-  background-color: #fff !important; }
-
-.bg-transparent {
-  background-color: transparent !important; }
-
-.border {
-  border: 1px solid #dee2e6 !important; }
-
-.border-top {
-  border-top: 1px solid #dee2e6 !important; }
-
-.border-right {
-  border-right: 1px solid #dee2e6 !important; }
-
-.border-bottom {
-  border-bottom: 1px solid #dee2e6 !important; }
-
-.border-left {
-  border-left: 1px solid #dee2e6 !important; }
-
-.border-0 {
-  border: 0 !important; }
-
-.border-top-0 {
-  border-top: 0 !important; }
-
-.border-right-0 {
-  border-right: 0 !important; }
-
-.border-bottom-0 {
-  border-bottom: 0 !important; }
-
-.border-left-0 {
-  border-left: 0 !important; }
-
-.border-primary {
-  border-color: #dc7633 !important; }
-
-.border-secondary {
-  border-color: #6c757d !important; }
-
-.border-success {
-  border-color: #28a745 !important; }
-
-.border-info {
-  border-color: #17a2b8 !important; }
-
-.border-warning {
-  border-color: #ffc107 !important; }
-
-.border-danger {
-  border-color: #dc3545 !important; }
-
-.border-light {
-  border-color: #f8f9fa !important; }
-
-.border-dark {
-  border-color: #343a40 !important; }
-
-.border-white {
-  border-color: #fff !important; }
-
-.rounded-sm {
-  border-radius: 0.2rem !important; }
-
-.rounded {
-  border-radius: 0.25rem !important; }
-
-.rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important; }
-
-.rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important; }
-
-.rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important; }
-
-.rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important; }
-
-.rounded-lg {
-  border-radius: 0.3rem !important; }
-
-.rounded-circle {
-  border-radius: 50% !important; }
-
-.rounded-pill {
-  border-radius: 50rem !important; }
-
-.rounded-0 {
-  border-radius: 0 !important; }
-
-.clearfix::after {
-  display: block;
-  clear: both;
-  content: ""; }
-
-.d-none {
-  display: none !important; }
-
-.d-inline {
-  display: inline !important; }
-
-.d-inline-block {
-  display: inline-block !important; }
-
-.d-block {
-  display: block !important; }
-
-.d-table {
-  display: table !important; }
-
-.d-table-row {
-  display: table-row !important; }
-
-.d-table-cell {
-  display: table-cell !important; }
-
-.d-flex {
-  display: flex !important; }
-
-.d-inline-flex {
-  display: inline-flex !important; }
-
-@media (min-width: 576px) {
-  .d-sm-none {
-    display: none !important; }
-  .d-sm-inline {
-    display: inline !important; }
-  .d-sm-inline-block {
-    display: inline-block !important; }
-  .d-sm-block {
-    display: block !important; }
-  .d-sm-table {
-    display: table !important; }
-  .d-sm-table-row {
-    display: table-row !important; }
-  .d-sm-table-cell {
-    display: table-cell !important; }
-  .d-sm-flex {
-    display: flex !important; }
-  .d-sm-inline-flex {
-    display: inline-flex !important; } }
-
-@media (min-width: 768px) {
-  .d-md-none {
-    display: none !important; }
-  .d-md-inline {
-    display: inline !important; }
-  .d-md-inline-block {
-    display: inline-block !important; }
-  .d-md-block {
-    display: block !important; }
-  .d-md-table {
-    display: table !important; }
-  .d-md-table-row {
-    display: table-row !important; }
-  .d-md-table-cell {
-    display: table-cell !important; }
-  .d-md-flex {
-    display: flex !important; }
-  .d-md-inline-flex {
-    display: inline-flex !important; } }
-
-@media (min-width: 992px) {
-  .d-lg-none {
-    display: none !important; }
-  .d-lg-inline {
-    display: inline !important; }
-  .d-lg-inline-block {
-    display: inline-block !important; }
-  .d-lg-block {
-    display: block !important; }
-  .d-lg-table {
-    display: table !important; }
-  .d-lg-table-row {
-    display: table-row !important; }
-  .d-lg-table-cell {
-    display: table-cell !important; }
-  .d-lg-flex {
-    display: flex !important; }
-  .d-lg-inline-flex {
-    display: inline-flex !important; } }
-
-@media (min-width: 1200px) {
-  .d-xl-none {
-    display: none !important; }
-  .d-xl-inline {
-    display: inline !important; }
-  .d-xl-inline-block {
-    display: inline-block !important; }
-  .d-xl-block {
-    display: block !important; }
-  .d-xl-table {
-    display: table !important; }
-  .d-xl-table-row {
-    display: table-row !important; }
-  .d-xl-table-cell {
-    display: table-cell !important; }
-  .d-xl-flex {
-    display: flex !important; }
-  .d-xl-inline-flex {
-    display: inline-flex !important; } }
-
-@media print {
-  .d-print-none {
-    display: none !important; }
-  .d-print-inline {
-    display: inline !important; }
-  .d-print-inline-block {
-    display: inline-block !important; }
-  .d-print-block {
-    display: block !important; }
-  .d-print-table {
-    display: table !important; }
-  .d-print-table-row {
-    display: table-row !important; }
-  .d-print-table-cell {
-    display: table-cell !important; }
-  .d-print-flex {
-    display: flex !important; }
-  .d-print-inline-flex {
-    display: inline-flex !important; } }
-
-.embed-responsive {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden; }
-  .embed-responsive::before {
-    display: block;
-    content: ""; }
-  .embed-responsive .embed-responsive-item,
-  .embed-responsive iframe,
-  .embed-responsive embed,
-  .embed-responsive object,
-  .embed-responsive video {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0; }
-
-.embed-responsive-21by9::before {
-  padding-top: 42.85714286%; }
-
-.embed-responsive-16by9::before {
-  padding-top: 56.25%; }
-
-.embed-responsive-4by3::before {
-  padding-top: 75%; }
-
-.embed-responsive-1by1::before {
-  padding-top: 100%; }
-
-.flex-row {
-  flex-direction: row !important; }
-
-.flex-column {
-  flex-direction: column !important; }
-
-.flex-row-reverse {
-  flex-direction: row-reverse !important; }
-
-.flex-column-reverse {
-  flex-direction: column-reverse !important; }
-
-.flex-wrap {
-  flex-wrap: wrap !important; }
-
-.flex-nowrap {
-  flex-wrap: nowrap !important; }
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse !important; }
-
-.flex-fill {
-  flex: 1 1 auto !important; }
-
-.flex-grow-0 {
-  flex-grow: 0 !important; }
-
-.flex-grow-1 {
-  flex-grow: 1 !important; }
-
-.flex-shrink-0 {
-  flex-shrink: 0 !important; }
-
-.flex-shrink-1 {
-  flex-shrink: 1 !important; }
-
-.justify-content-start {
-  justify-content: flex-start !important; }
-
-.justify-content-end {
-  justify-content: flex-end !important; }
-
-.justify-content-center {
-  justify-content: center !important; }
-
-.justify-content-between {
-  justify-content: space-between !important; }
-
-.justify-content-around {
-  justify-content: space-around !important; }
-
-.align-items-start {
-  align-items: flex-start !important; }
-
-.align-items-end {
-  align-items: flex-end !important; }
-
-.align-items-center {
-  align-items: center !important; }
-
-.align-items-baseline {
-  align-items: baseline !important; }
-
-.align-items-stretch {
-  align-items: stretch !important; }
-
-.align-content-start {
-  align-content: flex-start !important; }
-
-.align-content-end {
-  align-content: flex-end !important; }
-
-.align-content-center {
-  align-content: center !important; }
-
-.align-content-between {
-  align-content: space-between !important; }
-
-.align-content-around {
-  align-content: space-around !important; }
-
-.align-content-stretch {
-  align-content: stretch !important; }
-
-.align-self-auto {
-  align-self: auto !important; }
-
-.align-self-start {
-  align-self: flex-start !important; }
-
-.align-self-end {
-  align-self: flex-end !important; }
-
-.align-self-center {
-  align-self: center !important; }
-
-.align-self-baseline {
-  align-self: baseline !important; }
-
-.align-self-stretch {
-  align-self: stretch !important; }
-
-@media (min-width: 576px) {
-  .flex-sm-row {
-    flex-direction: row !important; }
-  .flex-sm-column {
-    flex-direction: column !important; }
-  .flex-sm-row-reverse {
-    flex-direction: row-reverse !important; }
-  .flex-sm-column-reverse {
-    flex-direction: column-reverse !important; }
-  .flex-sm-wrap {
-    flex-wrap: wrap !important; }
-  .flex-sm-nowrap {
-    flex-wrap: nowrap !important; }
-  .flex-sm-wrap-reverse {
-    flex-wrap: wrap-reverse !important; }
-  .flex-sm-fill {
-    flex: 1 1 auto !important; }
-  .flex-sm-grow-0 {
-    flex-grow: 0 !important; }
-  .flex-sm-grow-1 {
-    flex-grow: 1 !important; }
-  .flex-sm-shrink-0 {
-    flex-shrink: 0 !important; }
-  .flex-sm-shrink-1 {
-    flex-shrink: 1 !important; }
-  .justify-content-sm-start {
-    justify-content: flex-start !important; }
-  .justify-content-sm-end {
-    justify-content: flex-end !important; }
-  .justify-content-sm-center {
-    justify-content: center !important; }
-  .justify-content-sm-between {
-    justify-content: space-between !important; }
-  .justify-content-sm-around {
-    justify-content: space-around !important; }
-  .align-items-sm-start {
-    align-items: flex-start !important; }
-  .align-items-sm-end {
-    align-items: flex-end !important; }
-  .align-items-sm-center {
-    align-items: center !important; }
-  .align-items-sm-baseline {
-    align-items: baseline !important; }
-  .align-items-sm-stretch {
-    align-items: stretch !important; }
-  .align-content-sm-start {
-    align-content: flex-start !important; }
-  .align-content-sm-end {
-    align-content: flex-end !important; }
-  .align-content-sm-center {
-    align-content: center !important; }
-  .align-content-sm-between {
-    align-content: space-between !important; }
-  .align-content-sm-around {
-    align-content: space-around !important; }
-  .align-content-sm-stretch {
-    align-content: stretch !important; }
-  .align-self-sm-auto {
-    align-self: auto !important; }
-  .align-self-sm-start {
-    align-self: flex-start !important; }
-  .align-self-sm-end {
-    align-self: flex-end !important; }
-  .align-self-sm-center {
-    align-self: center !important; }
-  .align-self-sm-baseline {
-    align-self: baseline !important; }
-  .align-self-sm-stretch {
-    align-self: stretch !important; } }
-
-@media (min-width: 768px) {
-  .flex-md-row {
-    flex-direction: row !important; }
-  .flex-md-column {
-    flex-direction: column !important; }
-  .flex-md-row-reverse {
-    flex-direction: row-reverse !important; }
-  .flex-md-column-reverse {
-    flex-direction: column-reverse !important; }
-  .flex-md-wrap {
-    flex-wrap: wrap !important; }
-  .flex-md-nowrap {
-    flex-wrap: nowrap !important; }
-  .flex-md-wrap-reverse {
-    flex-wrap: wrap-reverse !important; }
-  .flex-md-fill {
-    flex: 1 1 auto !important; }
-  .flex-md-grow-0 {
-    flex-grow: 0 !important; }
-  .flex-md-grow-1 {
-    flex-grow: 1 !important; }
-  .flex-md-shrink-0 {
-    flex-shrink: 0 !important; }
-  .flex-md-shrink-1 {
-    flex-shrink: 1 !important; }
-  .justify-content-md-start {
-    justify-content: flex-start !important; }
-  .justify-content-md-end {
-    justify-content: flex-end !important; }
-  .justify-content-md-center {
-    justify-content: center !important; }
-  .justify-content-md-between {
-    justify-content: space-between !important; }
-  .justify-content-md-around {
-    justify-content: space-around !important; }
-  .align-items-md-start {
-    align-items: flex-start !important; }
-  .align-items-md-end {
-    align-items: flex-end !important; }
-  .align-items-md-center {
-    align-items: center !important; }
-  .align-items-md-baseline {
-    align-items: baseline !important; }
-  .align-items-md-stretch {
-    align-items: stretch !important; }
-  .align-content-md-start {
-    align-content: flex-start !important; }
-  .align-content-md-end {
-    align-content: flex-end !important; }
-  .align-content-md-center {
-    align-content: center !important; }
-  .align-content-md-between {
-    align-content: space-between !important; }
-  .align-content-md-around {
-    align-content: space-around !important; }
-  .align-content-md-stretch {
-    align-content: stretch !important; }
-  .align-self-md-auto {
-    align-self: auto !important; }
-  .align-self-md-start {
-    align-self: flex-start !important; }
-  .align-self-md-end {
-    align-self: flex-end !important; }
-  .align-self-md-center {
-    align-self: center !important; }
-  .align-self-md-baseline {
-    align-self: baseline !important; }
-  .align-self-md-stretch {
-    align-self: stretch !important; } }
-
-@media (min-width: 992px) {
-  .flex-lg-row {
-    flex-direction: row !important; }
-  .flex-lg-column {
-    flex-direction: column !important; }
-  .flex-lg-row-reverse {
-    flex-direction: row-reverse !important; }
-  .flex-lg-column-reverse {
-    flex-direction: column-reverse !important; }
-  .flex-lg-wrap {
-    flex-wrap: wrap !important; }
-  .flex-lg-nowrap {
-    flex-wrap: nowrap !important; }
-  .flex-lg-wrap-reverse {
-    flex-wrap: wrap-reverse !important; }
-  .flex-lg-fill {
-    flex: 1 1 auto !important; }
-  .flex-lg-grow-0 {
-    flex-grow: 0 !important; }
-  .flex-lg-grow-1 {
-    flex-grow: 1 !important; }
-  .flex-lg-shrink-0 {
-    flex-shrink: 0 !important; }
-  .flex-lg-shrink-1 {
-    flex-shrink: 1 !important; }
-  .justify-content-lg-start {
-    justify-content: flex-start !important; }
-  .justify-content-lg-end {
-    justify-content: flex-end !important; }
-  .justify-content-lg-center {
-    justify-content: center !important; }
-  .justify-content-lg-between {
-    justify-content: space-between !important; }
-  .justify-content-lg-around {
-    justify-content: space-around !important; }
-  .align-items-lg-start {
-    align-items: flex-start !important; }
-  .align-items-lg-end {
-    align-items: flex-end !important; }
-  .align-items-lg-center {
-    align-items: center !important; }
-  .align-items-lg-baseline {
-    align-items: baseline !important; }
-  .align-items-lg-stretch {
-    align-items: stretch !important; }
-  .align-content-lg-start {
-    align-content: flex-start !important; }
-  .align-content-lg-end {
-    align-content: flex-end !important; }
-  .align-content-lg-center {
-    align-content: center !important; }
-  .align-content-lg-between {
-    align-content: space-between !important; }
-  .align-content-lg-around {
-    align-content: space-around !important; }
-  .align-content-lg-stretch {
-    align-content: stretch !important; }
-  .align-self-lg-auto {
-    align-self: auto !important; }
-  .align-self-lg-start {
-    align-self: flex-start !important; }
-  .align-self-lg-end {
-    align-self: flex-end !important; }
-  .align-self-lg-center {
-    align-self: center !important; }
-  .align-self-lg-baseline {
-    align-self: baseline !important; }
-  .align-self-lg-stretch {
-    align-self: stretch !important; } }
-
-@media (min-width: 1200px) {
-  .flex-xl-row {
-    flex-direction: row !important; }
-  .flex-xl-column {
-    flex-direction: column !important; }
-  .flex-xl-row-reverse {
-    flex-direction: row-reverse !important; }
-  .flex-xl-column-reverse {
-    flex-direction: column-reverse !important; }
-  .flex-xl-wrap {
-    flex-wrap: wrap !important; }
-  .flex-xl-nowrap {
-    flex-wrap: nowrap !important; }
-  .flex-xl-wrap-reverse {
-    flex-wrap: wrap-reverse !important; }
-  .flex-xl-fill {
-    flex: 1 1 auto !important; }
-  .flex-xl-grow-0 {
-    flex-grow: 0 !important; }
-  .flex-xl-grow-1 {
-    flex-grow: 1 !important; }
-  .flex-xl-shrink-0 {
-    flex-shrink: 0 !important; }
-  .flex-xl-shrink-1 {
-    flex-shrink: 1 !important; }
-  .justify-content-xl-start {
-    justify-content: flex-start !important; }
-  .justify-content-xl-end {
-    justify-content: flex-end !important; }
-  .justify-content-xl-center {
-    justify-content: center !important; }
-  .justify-content-xl-between {
-    justify-content: space-between !important; }
-  .justify-content-xl-around {
-    justify-content: space-around !important; }
-  .align-items-xl-start {
-    align-items: flex-start !important; }
-  .align-items-xl-end {
-    align-items: flex-end !important; }
-  .align-items-xl-center {
-    align-items: center !important; }
-  .align-items-xl-baseline {
-    align-items: baseline !important; }
-  .align-items-xl-stretch {
-    align-items: stretch !important; }
-  .align-content-xl-start {
-    align-content: flex-start !important; }
-  .align-content-xl-end {
-    align-content: flex-end !important; }
-  .align-content-xl-center {
-    align-content: center !important; }
-  .align-content-xl-between {
-    align-content: space-between !important; }
-  .align-content-xl-around {
-    align-content: space-around !important; }
-  .align-content-xl-stretch {
-    align-content: stretch !important; }
-  .align-self-xl-auto {
-    align-self: auto !important; }
-  .align-self-xl-start {
-    align-self: flex-start !important; }
-  .align-self-xl-end {
-    align-self: flex-end !important; }
-  .align-self-xl-center {
-    align-self: center !important; }
-  .align-self-xl-baseline {
-    align-self: baseline !important; }
-  .align-self-xl-stretch {
-    align-self: stretch !important; } }
-
-.float-left {
-  float: left !important; }
-
-.float-right {
-  float: right !important; }
-
-.float-none {
-  float: none !important; }
-
-@media (min-width: 576px) {
-  .float-sm-left {
-    float: left !important; }
-  .float-sm-right {
-    float: right !important; }
-  .float-sm-none {
-    float: none !important; } }
-
-@media (min-width: 768px) {
-  .float-md-left {
-    float: left !important; }
-  .float-md-right {
-    float: right !important; }
-  .float-md-none {
-    float: none !important; } }
-
-@media (min-width: 992px) {
-  .float-lg-left {
-    float: left !important; }
-  .float-lg-right {
-    float: right !important; }
-  .float-lg-none {
-    float: none !important; } }
-
-@media (min-width: 1200px) {
-  .float-xl-left {
-    float: left !important; }
-  .float-xl-right {
-    float: right !important; }
-  .float-xl-none {
-    float: none !important; } }
-
-.overflow-auto {
-  overflow: auto !important; }
-
-.overflow-hidden {
-  overflow: hidden !important; }
-
-.position-static {
-  position: static !important; }
-
-.position-relative {
-  position: relative !important; }
-
-.position-absolute {
-  position: absolute !important; }
-
-.position-fixed {
-  position: fixed !important; }
-
-.position-sticky {
-  position: sticky !important; }
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030; }
-
-.fixed-bottom {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030; }
-
-@supports (position: sticky) {
-  .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1020; } }
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0; }
-
-.sr-only-focusable:active, .sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-  white-space: normal; }
-
-.shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
-
-.shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
-
-.shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
-
-.shadow-none {
-  box-shadow: none !important; }
-
-.w-25 {
-  width: 25% !important; }
-
-.w-50 {
-  width: 50% !important; }
-
-.w-75 {
-  width: 75% !important; }
-
-.w-100 {
-  width: 100% !important; }
-
-.w-auto {
-  width: auto !important; }
-
-.h-25 {
-  height: 25% !important; }
-
-.h-50 {
-  height: 50% !important; }
-
-.h-75 {
-  height: 75% !important; }
-
-.h-100 {
-  height: 100% !important; }
-
-.h-auto {
-  height: auto !important; }
-
-.mw-100 {
-  max-width: 100% !important; }
-
-.mh-100 {
-  max-height: 100% !important; }
-
-.min-vw-100 {
-  min-width: 100vw !important; }
-
-.min-vh-100 {
-  min-height: 100vh !important; }
-
-.vw-100 {
-  width: 100vw !important; }
-
-.vh-100 {
-  height: 100vh !important; }
-
-.stretched-link::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: auto;
-  content: "";
-  background-color: rgba(0, 0, 0, 0); }
-
-.m-0 {
-  margin: 0 !important; }
-
-.mt-0,
-.my-0 {
-  margin-top: 0 !important; }
-
-.mr-0,
-.mx-0 {
-  margin-right: 0 !important; }
-
-.mb-0,
-.my-0 {
-  margin-bottom: 0 !important; }
-
-.ml-0,
-.mx-0 {
-  margin-left: 0 !important; }
-
-.m-1 {
-  margin: 0.25rem !important; }
-
-.mt-1,
-.my-1 {
-  margin-top: 0.25rem !important; }
-
-.mr-1,
-.mx-1 {
-  margin-right: 0.25rem !important; }
-
-.mb-1,
-.my-1 {
-  margin-bottom: 0.25rem !important; }
-
-.ml-1,
-.mx-1 {
-  margin-left: 0.25rem !important; }
-
-.m-2 {
-  margin: 0.5rem !important; }
-
-.mt-2,
-.my-2 {
-  margin-top: 0.5rem !important; }
-
-.mr-2,
-.mx-2 {
-  margin-right: 0.5rem !important; }
-
-.mb-2,
-.my-2 {
-  margin-bottom: 0.5rem !important; }
-
-.ml-2,
-.mx-2 {
-  margin-left: 0.5rem !important; }
-
-.m-3 {
-  margin: 1rem !important; }
-
-.mt-3,
-.my-3 {
-  margin-top: 1rem !important; }
-
-.mr-3,
-.mx-3 {
-  margin-right: 1rem !important; }
-
-.mb-3,
-.my-3 {
-  margin-bottom: 1rem !important; }
-
-.ml-3,
-.mx-3 {
-  margin-left: 1rem !important; }
-
-.m-4 {
-  margin: 1.5rem !important; }
-
-.mt-4,
-.my-4 {
-  margin-top: 1.5rem !important; }
-
-.mr-4,
-.mx-4 {
-  margin-right: 1.5rem !important; }
-
-.mb-4,
-.my-4 {
-  margin-bottom: 1.5rem !important; }
-
-.ml-4,
-.mx-4 {
-  margin-left: 1.5rem !important; }
-
-.m-5 {
-  margin: 3rem !important; }
-
-.mt-5,
-.my-5 {
-  margin-top: 3rem !important; }
-
-.mr-5,
-.mx-5 {
-  margin-right: 3rem !important; }
-
-.mb-5,
-.my-5 {
-  margin-bottom: 3rem !important; }
-
-.ml-5,
-.mx-5 {
-  margin-left: 3rem !important; }
-
-.p-0 {
-  padding: 0 !important; }
-
-.pt-0,
-.py-0 {
-  padding-top: 0 !important; }
-
-.pr-0,
-.px-0 {
-  padding-right: 0 !important; }
-
-.pb-0,
-.py-0 {
-  padding-bottom: 0 !important; }
-
-.pl-0,
-.px-0 {
-  padding-left: 0 !important; }
-
-.p-1 {
-  padding: 0.25rem !important; }
-
-.pt-1,
-.py-1 {
-  padding-top: 0.25rem !important; }
-
-.pr-1,
-.px-1 {
-  padding-right: 0.25rem !important; }
-
-.pb-1,
-.py-1 {
-  padding-bottom: 0.25rem !important; }
-
-.pl-1,
-.px-1 {
-  padding-left: 0.25rem !important; }
-
-.p-2 {
-  padding: 0.5rem !important; }
-
-.pt-2,
-.py-2 {
-  padding-top: 0.5rem !important; }
-
-.pr-2,
-.px-2 {
-  padding-right: 0.5rem !important; }
-
-.pb-2,
-.py-2 {
-  padding-bottom: 0.5rem !important; }
-
-.pl-2,
-.px-2 {
-  padding-left: 0.5rem !important; }
-
-.p-3 {
-  padding: 1rem !important; }
-
-.pt-3,
-.py-3 {
-  padding-top: 1rem !important; }
-
-.pr-3,
-.px-3 {
-  padding-right: 1rem !important; }
-
-.pb-3,
-.py-3 {
-  padding-bottom: 1rem !important; }
-
-.pl-3,
-.px-3 {
-  padding-left: 1rem !important; }
-
-.p-4 {
-  padding: 1.5rem !important; }
-
-.pt-4,
-.py-4 {
-  padding-top: 1.5rem !important; }
-
-.pr-4,
-.px-4 {
-  padding-right: 1.5rem !important; }
-
-.pb-4,
-.py-4 {
-  padding-bottom: 1.5rem !important; }
-
-.pl-4,
-.px-4 {
-  padding-left: 1.5rem !important; }
-
-.p-5 {
-  padding: 3rem !important; }
-
-.pt-5,
-.py-5 {
-  padding-top: 3rem !important; }
-
-.pr-5,
-.px-5 {
-  padding-right: 3rem !important; }
-
-.pb-5,
-.py-5 {
-  padding-bottom: 3rem !important; }
-
-.pl-5,
-.px-5 {
-  padding-left: 3rem !important; }
-
-.m-n1 {
-  margin: -0.25rem !important; }
-
-.mt-n1,
-.my-n1 {
-  margin-top: -0.25rem !important; }
-
-.mr-n1,
-.mx-n1 {
-  margin-right: -0.25rem !important; }
-
-.mb-n1,
-.my-n1 {
-  margin-bottom: -0.25rem !important; }
-
-.ml-n1,
-.mx-n1 {
-  margin-left: -0.25rem !important; }
-
-.m-n2 {
-  margin: -0.5rem !important; }
-
-.mt-n2,
-.my-n2 {
-  margin-top: -0.5rem !important; }
-
-.mr-n2,
-.mx-n2 {
-  margin-right: -0.5rem !important; }
-
-.mb-n2,
-.my-n2 {
-  margin-bottom: -0.5rem !important; }
-
-.ml-n2,
-.mx-n2 {
-  margin-left: -0.5rem !important; }
-
-.m-n3 {
-  margin: -1rem !important; }
-
-.mt-n3,
-.my-n3 {
-  margin-top: -1rem !important; }
-
-.mr-n3,
-.mx-n3 {
-  margin-right: -1rem !important; }
-
-.mb-n3,
-.my-n3 {
-  margin-bottom: -1rem !important; }
-
-.ml-n3,
-.mx-n3 {
-  margin-left: -1rem !important; }
-
-.m-n4 {
-  margin: -1.5rem !important; }
-
-.mt-n4,
-.my-n4 {
-  margin-top: -1.5rem !important; }
-
-.mr-n4,
-.mx-n4 {
-  margin-right: -1.5rem !important; }
-
-.mb-n4,
-.my-n4 {
-  margin-bottom: -1.5rem !important; }
-
-.ml-n4,
-.mx-n4 {
-  margin-left: -1.5rem !important; }
-
-.m-n5 {
-  margin: -3rem !important; }
-
-.mt-n5,
-.my-n5 {
-  margin-top: -3rem !important; }
-
-.mr-n5,
-.mx-n5 {
-  margin-right: -3rem !important; }
-
-.mb-n5,
-.my-n5 {
-  margin-bottom: -3rem !important; }
-
-.ml-n5,
-.mx-n5 {
-  margin-left: -3rem !important; }
-
-.m-auto {
-  margin: auto !important; }
-
-.mt-auto,
-.my-auto {
-  margin-top: auto !important; }
-
-.mr-auto,
-.mx-auto {
-  margin-right: auto !important; }
-
-.mb-auto,
-.my-auto {
-  margin-bottom: auto !important; }
-
-.ml-auto,
-.mx-auto {
-  margin-left: auto !important; }
-
-@media (min-width: 576px) {
-  .m-sm-0 {
-    margin: 0 !important; }
-  .mt-sm-0,
-  .my-sm-0 {
-    margin-top: 0 !important; }
-  .mr-sm-0,
-  .mx-sm-0 {
-    margin-right: 0 !important; }
-  .mb-sm-0,
-  .my-sm-0 {
-    margin-bottom: 0 !important; }
-  .ml-sm-0,
-  .mx-sm-0 {
-    margin-left: 0 !important; }
-  .m-sm-1 {
-    margin: 0.25rem !important; }
-  .mt-sm-1,
-  .my-sm-1 {
-    margin-top: 0.25rem !important; }
-  .mr-sm-1,
-  .mx-sm-1 {
-    margin-right: 0.25rem !important; }
-  .mb-sm-1,
-  .my-sm-1 {
-    margin-bottom: 0.25rem !important; }
-  .ml-sm-1,
-  .mx-sm-1 {
-    margin-left: 0.25rem !important; }
-  .m-sm-2 {
-    margin: 0.5rem !important; }
-  .mt-sm-2,
-  .my-sm-2 {
-    margin-top: 0.5rem !important; }
-  .mr-sm-2,
-  .mx-sm-2 {
-    margin-right: 0.5rem !important; }
-  .mb-sm-2,
-  .my-sm-2 {
-    margin-bottom: 0.5rem !important; }
-  .ml-sm-2,
-  .mx-sm-2 {
-    margin-left: 0.5rem !important; }
-  .m-sm-3 {
-    margin: 1rem !important; }
-  .mt-sm-3,
-  .my-sm-3 {
-    margin-top: 1rem !important; }
-  .mr-sm-3,
-  .mx-sm-3 {
-    margin-right: 1rem !important; }
-  .mb-sm-3,
-  .my-sm-3 {
-    margin-bottom: 1rem !important; }
-  .ml-sm-3,
-  .mx-sm-3 {
-    margin-left: 1rem !important; }
-  .m-sm-4 {
-    margin: 1.5rem !important; }
-  .mt-sm-4,
-  .my-sm-4 {
-    margin-top: 1.5rem !important; }
-  .mr-sm-4,
-  .mx-sm-4 {
-    margin-right: 1.5rem !important; }
-  .mb-sm-4,
-  .my-sm-4 {
-    margin-bottom: 1.5rem !important; }
-  .ml-sm-4,
-  .mx-sm-4 {
-    margin-left: 1.5rem !important; }
-  .m-sm-5 {
-    margin: 3rem !important; }
-  .mt-sm-5,
-  .my-sm-5 {
-    margin-top: 3rem !important; }
-  .mr-sm-5,
-  .mx-sm-5 {
-    margin-right: 3rem !important; }
-  .mb-sm-5,
-  .my-sm-5 {
-    margin-bottom: 3rem !important; }
-  .ml-sm-5,
-  .mx-sm-5 {
-    margin-left: 3rem !important; }
-  .p-sm-0 {
-    padding: 0 !important; }
-  .pt-sm-0,
-  .py-sm-0 {
-    padding-top: 0 !important; }
-  .pr-sm-0,
-  .px-sm-0 {
-    padding-right: 0 !important; }
-  .pb-sm-0,
-  .py-sm-0 {
-    padding-bottom: 0 !important; }
-  .pl-sm-0,
-  .px-sm-0 {
-    padding-left: 0 !important; }
-  .p-sm-1 {
-    padding: 0.25rem !important; }
-  .pt-sm-1,
-  .py-sm-1 {
-    padding-top: 0.25rem !important; }
-  .pr-sm-1,
-  .px-sm-1 {
-    padding-right: 0.25rem !important; }
-  .pb-sm-1,
-  .py-sm-1 {
-    padding-bottom: 0.25rem !important; }
-  .pl-sm-1,
-  .px-sm-1 {
-    padding-left: 0.25rem !important; }
-  .p-sm-2 {
-    padding: 0.5rem !important; }
-  .pt-sm-2,
-  .py-sm-2 {
-    padding-top: 0.5rem !important; }
-  .pr-sm-2,
-  .px-sm-2 {
-    padding-right: 0.5rem !important; }
-  .pb-sm-2,
-  .py-sm-2 {
-    padding-bottom: 0.5rem !important; }
-  .pl-sm-2,
-  .px-sm-2 {
-    padding-left: 0.5rem !important; }
-  .p-sm-3 {
-    padding: 1rem !important; }
-  .pt-sm-3,
-  .py-sm-3 {
-    padding-top: 1rem !important; }
-  .pr-sm-3,
-  .px-sm-3 {
-    padding-right: 1rem !important; }
-  .pb-sm-3,
-  .py-sm-3 {
-    padding-bottom: 1rem !important; }
-  .pl-sm-3,
-  .px-sm-3 {
-    padding-left: 1rem !important; }
-  .p-sm-4 {
-    padding: 1.5rem !important; }
-  .pt-sm-4,
-  .py-sm-4 {
-    padding-top: 1.5rem !important; }
-  .pr-sm-4,
-  .px-sm-4 {
-    padding-right: 1.5rem !important; }
-  .pb-sm-4,
-  .py-sm-4 {
-    padding-bottom: 1.5rem !important; }
-  .pl-sm-4,
-  .px-sm-4 {
-    padding-left: 1.5rem !important; }
-  .p-sm-5 {
-    padding: 3rem !important; }
-  .pt-sm-5,
-  .py-sm-5 {
-    padding-top: 3rem !important; }
-  .pr-sm-5,
-  .px-sm-5 {
-    padding-right: 3rem !important; }
-  .pb-sm-5,
-  .py-sm-5 {
-    padding-bottom: 3rem !important; }
-  .pl-sm-5,
-  .px-sm-5 {
-    padding-left: 3rem !important; }
-  .m-sm-n1 {
-    margin: -0.25rem !important; }
-  .mt-sm-n1,
-  .my-sm-n1 {
-    margin-top: -0.25rem !important; }
-  .mr-sm-n1,
-  .mx-sm-n1 {
-    margin-right: -0.25rem !important; }
-  .mb-sm-n1,
-  .my-sm-n1 {
-    margin-bottom: -0.25rem !important; }
-  .ml-sm-n1,
-  .mx-sm-n1 {
-    margin-left: -0.25rem !important; }
-  .m-sm-n2 {
-    margin: -0.5rem !important; }
-  .mt-sm-n2,
-  .my-sm-n2 {
-    margin-top: -0.5rem !important; }
-  .mr-sm-n2,
-  .mx-sm-n2 {
-    margin-right: -0.5rem !important; }
-  .mb-sm-n2,
-  .my-sm-n2 {
-    margin-bottom: -0.5rem !important; }
-  .ml-sm-n2,
-  .mx-sm-n2 {
-    margin-left: -0.5rem !important; }
-  .m-sm-n3 {
-    margin: -1rem !important; }
-  .mt-sm-n3,
-  .my-sm-n3 {
-    margin-top: -1rem !important; }
-  .mr-sm-n3,
-  .mx-sm-n3 {
-    margin-right: -1rem !important; }
-  .mb-sm-n3,
-  .my-sm-n3 {
-    margin-bottom: -1rem !important; }
-  .ml-sm-n3,
-  .mx-sm-n3 {
-    margin-left: -1rem !important; }
-  .m-sm-n4 {
-    margin: -1.5rem !important; }
-  .mt-sm-n4,
-  .my-sm-n4 {
-    margin-top: -1.5rem !important; }
-  .mr-sm-n4,
-  .mx-sm-n4 {
-    margin-right: -1.5rem !important; }
-  .mb-sm-n4,
-  .my-sm-n4 {
-    margin-bottom: -1.5rem !important; }
-  .ml-sm-n4,
-  .mx-sm-n4 {
-    margin-left: -1.5rem !important; }
-  .m-sm-n5 {
-    margin: -3rem !important; }
-  .mt-sm-n5,
-  .my-sm-n5 {
-    margin-top: -3rem !important; }
-  .mr-sm-n5,
-  .mx-sm-n5 {
-    margin-right: -3rem !important; }
-  .mb-sm-n5,
-  .my-sm-n5 {
-    margin-bottom: -3rem !important; }
-  .ml-sm-n5,
-  .mx-sm-n5 {
-    margin-left: -3rem !important; }
-  .m-sm-auto {
-    margin: auto !important; }
-  .mt-sm-auto,
-  .my-sm-auto {
-    margin-top: auto !important; }
-  .mr-sm-auto,
-  .mx-sm-auto {
-    margin-right: auto !important; }
-  .mb-sm-auto,
-  .my-sm-auto {
-    margin-bottom: auto !important; }
-  .ml-sm-auto,
-  .mx-sm-auto {
-    margin-left: auto !important; } }
-
-@media (min-width: 768px) {
-  .m-md-0 {
-    margin: 0 !important; }
-  .mt-md-0,
-  .my-md-0 {
-    margin-top: 0 !important; }
-  .mr-md-0,
-  .mx-md-0 {
-    margin-right: 0 !important; }
-  .mb-md-0,
-  .my-md-0 {
-    margin-bottom: 0 !important; }
-  .ml-md-0,
-  .mx-md-0 {
-    margin-left: 0 !important; }
-  .m-md-1 {
-    margin: 0.25rem !important; }
-  .mt-md-1,
-  .my-md-1 {
-    margin-top: 0.25rem !important; }
-  .mr-md-1,
-  .mx-md-1 {
-    margin-right: 0.25rem !important; }
-  .mb-md-1,
-  .my-md-1 {
-    margin-bottom: 0.25rem !important; }
-  .ml-md-1,
-  .mx-md-1 {
-    margin-left: 0.25rem !important; }
-  .m-md-2 {
-    margin: 0.5rem !important; }
-  .mt-md-2,
-  .my-md-2 {
-    margin-top: 0.5rem !important; }
-  .mr-md-2,
-  .mx-md-2 {
-    margin-right: 0.5rem !important; }
-  .mb-md-2,
-  .my-md-2 {
-    margin-bottom: 0.5rem !important; }
-  .ml-md-2,
-  .mx-md-2 {
-    margin-left: 0.5rem !important; }
-  .m-md-3 {
-    margin: 1rem !important; }
-  .mt-md-3,
-  .my-md-3 {
-    margin-top: 1rem !important; }
-  .mr-md-3,
-  .mx-md-3 {
-    margin-right: 1rem !important; }
-  .mb-md-3,
-  .my-md-3 {
-    margin-bottom: 1rem !important; }
-  .ml-md-3,
-  .mx-md-3 {
-    margin-left: 1rem !important; }
-  .m-md-4 {
-    margin: 1.5rem !important; }
-  .mt-md-4,
-  .my-md-4 {
-    margin-top: 1.5rem !important; }
-  .mr-md-4,
-  .mx-md-4 {
-    margin-right: 1.5rem !important; }
-  .mb-md-4,
-  .my-md-4 {
-    margin-bottom: 1.5rem !important; }
-  .ml-md-4,
-  .mx-md-4 {
-    margin-left: 1.5rem !important; }
-  .m-md-5 {
-    margin: 3rem !important; }
-  .mt-md-5,
-  .my-md-5 {
-    margin-top: 3rem !important; }
-  .mr-md-5,
-  .mx-md-5 {
-    margin-right: 3rem !important; }
-  .mb-md-5,
-  .my-md-5 {
-    margin-bottom: 3rem !important; }
-  .ml-md-5,
-  .mx-md-5 {
-    margin-left: 3rem !important; }
-  .p-md-0 {
-    padding: 0 !important; }
-  .pt-md-0,
-  .py-md-0 {
-    padding-top: 0 !important; }
-  .pr-md-0,
-  .px-md-0 {
-    padding-right: 0 !important; }
-  .pb-md-0,
-  .py-md-0 {
-    padding-bottom: 0 !important; }
-  .pl-md-0,
-  .px-md-0 {
-    padding-left: 0 !important; }
-  .p-md-1 {
-    padding: 0.25rem !important; }
-  .pt-md-1,
-  .py-md-1 {
-    padding-top: 0.25rem !important; }
-  .pr-md-1,
-  .px-md-1 {
-    padding-right: 0.25rem !important; }
-  .pb-md-1,
-  .py-md-1 {
-    padding-bottom: 0.25rem !important; }
-  .pl-md-1,
-  .px-md-1 {
-    padding-left: 0.25rem !important; }
-  .p-md-2 {
-    padding: 0.5rem !important; }
-  .pt-md-2,
-  .py-md-2 {
-    padding-top: 0.5rem !important; }
-  .pr-md-2,
-  .px-md-2 {
-    padding-right: 0.5rem !important; }
-  .pb-md-2,
-  .py-md-2 {
-    padding-bottom: 0.5rem !important; }
-  .pl-md-2,
-  .px-md-2 {
-    padding-left: 0.5rem !important; }
-  .p-md-3 {
-    padding: 1rem !important; }
-  .pt-md-3,
-  .py-md-3 {
-    padding-top: 1rem !important; }
-  .pr-md-3,
-  .px-md-3 {
-    padding-right: 1rem !important; }
-  .pb-md-3,
-  .py-md-3 {
-    padding-bottom: 1rem !important; }
-  .pl-md-3,
-  .px-md-3 {
-    padding-left: 1rem !important; }
-  .p-md-4 {
-    padding: 1.5rem !important; }
-  .pt-md-4,
-  .py-md-4 {
-    padding-top: 1.5rem !important; }
-  .pr-md-4,
-  .px-md-4 {
-    padding-right: 1.5rem !important; }
-  .pb-md-4,
-  .py-md-4 {
-    padding-bottom: 1.5rem !important; }
-  .pl-md-4,
-  .px-md-4 {
-    padding-left: 1.5rem !important; }
-  .p-md-5 {
-    padding: 3rem !important; }
-  .pt-md-5,
-  .py-md-5 {
-    padding-top: 3rem !important; }
-  .pr-md-5,
-  .px-md-5 {
-    padding-right: 3rem !important; }
-  .pb-md-5,
-  .py-md-5 {
-    padding-bottom: 3rem !important; }
-  .pl-md-5,
-  .px-md-5 {
-    padding-left: 3rem !important; }
-  .m-md-n1 {
-    margin: -0.25rem !important; }
-  .mt-md-n1,
-  .my-md-n1 {
-    margin-top: -0.25rem !important; }
-  .mr-md-n1,
-  .mx-md-n1 {
-    margin-right: -0.25rem !important; }
-  .mb-md-n1,
-  .my-md-n1 {
-    margin-bottom: -0.25rem !important; }
-  .ml-md-n1,
-  .mx-md-n1 {
-    margin-left: -0.25rem !important; }
-  .m-md-n2 {
-    margin: -0.5rem !important; }
-  .mt-md-n2,
-  .my-md-n2 {
-    margin-top: -0.5rem !important; }
-  .mr-md-n2,
-  .mx-md-n2 {
-    margin-right: -0.5rem !important; }
-  .mb-md-n2,
-  .my-md-n2 {
-    margin-bottom: -0.5rem !important; }
-  .ml-md-n2,
-  .mx-md-n2 {
-    margin-left: -0.5rem !important; }
-  .m-md-n3 {
-    margin: -1rem !important; }
-  .mt-md-n3,
-  .my-md-n3 {
-    margin-top: -1rem !important; }
-  .mr-md-n3,
-  .mx-md-n3 {
-    margin-right: -1rem !important; }
-  .mb-md-n3,
-  .my-md-n3 {
-    margin-bottom: -1rem !important; }
-  .ml-md-n3,
-  .mx-md-n3 {
-    margin-left: -1rem !important; }
-  .m-md-n4 {
-    margin: -1.5rem !important; }
-  .mt-md-n4,
-  .my-md-n4 {
-    margin-top: -1.5rem !important; }
-  .mr-md-n4,
-  .mx-md-n4 {
-    margin-right: -1.5rem !important; }
-  .mb-md-n4,
-  .my-md-n4 {
-    margin-bottom: -1.5rem !important; }
-  .ml-md-n4,
-  .mx-md-n4 {
-    margin-left: -1.5rem !important; }
-  .m-md-n5 {
-    margin: -3rem !important; }
-  .mt-md-n5,
-  .my-md-n5 {
-    margin-top: -3rem !important; }
-  .mr-md-n5,
-  .mx-md-n5 {
-    margin-right: -3rem !important; }
-  .mb-md-n5,
-  .my-md-n5 {
-    margin-bottom: -3rem !important; }
-  .ml-md-n5,
-  .mx-md-n5 {
-    margin-left: -3rem !important; }
-  .m-md-auto {
-    margin: auto !important; }
-  .mt-md-auto,
-  .my-md-auto {
-    margin-top: auto !important; }
-  .mr-md-auto,
-  .mx-md-auto {
-    margin-right: auto !important; }
-  .mb-md-auto,
-  .my-md-auto {
-    margin-bottom: auto !important; }
-  .ml-md-auto,
-  .mx-md-auto {
-    margin-left: auto !important; } }
-
-@media (min-width: 992px) {
-  .m-lg-0 {
-    margin: 0 !important; }
-  .mt-lg-0,
-  .my-lg-0 {
-    margin-top: 0 !important; }
-  .mr-lg-0,
-  .mx-lg-0 {
-    margin-right: 0 !important; }
-  .mb-lg-0,
-  .my-lg-0 {
-    margin-bottom: 0 !important; }
-  .ml-lg-0,
-  .mx-lg-0 {
-    margin-left: 0 !important; }
-  .m-lg-1 {
-    margin: 0.25rem !important; }
-  .mt-lg-1,
-  .my-lg-1 {
-    margin-top: 0.25rem !important; }
-  .mr-lg-1,
-  .mx-lg-1 {
-    margin-right: 0.25rem !important; }
-  .mb-lg-1,
-  .my-lg-1 {
-    margin-bottom: 0.25rem !important; }
-  .ml-lg-1,
-  .mx-lg-1 {
-    margin-left: 0.25rem !important; }
-  .m-lg-2 {
-    margin: 0.5rem !important; }
-  .mt-lg-2,
-  .my-lg-2 {
-    margin-top: 0.5rem !important; }
-  .mr-lg-2,
-  .mx-lg-2 {
-    margin-right: 0.5rem !important; }
-  .mb-lg-2,
-  .my-lg-2 {
-    margin-bottom: 0.5rem !important; }
-  .ml-lg-2,
-  .mx-lg-2 {
-    margin-left: 0.5rem !important; }
-  .m-lg-3 {
-    margin: 1rem !important; }
-  .mt-lg-3,
-  .my-lg-3 {
-    margin-top: 1rem !important; }
-  .mr-lg-3,
-  .mx-lg-3 {
-    margin-right: 1rem !important; }
-  .mb-lg-3,
-  .my-lg-3 {
-    margin-bottom: 1rem !important; }
-  .ml-lg-3,
-  .mx-lg-3 {
-    margin-left: 1rem !important; }
-  .m-lg-4 {
-    margin: 1.5rem !important; }
-  .mt-lg-4,
-  .my-lg-4 {
-    margin-top: 1.5rem !important; }
-  .mr-lg-4,
-  .mx-lg-4 {
-    margin-right: 1.5rem !important; }
-  .mb-lg-4,
-  .my-lg-4 {
-    margin-bottom: 1.5rem !important; }
-  .ml-lg-4,
-  .mx-lg-4 {
-    margin-left: 1.5rem !important; }
-  .m-lg-5 {
-    margin: 3rem !important; }
-  .mt-lg-5,
-  .my-lg-5 {
-    margin-top: 3rem !important; }
-  .mr-lg-5,
-  .mx-lg-5 {
-    margin-right: 3rem !important; }
-  .mb-lg-5,
-  .my-lg-5 {
-    margin-bottom: 3rem !important; }
-  .ml-lg-5,
-  .mx-lg-5 {
-    margin-left: 3rem !important; }
-  .p-lg-0 {
-    padding: 0 !important; }
-  .pt-lg-0,
-  .py-lg-0 {
-    padding-top: 0 !important; }
-  .pr-lg-0,
-  .px-lg-0 {
-    padding-right: 0 !important; }
-  .pb-lg-0,
-  .py-lg-0 {
-    padding-bottom: 0 !important; }
-  .pl-lg-0,
-  .px-lg-0 {
-    padding-left: 0 !important; }
-  .p-lg-1 {
-    padding: 0.25rem !important; }
-  .pt-lg-1,
-  .py-lg-1 {
-    padding-top: 0.25rem !important; }
-  .pr-lg-1,
-  .px-lg-1 {
-    padding-right: 0.25rem !important; }
-  .pb-lg-1,
-  .py-lg-1 {
-    padding-bottom: 0.25rem !important; }
-  .pl-lg-1,
-  .px-lg-1 {
-    padding-left: 0.25rem !important; }
-  .p-lg-2 {
-    padding: 0.5rem !important; }
-  .pt-lg-2,
-  .py-lg-2 {
-    padding-top: 0.5rem !important; }
-  .pr-lg-2,
-  .px-lg-2 {
-    padding-right: 0.5rem !important; }
-  .pb-lg-2,
-  .py-lg-2 {
-    padding-bottom: 0.5rem !important; }
-  .pl-lg-2,
-  .px-lg-2 {
-    padding-left: 0.5rem !important; }
-  .p-lg-3 {
-    padding: 1rem !important; }
-  .pt-lg-3,
-  .py-lg-3 {
-    padding-top: 1rem !important; }
-  .pr-lg-3,
-  .px-lg-3 {
-    padding-right: 1rem !important; }
-  .pb-lg-3,
-  .py-lg-3 {
-    padding-bottom: 1rem !important; }
-  .pl-lg-3,
-  .px-lg-3 {
-    padding-left: 1rem !important; }
-  .p-lg-4 {
-    padding: 1.5rem !important; }
-  .pt-lg-4,
-  .py-lg-4 {
-    padding-top: 1.5rem !important; }
-  .pr-lg-4,
-  .px-lg-4 {
-    padding-right: 1.5rem !important; }
-  .pb-lg-4,
-  .py-lg-4 {
-    padding-bottom: 1.5rem !important; }
-  .pl-lg-4,
-  .px-lg-4 {
-    padding-left: 1.5rem !important; }
-  .p-lg-5 {
-    padding: 3rem !important; }
-  .pt-lg-5,
-  .py-lg-5 {
-    padding-top: 3rem !important; }
-  .pr-lg-5,
-  .px-lg-5 {
-    padding-right: 3rem !important; }
-  .pb-lg-5,
-  .py-lg-5 {
-    padding-bottom: 3rem !important; }
-  .pl-lg-5,
-  .px-lg-5 {
-    padding-left: 3rem !important; }
-  .m-lg-n1 {
-    margin: -0.25rem !important; }
-  .mt-lg-n1,
-  .my-lg-n1 {
-    margin-top: -0.25rem !important; }
-  .mr-lg-n1,
-  .mx-lg-n1 {
-    margin-right: -0.25rem !important; }
-  .mb-lg-n1,
-  .my-lg-n1 {
-    margin-bottom: -0.25rem !important; }
-  .ml-lg-n1,
-  .mx-lg-n1 {
-    margin-left: -0.25rem !important; }
-  .m-lg-n2 {
-    margin: -0.5rem !important; }
-  .mt-lg-n2,
-  .my-lg-n2 {
-    margin-top: -0.5rem !important; }
-  .mr-lg-n2,
-  .mx-lg-n2 {
-    margin-right: -0.5rem !important; }
-  .mb-lg-n2,
-  .my-lg-n2 {
-    margin-bottom: -0.5rem !important; }
-  .ml-lg-n2,
-  .mx-lg-n2 {
-    margin-left: -0.5rem !important; }
-  .m-lg-n3 {
-    margin: -1rem !important; }
-  .mt-lg-n3,
-  .my-lg-n3 {
-    margin-top: -1rem !important; }
-  .mr-lg-n3,
-  .mx-lg-n3 {
-    margin-right: -1rem !important; }
-  .mb-lg-n3,
-  .my-lg-n3 {
-    margin-bottom: -1rem !important; }
-  .ml-lg-n3,
-  .mx-lg-n3 {
-    margin-left: -1rem !important; }
-  .m-lg-n4 {
-    margin: -1.5rem !important; }
-  .mt-lg-n4,
-  .my-lg-n4 {
-    margin-top: -1.5rem !important; }
-  .mr-lg-n4,
-  .mx-lg-n4 {
-    margin-right: -1.5rem !important; }
-  .mb-lg-n4,
-  .my-lg-n4 {
-    margin-bottom: -1.5rem !important; }
-  .ml-lg-n4,
-  .mx-lg-n4 {
-    margin-left: -1.5rem !important; }
-  .m-lg-n5 {
-    margin: -3rem !important; }
-  .mt-lg-n5,
-  .my-lg-n5 {
-    margin-top: -3rem !important; }
-  .mr-lg-n5,
-  .mx-lg-n5 {
-    margin-right: -3rem !important; }
-  .mb-lg-n5,
-  .my-lg-n5 {
-    margin-bottom: -3rem !important; }
-  .ml-lg-n5,
-  .mx-lg-n5 {
-    margin-left: -3rem !important; }
-  .m-lg-auto {
-    margin: auto !important; }
-  .mt-lg-auto,
-  .my-lg-auto {
-    margin-top: auto !important; }
-  .mr-lg-auto,
-  .mx-lg-auto {
-    margin-right: auto !important; }
-  .mb-lg-auto,
-  .my-lg-auto {
-    margin-bottom: auto !important; }
-  .ml-lg-auto,
-  .mx-lg-auto {
-    margin-left: auto !important; } }
-
-@media (min-width: 1200px) {
-  .m-xl-0 {
-    margin: 0 !important; }
-  .mt-xl-0,
-  .my-xl-0 {
-    margin-top: 0 !important; }
-  .mr-xl-0,
-  .mx-xl-0 {
-    margin-right: 0 !important; }
-  .mb-xl-0,
-  .my-xl-0 {
-    margin-bottom: 0 !important; }
-  .ml-xl-0,
-  .mx-xl-0 {
-    margin-left: 0 !important; }
-  .m-xl-1 {
-    margin: 0.25rem !important; }
-  .mt-xl-1,
-  .my-xl-1 {
-    margin-top: 0.25rem !important; }
-  .mr-xl-1,
-  .mx-xl-1 {
-    margin-right: 0.25rem !important; }
-  .mb-xl-1,
-  .my-xl-1 {
-    margin-bottom: 0.25rem !important; }
-  .ml-xl-1,
-  .mx-xl-1 {
-    margin-left: 0.25rem !important; }
-  .m-xl-2 {
-    margin: 0.5rem !important; }
-  .mt-xl-2,
-  .my-xl-2 {
-    margin-top: 0.5rem !important; }
-  .mr-xl-2,
-  .mx-xl-2 {
-    margin-right: 0.5rem !important; }
-  .mb-xl-2,
-  .my-xl-2 {
-    margin-bottom: 0.5rem !important; }
-  .ml-xl-2,
-  .mx-xl-2 {
-    margin-left: 0.5rem !important; }
-  .m-xl-3 {
-    margin: 1rem !important; }
-  .mt-xl-3,
-  .my-xl-3 {
-    margin-top: 1rem !important; }
-  .mr-xl-3,
-  .mx-xl-3 {
-    margin-right: 1rem !important; }
-  .mb-xl-3,
-  .my-xl-3 {
-    margin-bottom: 1rem !important; }
-  .ml-xl-3,
-  .mx-xl-3 {
-    margin-left: 1rem !important; }
-  .m-xl-4 {
-    margin: 1.5rem !important; }
-  .mt-xl-4,
-  .my-xl-4 {
-    margin-top: 1.5rem !important; }
-  .mr-xl-4,
-  .mx-xl-4 {
-    margin-right: 1.5rem !important; }
-  .mb-xl-4,
-  .my-xl-4 {
-    margin-bottom: 1.5rem !important; }
-  .ml-xl-4,
-  .mx-xl-4 {
-    margin-left: 1.5rem !important; }
-  .m-xl-5 {
-    margin: 3rem !important; }
-  .mt-xl-5,
-  .my-xl-5 {
-    margin-top: 3rem !important; }
-  .mr-xl-5,
-  .mx-xl-5 {
-    margin-right: 3rem !important; }
-  .mb-xl-5,
-  .my-xl-5 {
-    margin-bottom: 3rem !important; }
-  .ml-xl-5,
-  .mx-xl-5 {
-    margin-left: 3rem !important; }
-  .p-xl-0 {
-    padding: 0 !important; }
-  .pt-xl-0,
-  .py-xl-0 {
-    padding-top: 0 !important; }
-  .pr-xl-0,
-  .px-xl-0 {
-    padding-right: 0 !important; }
-  .pb-xl-0,
-  .py-xl-0 {
-    padding-bottom: 0 !important; }
-  .pl-xl-0,
-  .px-xl-0 {
-    padding-left: 0 !important; }
-  .p-xl-1 {
-    padding: 0.25rem !important; }
-  .pt-xl-1,
-  .py-xl-1 {
-    padding-top: 0.25rem !important; }
-  .pr-xl-1,
-  .px-xl-1 {
-    padding-right: 0.25rem !important; }
-  .pb-xl-1,
-  .py-xl-1 {
-    padding-bottom: 0.25rem !important; }
-  .pl-xl-1,
-  .px-xl-1 {
-    padding-left: 0.25rem !important; }
-  .p-xl-2 {
-    padding: 0.5rem !important; }
-  .pt-xl-2,
-  .py-xl-2 {
-    padding-top: 0.5rem !important; }
-  .pr-xl-2,
-  .px-xl-2 {
-    padding-right: 0.5rem !important; }
-  .pb-xl-2,
-  .py-xl-2 {
-    padding-bottom: 0.5rem !important; }
-  .pl-xl-2,
-  .px-xl-2 {
-    padding-left: 0.5rem !important; }
-  .p-xl-3 {
-    padding: 1rem !important; }
-  .pt-xl-3,
-  .py-xl-3 {
-    padding-top: 1rem !important; }
-  .pr-xl-3,
-  .px-xl-3 {
-    padding-right: 1rem !important; }
-  .pb-xl-3,
-  .py-xl-3 {
-    padding-bottom: 1rem !important; }
-  .pl-xl-3,
-  .px-xl-3 {
-    padding-left: 1rem !important; }
-  .p-xl-4 {
-    padding: 1.5rem !important; }
-  .pt-xl-4,
-  .py-xl-4 {
-    padding-top: 1.5rem !important; }
-  .pr-xl-4,
-  .px-xl-4 {
-    padding-right: 1.5rem !important; }
-  .pb-xl-4,
-  .py-xl-4 {
-    padding-bottom: 1.5rem !important; }
-  .pl-xl-4,
-  .px-xl-4 {
-    padding-left: 1.5rem !important; }
-  .p-xl-5 {
-    padding: 3rem !important; }
-  .pt-xl-5,
-  .py-xl-5 {
-    padding-top: 3rem !important; }
-  .pr-xl-5,
-  .px-xl-5 {
-    padding-right: 3rem !important; }
-  .pb-xl-5,
-  .py-xl-5 {
-    padding-bottom: 3rem !important; }
-  .pl-xl-5,
-  .px-xl-5 {
-    padding-left: 3rem !important; }
-  .m-xl-n1 {
-    margin: -0.25rem !important; }
-  .mt-xl-n1,
-  .my-xl-n1 {
-    margin-top: -0.25rem !important; }
-  .mr-xl-n1,
-  .mx-xl-n1 {
-    margin-right: -0.25rem !important; }
-  .mb-xl-n1,
-  .my-xl-n1 {
-    margin-bottom: -0.25rem !important; }
-  .ml-xl-n1,
-  .mx-xl-n1 {
-    margin-left: -0.25rem !important; }
-  .m-xl-n2 {
-    margin: -0.5rem !important; }
-  .mt-xl-n2,
-  .my-xl-n2 {
-    margin-top: -0.5rem !important; }
-  .mr-xl-n2,
-  .mx-xl-n2 {
-    margin-right: -0.5rem !important; }
-  .mb-xl-n2,
-  .my-xl-n2 {
-    margin-bottom: -0.5rem !important; }
-  .ml-xl-n2,
-  .mx-xl-n2 {
-    margin-left: -0.5rem !important; }
-  .m-xl-n3 {
-    margin: -1rem !important; }
-  .mt-xl-n3,
-  .my-xl-n3 {
-    margin-top: -1rem !important; }
-  .mr-xl-n3,
-  .mx-xl-n3 {
-    margin-right: -1rem !important; }
-  .mb-xl-n3,
-  .my-xl-n3 {
-    margin-bottom: -1rem !important; }
-  .ml-xl-n3,
-  .mx-xl-n3 {
-    margin-left: -1rem !important; }
-  .m-xl-n4 {
-    margin: -1.5rem !important; }
-  .mt-xl-n4,
-  .my-xl-n4 {
-    margin-top: -1.5rem !important; }
-  .mr-xl-n4,
-  .mx-xl-n4 {
-    margin-right: -1.5rem !important; }
-  .mb-xl-n4,
-  .my-xl-n4 {
-    margin-bottom: -1.5rem !important; }
-  .ml-xl-n4,
-  .mx-xl-n4 {
-    margin-left: -1.5rem !important; }
-  .m-xl-n5 {
-    margin: -3rem !important; }
-  .mt-xl-n5,
-  .my-xl-n5 {
-    margin-top: -3rem !important; }
-  .mr-xl-n5,
-  .mx-xl-n5 {
-    margin-right: -3rem !important; }
-  .mb-xl-n5,
-  .my-xl-n5 {
-    margin-bottom: -3rem !important; }
-  .ml-xl-n5,
-  .mx-xl-n5 {
-    margin-left: -3rem !important; }
-  .m-xl-auto {
-    margin: auto !important; }
-  .mt-xl-auto,
-  .my-xl-auto {
-    margin-top: auto !important; }
-  .mr-xl-auto,
-  .mx-xl-auto {
-    margin-right: auto !important; }
-  .mb-xl-auto,
-  .my-xl-auto {
-    margin-bottom: auto !important; }
-  .ml-xl-auto,
-  .mx-xl-auto {
-    margin-left: auto !important; } }
-
-.text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
-
-.text-justify {
-  text-align: justify !important; }
-
-.text-wrap {
-  white-space: normal !important; }
-
-.text-nowrap {
-  white-space: nowrap !important; }
-
-.text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-.text-left {
-  text-align: left !important; }
-
-.text-right {
-  text-align: right !important; }
-
-.text-center {
-  text-align: center !important; }
-
-@media (min-width: 576px) {
-  .text-sm-left {
-    text-align: left !important; }
-  .text-sm-right {
-    text-align: right !important; }
-  .text-sm-center {
-    text-align: center !important; } }
-
-@media (min-width: 768px) {
-  .text-md-left {
-    text-align: left !important; }
-  .text-md-right {
-    text-align: right !important; }
-  .text-md-center {
-    text-align: center !important; } }
-
-@media (min-width: 992px) {
-  .text-lg-left {
-    text-align: left !important; }
-  .text-lg-right {
-    text-align: right !important; }
-  .text-lg-center {
-    text-align: center !important; } }
-
-@media (min-width: 1200px) {
-  .text-xl-left {
-    text-align: left !important; }
-  .text-xl-right {
-    text-align: right !important; }
-  .text-xl-center {
-    text-align: center !important; } }
-
-.text-lowercase {
-  text-transform: lowercase !important; }
-
-.text-uppercase {
-  text-transform: uppercase !important; }
-
-.text-capitalize {
-  text-transform: capitalize !important; }
-
-.font-weight-light {
-  font-weight: 300 !important; }
-
-.font-weight-lighter {
-  font-weight: lighter !important; }
-
-.font-weight-normal {
-  font-weight: 400 !important; }
-
-.font-weight-bold {
-  font-weight: 700 !important; }
-
-.font-weight-bolder {
-  font-weight: bolder !important; }
-
-.font-italic {
-  font-style: italic !important; }
-
-.text-white {
-  color: #fff !important; }
-
-.text-primary {
-  color: #dc7633 !important; }
-
-a.text-primary:hover, a.text-primary:focus {
-  color: #a6531c !important; }
-
-.text-secondary {
-  color: #6c757d !important; }
-
-a.text-secondary:hover, a.text-secondary:focus {
-  color: #494f54 !important; }
-
-.text-success {
-  color: #28a745 !important; }
-
-a.text-success:hover, a.text-success:focus {
-  color: #19692c !important; }
-
-.text-info {
-  color: #17a2b8 !important; }
-
-a.text-info:hover, a.text-info:focus {
-  color: #0f6674 !important; }
-
-.text-warning {
-  color: #ffc107 !important; }
-
-a.text-warning:hover, a.text-warning:focus {
-  color: #ba8b00 !important; }
-
-.text-danger {
-  color: #dc3545 !important; }
-
-a.text-danger:hover, a.text-danger:focus {
-  color: #a71d2a !important; }
-
-.text-light {
-  color: #f8f9fa !important; }
-
-a.text-light:hover, a.text-light:focus {
-  color: #cbd3da !important; }
-
-.text-dark {
-  color: #343a40 !important; }
-
-a.text-dark:hover, a.text-dark:focus {
-  color: #121416 !important; }
-
-.text-body {
-  color: #212529 !important; }
-
-.text-muted {
-  color: rgba(0, 0, 0, 0.54) !important; }
-
-.text-black-50 {
-  color: rgba(0, 0, 0, 0.5) !important; }
-
-.text-white-50 {
-  color: rgba(255, 255, 255, 0.5) !important; }
-
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0; }
-
-.text-decoration-none {
-  text-decoration: none !important; }
-
-.text-break {
-  word-break: break-word !important;
-  overflow-wrap: break-word !important; }
-
-.text-reset {
-  color: inherit !important; }
-
-.visible {
-  visibility: visible !important; }
-
-.invisible {
-  visibility: hidden !important; }
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    text-shadow: none !important;
-    box-shadow: none !important; }
-  a:not(.btn) {
-    text-decoration: underline; }
-  abbr[title]::after {
-    content: " (" attr(title) ")"; }
-  pre {
-    white-space: pre-wrap !important; }
-  pre,
-  blockquote {
-    border: 1px solid #adb5bd;
-    page-break-inside: avoid; }
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-  h2,
-  h3 {
+    width: 30 Ç±Ì"—'*¾_—?uÌ“së'ı*¸=éÈNÅ‹`¾ŠÜ|cNôªÒCe7·]W ƒ¢™Š¯;t•
+}®
+]e 6É¢
+pÓD¹e˜…ËşÉ¥¸¼#€§@–i„F,•P©wHŒàW?w%¦»(l(PÉ†ØğßîHa¼=FäÕ³·6m×SGº›ˆyÑe¦á’¹Å6H~<#DÛd4 ÑK×İUÊØ³çÉƒŒãÌ›ÊôÊéGµ;âÏ£Z±KˆcÕ€¥è™O¤=ˆ9jê}S=köò7‡è ³£¢>ı¡ÔT}hâ¼¦ëCU´ÜæD9Ÿaz*Z²<Ói³¨r|l,Æërˆ*†—ô ˜‘ŞU}(UĞå#Ú–(¯t^á¯bEÓcSÙ„ 0ıÎ`™˜Û¢è‚ï¶];`‘-½ì
+™À½,PñˆÊéaå¹kpeÈí1@İ)|J©úÀ÷µVÕ"2I}^ ˜ƒ—>µÀÀ)fÈŞÁ4^PEoKgßcÌçyA)æ:ˆ¾éö5ğÁyÕÎ•|58¯028ú–<iUûöNçË5-Ã=˜mwÇkJuº<¶ÎŞ¬ë¶Q`y…O¹z–õCSÉ¦ú/Î˜ÌXmT˜g†1MTyu¶MŒè²ÑeØÜ`-Ëé¹½Ér|4/ã{ù»[¹õ°k¡ ŒáÁ T$íe…>‘×
+îœP?F-g óO>¿ªNWÏ¯På|~uV¹ãĞ5=PæFL-‚m)p/gZ*­­Ñá{sSJºÄ'Ü,ºÄ·Óœ“5ºfå«D‰.WSçf':ºu2¦â5ùt;úÚåfõ†Î@j†<±˜>»šÛ:5 ƒ·]
+ä	+$ÀÑË„û‡ĞjÉiª=7jC›ÏeFr¾%VyêœÂ
+À[~¨Ì‚¨'™´¼ÙÏ .Ãié)´‰g˜Ùh –:Ó®, d‚â5¹P-,[Š£Wïb.xêÉd
+£t5hæİÂ,éÉ3T?ŸÕÏ> Œ@¼Ä&¹/9F÷ºå6º6Kaëµ™Í®¦İŒù2)ä.Í|g(n~)«f™O˜©_ˆì#ÛŒyßF³£¼ò2Ä.Ê1í(AtÃxîMe[Söc.bıU-écUnFÃ:Ş}æ¢: Ön{tÌwQõ¬1öFiöÀ®GfØ°Q}zKáh)@b6± Tcù*TÑÀ¤vÍ¼İÏL&ëá§ïœ¿ÌË‰‘ÃMHÛ¯â#€jõÄñ`ÂµMrCJ¤¡ƒ£"¥ï‘Œ^–¬Å2Aß~õ2ô3j³GõÎz…é¤Ã„âİ•¾÷ñUVà^fÓ©r^î1H,Ï|´gt÷àÃH½{úÒ×Ş=€3ª€lV 2Û±Ş…ê.Ìè—Fß+IEÉôX”Ó#!$UM’¯ªşA²¹Ù§ëac¤ªÂ§¡c¥ìÖDóW5€™ÖKÊšçıíúzCƒ9·Û4‰‘¯Û%¤À^ó¬öİ•×ŒÉl»
+™Ynˆ‰ğm;Ú4„gé«B9¡ã­h˜GÃÊ'a‹oÀ:7í¦Eb„!Ád[Rx÷Ï ª!Ö-Õ‹mC:;0AJoøıĞ’œ—~ôf†å'/´lPT	ÀJ60ñ;†ÿÉÓ	Êæj©£úĞ£±Jå]®Œ4¡÷îô~oÛ2ı_‹B—èÏ›½*g€cËn +Tfc¾vS;ÓúZ©ñIt%f(º{^Á™Ty…zÏ<f²ûZ#Í×İWòÙW{,ñÅ3ßI+„-qG1n÷A<´ãŞ®1Z†¬^|*İF<—êÊe:‘í‰çËï°"î¬t«U#„ŸTMK“Ûb<E‘70|Ìª ç
+V]IÀzi—XS|2Š1—¶çQç¨Ş·½Èt1e qôÑKÕa«HÜ—*_Ëµ©½¢+ôÎ¨f‡¹-ÍJ¢c<¢Ê^â³íæ æBšT1Æ¬1Ò¤ÊÕi £'¯G‚ù[ŠòkWi²œè—·è*FÎOÖâ?·5´&>2Òccr”+@ÄNç4`Ó„¸Y|.¥½qu¨|k5Õ
+Ì8¯;ªƒ¢¥EWç›èëxîÊkÀr[Ş»×'İ0¸À™æ3¥^}ÈôÔ‚GªrzŒ¤~ÈtDS·—]ë‘io¢@GYÏmsQN7J¨ª<Ö,V–g&ĞÍI‘•°«šYmÎ’îæÿ£í]vmKuÍ~¾EIÙˆ²$î—ó*©lŸFô²[ªw/k˜6ìuşRU„±&ÆÆ0ğ…¥Š£-'ó2¹‘\yÄ$É÷Ê,C¸Zõÿ%Ì”ºdCT¼Âdé«¦qHp QÊ¤|KrÈ&Íéu ğ°#\’GùŒØÍîˆc¬y[&ö
++^ËÓwF$Şsbq´ ,ï››lªtÕT‚>Yü‹Æñ»}QâôÈû0®µ@Ÿ_ıä¥í‹‡ìGiÃŒWæø¯ÛÉçÆö©¾¤œCc•?ÛL'DvŞÈß8ŠJD`,‹†E>g74‘`Q1—,‡Œ‚!×ˆ‡Sã\ç,W›#‡uìØ?öŠ@hív#7[úÌpCN•°8€ôq'o„mHv9¯±õƒFŸÈS-G”ßè;"¦ù‰rí(fY¨U½9ó.RFW•¢L"2Bîˆy—™AúàYáq7çê)J·£N\YQ.pÅA4ğT B¨Æîêy˜p²ÌúÛÃ“ æ©¾İùiWNäÏ°•?s_˜¼W«Yü^·ÃÅl¤iü&—Wğú³åjÄêhšé˜ÉÄhšY‡ùrî¼,¹Ap¦–¹Qy=°ä^®gHUÏ†Ü$MzôåÄQ‘É0];ª»àÅ~á›ëÁŠQ§8±ò9ë©ÃÈ÷!ŠãÑo½ß>/Q™õİSÌrÀdÁŠŒyt“Dïı
+:²ˆ†9ˆ æ˜AdË¹2×ğJ‡Ï%C^ "é"È+uëòN>˜zà ¥Ö×°¿:(¼ÏyeşİÊ¢Y4™:¿İäN¦àUı½úş»ÊŸ=Nmë"£LJ/Zz	lÉÉj3U³3åM~7ÆÏ4ÓZ’3ŒmfİÚ£¿¥êĞ:ï™¥ß¸ÃE†²‹¹‘ñ:Ï7.†^âeOnònîûTŠ‚ïœAJ÷åÄlûœ$_"÷² •tûÎÈ¶øbäŸöıM¢8l1}Şîü0,+~`EáÁ£ºxŠ²äãÆpå‘Ì†„hvåL¨o"¢œôÑå2ó¯R_-Ó%`\å(Ê|AA½òø
+šE´€³vN¿]ZKÍ§ú+i$,G•xÉÌ1ò»É‘¯qü¢=å¤¾œx½{:ÓL#gôè·fdNRÓ‘#¡*™C,9Yéää<¿É•÷òs¨=@qäfât¹‰w·®GîØ`ZmF¶ÜĞPNy]-ôøĞßÔ8ÉwUD»·¦RÇÂw`”iÒú< p¦ÂZÎ5Ua·ÎÀÕ{{rÒÈj%xŠ2¥	'í)6±ÒuÉáûªêŸ Ğ7Ä%Ñ ‚S…[Q¡~œ3»§úÓøéù-_Uõ”ş’ç±â=Ş—,_:›#WÔÙ ºr¢ù•p(/˜WÎ­{[h~Üİ|±µ–urh8Şl_i¾¦M954Ï]OCC‡¹r9¶àbËÙõ¾Ğ”s}ù·ãu&¶˜ó÷ˆzĞÔ[Ğ!jjD¨ói˜è‡g…ôÀi 9ÉÙN€5şƒ”ŠÛğÌqçûöUØè³†Edx1úÜ¹\"&ScNÇJ'æÌ‰ÖĞÖí„i^ö¢e¯ñ*?~½©˜¹µ·ú+c²Öé‚ñ’aå™Kfd}šÕ¡UX9ú¡­c`C©­‘IuïÜšæğİ¡‰äL2[\Z““-iÚ¶kd$Xzú>Œ3à…™Ù¢ŞÕâ)âF¨Bd)òèØÛ•EÑgxÉQN¼%\Yáåv„+ì:zye)Ê¦Ëì…œH1óqÉÛÂĞ5wÈ¡©.F„¿óÿ™–I’‚¼·õğÈÂÙBÒÑ^ã]Höê§úºWüy¦zÊá‘ó ‰3ùD°¥ñ¥Šÿõ79,‡h-ùÓ*ZïC.Ş–fGöòîÑˆ¢
+tæ¢‹.QJvhÄ¿ÁŞå†VV$ùÎ]JÌ®|ğR‚ºjš!‚Şf2·ü¯BÈU`òÍ3X5;@Sí=mC"´IÓP^>HğEsˆÂP¯%^eå”uİ—ÚFmÛ7·£V­ßü7”¡’ãä\UĞxÇÙFkmW±ze¾UdÃQ”YÂv^y›g¥ò1X!ÑÁ–n_¡·ŸdÚğÈ¶mÊÎB/ÚZ~½PynFª¿ÒûÜŒ>å¯5ä3ÌF>"p¯SíO¹J.œèËYª[Î®Líô¼vn¦“kcNG[„P<×Ì õÊµ,<ha–q‹	×åÊ¥}}ßbãêÚ'ÊNÕ—Ğ3"ÖMf8D9e½:¹!
+ë1'ÏŠl<Uoè-EMcYï¬Èš³>.·6õ¤`ENÜ}ÇHNOt&ÇCåN²^‡—×û¬7«¢ä–= ¾ (ÎúÂè -Î8]NÂ‚”6æ2Å{±E´€£XŒ©úï·,Ÿì¸Oõuê1Bly' ÏXå¯e!8ĞÖláí{Spñivh¢Ë!/´õ–4¡ã¢÷OˆK“TÂ©^¸˜+¶éÈ§›}K|µÆw“[Óêûh’ñ•Ñ–O™lÂ¦™¨¶%[û†m–‘™ÏäZFzµyŠçÑíèB1¢€…ê)&"ZdÏ»¦Ä­ûG½Û:a«G»uV“]W$KQtÂT½NŒQ¦®s‰û‚-¨£(j¥Ìe?Ë°&®à•Gù´’óŒİ{¤tøj‚ê•ù…GÙ¡CŞäaÛ„?ÎÛğµmÊÒ>õÅğp5ôz6Sû'ÚÁSû•N<6¸@{Êé¬òıûCĞË.¿Ê1‡#G"\28Yr-ÿXé|‘[Wª²Ùæ¹Î«2ª—-!ÍëGš^³É5/²'ºv¸}Í˜ìF1Zê®œ×IŞ‚ Gss`(“—Lgxºùœ—-ÅÄ»IòŸ¤Á}GŠ·.ÅS(´m~,©•uW51mªs™râôS…­¶•}4^#îÄåãóQBö5¥ù6Ë¾Ìfô¡ôòqx‡’ˆÇSœÈØa È™SÚ} ^Qsˆp’Á"Ó‘€)ÿáõìS}íÄ„¿*®üód5}y¥É•Ëx¤À•Ù)ÚVÿß?R">[¦¾µµ}9Iìğ yËíÁê‡ˆyzşø³j|ú0…å4Zˆ<"ç¬?º?_İº?YÓÈuÚŞ*6¥¼¾",T]^´sX]h?å$À Ã•¬/}¹œµ2%¶ù!¥è|ßÍ/4ÑwÊö”F?ûfÈü#‚çÊ	¹’‰ÓeÛÇ7¼q±pù~ÂON¢^;Š"İƒËF bw¾)Bûàûyk
+ßò¼óøòP›wÈ#hFD×”,,äT¾6Åe(‡D.Nj»aËˆiêY‘Sû$O tõİ©¾)Ñsë(vèÏœ£øŠÍF¡q€gUú–(Ş#ÂŸçT— ´ª¿âÂïšw2U¯¸×`Œ…ö”Ï¢Ö"¶\u}Œîšáéƒ={k&½¶"êàÈñ:ƒ‚nË‡œš»š)çM:×üÀLµç[ó\L…˜™ÄxG¹ ‘Ì‚\ˆlAJ×UÆfMdŠ³-iü\bŞš’±œ¥OQ†Uó8@Áµh „ihÓó€eî7j%ÖQ9 â,]æqŠ3¬`í2O¨–!Ã™;a·¦z—m6ú	»É’¡hG!K$ÊÛa›È‰©­ÅÆx¬qhA/AãØÄÏYRbòw¯.Š'ÄS[ö…ô4k+?kAá–*ÖUşSjŒ Şò¿à›(¶–R#Ö~L®¼÷.ÛVq-ˆL`ëêêsM Óxú¶àÆ¿HS?Ã÷İµßÚÓÅ›şVpw	eëâ®›1	‰Ë½6/NrZı©Ì;Àçs|İÏç`õ™d]˜«ü§>§¦‚J÷”ÿı`<Éo-–¹t×‚ZçĞÿ.=‰l\iä{*Í!H»2ì”ä‚›‚ğÏ ¼*­6ş…_{ş˜¢k…5$_^¹Z!Id"’Ì;üAL¡úêßê UÈ­„‘ÃSåÃLå9p—°ZÂ0¾hÄ•Hü”7¬s§/ïäİ@3Í°&qgiFşf‰tä†&ùñÍ%Šì¨¶|r’k«¹¶Õÿ4ÿ¢É 79şzz‘ô1óÀ@ÔpÈÈˆüÊ
+ìY ÄI,n] 2Ö±©÷ˆ¹Ë7årEİo&Ê!–D:Ök§³ŸåºÊ4‘äâ'‹¨¿D8¼ÎüpÈûååÀ”õø°#–ö"âA#âà[Ø[‹¯,9Dø×I¼y-‡È?¼×R]ÖXéöV_²ƒ‚S™„eÉxe„P$}ßrNºt»-oÄİ	®¼7rĞúæ»è«ä¸]ÍR‡¿2ÂuJÜHCchZrƒ×úoä&–ğ3:4ÅFPÖ-cşÆSEá}Ğş:—¯è÷Úî#‹³Èß”x‰J-ršdâ~\>ÿÜYönx%›4Ğ¥{€ô&+|SI´"2dİš"_ãØXY’-œ§mbYÄŒsj•BXÕqà±È†˜·9±Ö‘?n÷nMa”A8G±qî~îëhx%Ïò`G‘”]Xô¯ò‹Hfi»qÀù©şŠêOlW^‚LÓîÊÉ ^÷òG´E%ÏÇb§•Üæ»-â™m3•WV²jùò2Bã¼cË5¢{qå]½Ê§/'zHñåC½1’+' mIÉ}ŞÌ²2Í`>o8®¢ÿ’%L²ûZ‚Q3r‚<w9?± óS(dŞ: *ñõ|ßÛ¶†T=IÃk[ÖWebs²"ZDa­aY{c€VzíbYÁ¹–t/b!DãÖO–•ÊV9ı@J7,¥=ÅZ1î·ç&Àcöpè.²õ¶ÃçBº‹Âtå‘€¶­úIËKoÆ™Í~œüà½Úq€gIøb®{Àq­İ_–ÁöÇ«®yNğ`|ª? ‚ÚôŞî!“È
+»d\6WòÊX´Š÷Å_hc-µà­èĞÈÁ€([“ÙUs}Ğ‰Ç[Š«@SN>½á1ÍŒ4äÃ…»I€œ<9ŞÑuC±å²>éÌ·åÜ‘ÖêÊY ¢êD†/”‘Ô·îü&ëy)rª‹Ø¸Eµ¸Øşşé¸ÆÍWÖÙ°@İtâ«Šñ"j2ù–<"]Qg>CÓöu°û>ˆ] wm§±¨HCa£ò÷eÙÅ‹\ dm%lÁ­“„ŞÄËÛu’h¢ø<x€¬OäñMÉ>SI'~ë=Ì&xÖvˆ]>£ÖƒpÀ'ßµÀR´€ó"1¤å¯‹£Ó"ñ$Izª¿‹Gââ?¸òZ8üoå?<Š@²«ÙQ~’EÖçŠÚ¹F.–B²u[>pÅØÈ=Í€bê=6C`'½õ2ä0gM9/³Ü¸v"™-gí·†0½Kq(f<)g÷q'À à›b_s\ğZ,bå‡(P±)àŞ6Ue(ğÉ¼1/,~nƒ,"78c„+"¦z`E—å~`åIv¥øNe‹h :Çÿ—Ş[Å~Àû[1É°M½¹z0«TNEÃŞáÜ¿`$)+\x¨¤Û÷Lû¡ò×¾älûŸÿ•Ê?¼*ËÄ,ŒË¯ÕqE$=ÑOõ§g“Z‡£Êÿ”ÿó”OY j[äezğ¢%=ï5GN´ÏAò[KNô=Í€q!—#æqÓ‘#1¶CMy‘3—ê²¦Òw.öfŞHöXQ$RqhØXãı·£µ…&rÔbÑH0R¸}Ş¦8ı:4Ñdp» qıQ3«¼‹P°rC#HÆ¹É¼9ŒÔì7¸f2f\uWNšë™İÈf¼‚ší„·ï>ÊÂğä¸8~¢ÈĞE©½M”LpmÙ¬¹\KØĞ^rÜ)–p%W¢¬ùİ“#›4Gmy%eˆ¾\¦c
+n¨mù¾¿Œuêüctü ËVC†‘ŸêK€	T(Ç§ü`.;„Õ—<¹TÛTrx•èÈ%{Ì©\9Ïs¸fä‡9î­Ñ‚‰åìÈaG([§+/A–>Ñ‚\9iE_Ä<ĞiØ‡éØ%£)Ä»K(z
+·l‹&Êƒ·¯ìXY•à¸ÅAFÙr~¹+³ÍG“÷òK3$çıË##2A@}yæ¾ß1"óŸ+—5X¦¤§CØ"¬ã»DCb^Ø%()œğÕgğÍ”ˆ¿çËeGAe¶å¢*ÆÙİØ‹ÙdöŸ÷£ıS~Ò!§ÿò§Œ†!ECæŸêK‰	%ûÛK†»Ë´„K&ZÚRÙ™[ŞG'£m†Ì#¢ñ|7“7á’Ã÷âbíš‘ĞñÆ]i9¤CkEi$C¿¡áKŞ‡c[zÑ‘#‚5FLr2¨³ú¢ÇF
+_Ş£¯±åS-•‚k,s¤Ë¸ôLAM†ìÈ‰>‹c„#'3‰©ó×°jÊ|w#C'“Cwåˆ†l3YÆ%ë:zn†	Ä.ëĞ*ÎÆéò±{<´–qŞº·V0ºÅ1Ï±ÍşUNZÏ”¿iš7åGAå\ÕÇÉ	ş[PvÓŸên7}Ê_&v‘l yôß²©½Ä.ªÁ‘Cù „¦-ÏAÊ}9VËÁ—‹J„# /Ÿa„}F„°ö3È–TEXŞÏ€ò&cx­‡ìĞdï¼?^¾^ƒÁgÏ…+õÀñ‚œŠ¿È­mn×¾tGN6§À5¾-ŸM"‘%ÛŒl¥D~½pÉQ5·¾~Ztš2¯hr¯ı€6ˆùqEË¢ØĞ¢q>K¸ôEÎ²Èâš`¾Y$Q„é¾9­!”ë7"T'7DB9ªDWNÄIò5ºòI´Í›ò£„ö’q·øMßLºüVwÙ§|I(Ï<u‘Ïä”\‚=¹{­ßäô ;'yg\yæa¹¹r9È®W\óÜUY æ×œ.„‘lÁ‘+Ÿğ®\Vv*_N,ÄìéˆP×¹¾~	<.ãaë•‚^¼íÅ<˜ù¯×4€¢í[rMS²nŞ:¹c¸”¢#×5îqtäHÆÀyüBnd,¦#7¸˜É~l&v7Å7?¹|ˆÁ6Ÿ¹¼ÃbíÜ¼¨©Ì¸1ƒ¼S®\¶¥‹+ÇÛ§57cÉºJNÌïæ÷½;aUàÈ‘Q¢û±Éi`%tÙœe—ªn²ÆÍ	·1hØw8.I·äLùqÀgª•_¯¬H³ë[ıNY:³ì)f¡0¶Éwá~mn8OÊ—9rNN9ŠãéÿEnÛÚ'¦_É¡ÉT#åç‹ŒV(£j¹àÛZqå…#¤h¶¼’ùp+^Ã”ıÂ5yÎæˆ\‰:‘›¼0¥Û×H›¹#×pA¯Õ•“piôêš\ËÅ~kfÀıĞÌà;z®'^CõÚ	ïâ:Lì£N7±p²F1¼p—ñÀaúZr1èñß•ãk8üÌÉh²_¿Í×­lW_2®3z´Â«xÍ—•Ó³&½ñh²‰æ5Dö£9¶h¦ü(ß“0Íı÷­ÌıÛ[ı-—VŸò÷t[Èš]ùÑCKRÈJºÀë˜*;|8Zú	JûW\ÿÛ7ªr#Şs•„({7rDœÇÄÈ¢Õ!Še\Ì'L>·û*b™Šü=hËÍË¨´µörl4P/HØ—8H
+Ôï=C$KvmÛ3xø‘EÔ–«ß­¨¸¶èúÒÌÌ„ôÜáëH"š/´%Aƒ±ËE©9[¹rM3İ¢m†{íÈs÷™;|;Y7šlŞ£Ş¦Aæ`Å•å‚ó¹€myIš¢Î•?âf›7åg1ì“GÆßíÂıÔS}‰§l$eÊ+Ôİ—“çŠ1åÄ¦Çü)_¥¬h¥.6™éëb6,"¾È}ä2pWfÉnŞbÿ&76¹”>ëİ‘Ã[Ş8Ú¯gòÁ¯ù¯eGÖ­ë×t9fÂË‘“³å¶|ˆŠ™·¯\·WÂT÷ÍO¢Qærùz.Ï¾7-ËiQö€|ášspÁˆß¡ÉYcë‡†Æ]Ÿf5V±3DÎ2…£/×›ÇîËsÄÚ³ÅÍ2úÿ¥
+·àúNz›ÜÛĞ-Q3h¦ü(‚˜
+&aéWì£s÷Ôß„MVÕ~ h”%™/àİ%3ïs5­@ÛÁV”ëoŠÈc&UOò³šì×+E2lq´vKn™ÈK¢Œ
+Qê¯±ËÇ¤Ü!6ò³•ûÇÉF^ÉîX‘ƒ>8€è<ßø¦ëÌ¸óÈ37·ââLéu€L9"Ø¦P9:ßšÊøàûà(F¢¼¶€§ÄŸô€Axß³Äâ™-\{–œ°…‡6G±L’WxäÃ5egÉ‰¹M™Y¿J	¸Êª¿‰Tç9Ç¢´K†[ /Ó€'r‹‡6ô1ºô Âà-Àz¡­&äíóQb¶ë¥ÙĞ.¿)6Mù"aEOh@%­Üh‡Æıÿğ C]ãş¢¢öp¢†BİS$¸{/éúU2`?)‡ˆÊXÚ‘»QL-+œ¹¦hÔ"9ÀrßúÉPÌ$n‰ÉwWVÿÍæ»+ã
+@Ş¾oŠe‰”luK¢X:Äí2×ˆx@|”Áâ+@ÑÎ’ÅcÆÊUñ#'U¦Üª¿ÉÉPÑğNn(ÊÁ`µ@¦Í†€4aŠ:ëe`³	-ŒçÛ¢Ì‘Jğe‡)²¡yŠ¢–Ë¹S¬XFôE9ÖéE½`RÔXh€|!§~’óØüS?q{rì'Q_*7"ïuÖ}SÜTVÙÃ#’´<özee’Ê­UÏŠ¬úªp:Š$ÚÎ!Ş(J¨’úÆRÌ„á™8 8¿£êX@”UÛ&Io T’¤æ(ÅÏ—¬wIñ:_dß$Å†ŸäĞ|Íb™ÄNKWŠ•ÜoNîvé¶-à"ö³ğªñ«ØËÑãØ§ş”®Ö±ß ÄZöß¤ğx×ü7 «düwé%u¬GÄ»‡8½;bšÛ0ÕğÃŠº¦Ÿx”ùC€2ßTßÒ+M#O‹C”îÜİxìA6¶Ù<+]}î£ Ğ Ãhš¸¢n Ã£>&—"ç·LdŠ1¡Èl{^!hv¬`n@”,OQÖø’6€e…{ìÒËb›$I< d;NÅÎ7Õaéx€ŠæX 9ÆŞ<×ÄFû¬rÇ±ÚÈ ZÀY²rgıı¢…tæqÕ¸Tê‰á¼r€)ÚâÓ‚tTŠÛ•'ÃQ²G$qkñŠ(Rù9¼XÄÉÍR®ˆM£õMó ä‡ôó0¹ÍĞeº“^Õd	#Ğ¸%5Mu\³ç”¯~Â)x›çè»Á÷ÀÍÍísq
+ÍXĞYVxíŸÜ€8Š\¥éÒt¡˜ÈÖ˜ü70İ5“Ô‹ÈÍËÖb.ºÕ,Ä¿.€?yÏ=ƒÕdQù{æhÄºuœÉ`÷sı¤*«±Š¶E¬rBÖıù†øH—C4€³ØÙ)cøınå9!şÔ§I«y%zï¾%«0>l«…‰Â»ë±™ X¢Hù û9·OÀšÈeªã¡ïÄ*½ñP:¾ÅS”±<{@ú™p á¹ô°Œe'ù‹®<ÈJÏ §(£†¥‚§ˆEhéJqp›İc54`Ô	€¦—€‰ïVÉ‡Ùñş©Wˆ†A„.KQv`Ã1EQP	nñ0­z´Æ^íhX‚MßO¡¹ÅkSúœŸ¢§Xğâm'@Yï,àBËƒœ¥³êåò¯÷7ïçOıõüŞE-c#ÄñfÀÉØ¹àKÖ4›Ã	€c¹È|¨ª7Xx|×â‹‡í”É}cŠ¢Ú]³–ZŠµŠNëõ«jï­†¤|+ûç®ÃdRÚ\”Ä~èâ©„r Ñ ÖCSÒyê½za^9Ù
+Fq5ƒ;Ö«–¢ÌsÍÒ½Q”±Ûv%j®2"¶â89ŠMs^;xM^‹hçY-‡h®û¿;Ìª¿ ¸†sœp Ña·u ×qy¬ÓUÄØY<Q›6K„sCQå@¦_jìÎ³šâÔâ½)‚»æzhª’XyÚ~ø<»i–×T,×¦ºè)%ˆõebC¼ «²¤:DÂ¬xEœD§êvdt#É£ú»²Æƒ·ˆø×= Í‚| ˆD}a¼škÏØ†/×ä8ß¥d÷kõ€øyÍÉ·Ïå…`8Ù±RÔâ´xŠ„[Ñ«éEîŒC÷Ó*“rGºäûúv,#$úşƒø×`UŞ6CJR…¾QùÛ/3¸,£ïéW´ÊÑH§ô§şR@Uéo°Y›÷
+¡§^í6{(¼6eÎzÄ„ı¯~ëQv
+ê;VpTÆ²¨l™5ß6•q ìíÚ·ŸuËPäÛr?|u•ı¼ÇûW7Y¸pCrˆM½êq`ö^="a‚ôæqS.C.íô£'²PxÀ$T|?Hü¥‚üÍiÌ‚ŞÑœ™'Rœî†£¨Æ‰d²v Ò¸àÛàšŠ2•qø¾5•H!:‹§ÈÉ»§¸k~VÓ”=f·×¦JãyÁåûC\’i-à,²\
+g¿;[æé[I&æ/œ*^B]æí¦•V9E³)[Dü‘pàşFÜ6eÎ>mÁ7$öÁ ËêÌ'^UõÖÈò@´âÆÃ…y^×GŸ"Çƒbr"¹UgñMÃSÄ}!3-ÅÁ›6Ñ…GÒE`åæ(Nò:æÃWãˆ…÷Ñ"A‘ÆÎÊh„ÃôÌ6.ƒé»#ã‚ÜÃµ;p°¬_ƒüJ¦PT»†3ìöSí,+2y³¾¼ZŠ$=Ë©_YÁŠ¼Æî)~\“|cSPôQÅD)‡iÃk_j‡Ñ'ıï˜Ûlª„(…¡^ûá],ÅWú-E8/£àaõ»×˜œ öS³'Ùi’µ,Œ+ŠGÄø/Å+âÄïqÁ÷Ã¬l('À$±÷ L• ¿Iş< F¢ÏuÅ§>ô+×dè§~Ò'v„ôqs¤ı8ÍìYÄeª'@Ç4â ˜YÔ\®¸€(Å÷\d¤Ñq§˜ú¾_>%=«µ‡C”£…^%]5²í¡çÙ«-,E=H§t¥X	o0“§(zìt€G@¾šêp–b·y¸æ!ûD[:0á×¸Jü©ÿ‰,Œä„ö™JàU“,ôeµğšD[À¿Z•µî|ßˆ}QÃFeYEã©QûÖ²ûğ÷ÛP<e!û0}¨ñtÌ\ƒéDˆéO©*¤SõmpâÁ²óÑô:N`t<ÚÖ˜ìñÏ›ÁP¥#`mü"> ff¯ñ èjz hæÔèy‡,ÊÓğ0^DîĞäØë)–ÊÛĞ8Pl<ÎõëWam){›§(çÜK<ÅÁœÙ¾ÊòHN,¢EÑ£hì (Dö_õñmÂò êzQäÅ¹>ò‹HR.²ò:Š‘<ÑxE‚	%ñÒO$EU©(Nò)-_¤} rÚ!ÆŒã!éòs}”‚@zŠ%4Íå(Ê'Ñ3×¯ÂJ$†Dfmà¨} üH«kÊÖ
+÷%ÈCX­§SşÒ¨/§4Rz=õ_Às–p€2iïà™®¤—EqoZt©¶Äz‚|Š*ÖY6ÿ€ ­ ¢Dä\<€@)¹2¸#Œ†¹…X9dÔè)ÖŒÖ<ÅŠ×dh×ÏåQmææ)6Ö¤Ù<EéUÆöÊcOÄÚËb˜— GQ–‚á^yÔ|¼İ2€Å¡ççÄ‘¼º¦d‘•¹WlS}IohMN×"¡‘p÷e©íD€»0Ÿ	RPÓğˆÜaÙ}cEæAÂ4Ò±RfHŸMÁP¬œª¥¸Xu¨‘“×Q\²ºSœpb’ˆÌáÏıËƒŠÚ´^Wí%Â¢ s£ò\ã/ıÌ1şÑo5~˜‹ac.k¾Öıôñ“Y;Óö‡ú—Ü§Êú- bçLàÁ¥(+ïüıâÈ<H¤9rÄDlç¬ÃŠRæZ©²våyà«µ1°,r QıÉÎ´ ÿ| ™Ç9B¯¼ıÿdjù­ğö½­ğ3yï¦!ÊR»Şå¢®Åt¨oÔ5êÈ)†ü3o ½……Úüó dP&ÊÕË…|ØÇ(ğÊ{p"K'9@–ˆŠkJÆEÓ%ŞšFHæë)rcÓ[öE9)äX¹Q©"!hHÆã\mõ| Èé˜–^\Pvo<ä€#öCBôº®é Svà}S2HymŠ(£ùAÆ]§äxdBÕMnˆ+ECò j8}`^t¤AÌ? \šª„@ì0‡çÚŞåõKz
+ápçÃci},›¦ŸúïÀŠİ?€gr‘h>²½-ğ®µc#Ægõå?cÔ@æJ&·­Ï¤t<ğÆ?™à²¸ô˜–X—J|hO±LÍîdGi3 ÅCG²€¦|í ˆ…™ë&ò5gØ{„±·Û¡)”§,Cè(vr…Åt¡ÎFy@”EÏ/Ä¶‚Óõ¡;&†¾ùÀŠ`Jveev2N{Š\İj¤OK‘×”ºÏÃ#û¸oyŠ„ˆ#{€lO“,<®)äxc>Ë9ÒA²F‰‹íÊ#¯.¼T;D¡W®R$«H-ªØoxwPKÑÎËB-²0ç?ZèiıË`Yø©ÿ“Œá³à'E"¼ğLlaHİ°šşŞŒ°£!×7Å¤­“÷ñ²$ñêbÆú4MO‘ü*•Ó
+Eõøä=ğ€bˆáğ¹•”€õş¹• «!xÄ>aBvÄÇ]E¶&LÓ<¢¨ ±Ä¯İ^ÖøÙ¢ÿÂÔjÕQ$|-1©nq† ©†G$}è6dnÓ×ÀÅ±’±ù ™ÀÌ®)_@
+ö[SÄ,M‡±ÎêÊpk½î±M%’Yö½ƒw–¬âGšıÈ*YV½ëÈˆ6Ñwó¬´„}ü¢œ…¼‡£ıÑĞïÙûUwû©¿	yØ9 á]âX"‰Ó`Şšøßôì¬f¸±$õ¤3ˆk#*òIuG\0c9 D-×ıÄ°ÂÔÉgyhÒmÃ°Ì7œ	k= Š L‡v‘åÑ#vù…ıÍ­Å¡ŒÍƒ4ˆ0 ,§¦ğâË÷¦2‹LÍ!fÍÆ-bØl„ğ¦§oÅO’Œ£ŠÄ®¬$‚KK‘ûåÆ}dîSG÷MáóÒb¿2_H0‹i§Å2¦xecùxÅÇØÉû«©ì!Ÿì´{Ôú?¶öOı%ä?ÁD<€8;¨O€"‡$YlEŠàİûåxƒÙşb¶32k‹­ªwÛ”náhä¶©¤&™Øh®)|øR×¦ªìqÿªwÃ–‚X,â¶a‹ö‚cE&¥ìÑSl­÷ÏøYéé´ê)’¡C6!OQ¦ºî•âLrŞ‰ÓS”ã–  ]Knvôu'&v9 2¢Ä@äªæ¸&ºRÔkÑÅµˆBÛVY(æ9"=†z d2Ú`Du¢q<¥Ü§…èÙrr~ÊBÉ*é)jò®—¼ŠK¬wŠÙÎòŞ{%ĞÌoòÎŞ¸Wù©¿Îí8‘–PgÏ¸İ‘‘µjnˆëòL‘œ€-EìRôìB17Çƒ§(s$Œ ‘~9èZ ‘K;ğ ,×Øï<àğÒ¡)9lËD?&ªÈaEÁd#)k$ËÜ¨˜-Rdöe‰íàÕ|xÀMwBK‘è9z‚¹|î$­sb–“ïÔ%Ú0'=ôƒFŠ‡~àº-fN†9"lMò¾^˜ÃÕÇRO’ntEµ&yË•"İ9sVmDó‰ùWÖlSpBÙó	ëú«r;Ÿú[	!ñXQg_B“Áuy6	¯:â+„²{éã¬PDQ¨²ˆ2]- ¬ç«gL-ú¤|a£­Ú.XŠrxx8Šµ’!ŠÛŞÚEÏmÕSÄÈ›$qò Ákğ nÉKŠ¹!Š*~æ·ÏdÄ(‡ÅŸÔÔ¢¬z¿t¦ˆ7YM¢ìÆº…_e•Mj`XQ‘ÓwDK‘+˜,Å}Ã¹5\*WVJ±Èzš·ie_ûBÌp–<b‰²ÿ«º+çcâä?õ—dU²#ÅX"ŠÊêjAöó5H#2NÑŸÉFí(C¦_7åV–0,ûÅ<ÓĞ— (ÄCu€Éãá«j ZÖı«4
+u;|•,&#¤ “€¸šê|ï\\s‚˜Û.×Q‡O_5ˆô³§ˆG%VÏ7æÏíu(Êş×9“Z [*Ë ¼ÏgTã>H¯¬ò¨ne;“cã0ºä¸`oñe¾ò |û\ò&½ï;u»ÏQä–ÑHÍE9è»€EÌ¥”íXnîÖøÀ…ø×`L ·“w ø¥ğ÷¦r"á¸’ÁnúÀ÷ÕåÛÙ»ôJdx×AïÒb)ZÀqÍÉd÷O–”Ÿ#¶heÕ'—œİ/à™àz_˜ÆÖ~şk…Àñ‡ô1’ ,·…(GhÑ¢lA¢!-Ä¿.€ÛøÈ¹[F(oşŞ¼Ä…–çŠK$QıöÏÁp`¿ıãQŞ#ªK½l6ßı°! »y@œøÃZÄíl®YÉŠGl¨¨sŞ{}ªø´€«ëgI”et–S'öª™+=g½ËÙ8åk_ˆŞ_¹Bu³Œx\\²X !Fåì3€Ş†l4Æ‘Œà·Ş	½'%Hs./Ì	ŸbÏ
+¯|<ê;€t+™|S¢|èúzãñ9;ŠÌSÌpY¦f—şUõoÜÚ­úKt	\6BD'Ş\‰i„EÓ‹øjd¨Ué1eã2ÈWŠtrÌv+ÇŒy ˆI±¾)n¯^PXÍS$¹HÙË¸³ÅvåQF2…t ØÕqç˜rª©‡~’M"Æºh–ºŠ|d¼ËÄ·Ár­g_ÙQ×…\ÛŒ|ÛxÙ§nÈ^38¾8Vˆ…š’¬·æù:ÈXíNÙşâ_ÀÕ#÷G¨ºlª‹Ê¶+7”‡g²+ÚâÊ™ìÊÄ÷ßºäÍP´€³ ê5ôøı"ìÇÈ÷©¿ $ô›à½­–µ§ÙÕ‚è€a-´²«`œh(ª æÆ™e|SˆŒÅüÒùßGÍ"7J8Û;Š5GU"oe÷À Ú#vÂ	²K\q×}É²‚¥#wô¢hÃxğŠe»8&[Š¸Ş‹ı ËˆêÅâ{+²‰¹«N’´¤€Ë‡ùr*&.ß/„®¬ÃŠ9(q “èq¾KQQİ=EŞÁşúğ YÂ¶Kg•„ó•=;ß™¯XòÇâYyeÑQ4€³IfÇ¯Çõ/ñÖ_»%&õì¡¢©w¹<çEüë¸+º$I…MÑ%Pm+^‘äñDÖewFL/b&ÙÒÖØq“wYxØèqô"–ó±M½yß…"!sù Ğ|3'M83€)‹ñ<"û[ÅsMŞFÙ	¯\‹Ì†ê)²Ø¹Â[‡¦d®8€ŞšâÙV·‹HêÊÂj~Fäø ±D,+9àÿ^£ÈŒ¹¿k*Ë^Ëáé6mdéáåÏwGÖ§ÄéÅ#cˆÑ7æ,óğ‚Ï¶£(jA'¨¸\²Lâe¨]›*³LŞäÅw¡°-à¼‚dÎjõ÷¿‰yCë¯mCÌrt¼<Û,=BpkzÔÇÿñ³bhîjC ±àSò "roØ5Å-âtsiªğtª§¨É¿Ú	 ‡‡‹oJ$95M­5«±`öCw4ÑíŞWË2=b¢¿•tE$Ÿîæö†Œ>AÉ=@àFè (œº7[fÖcàB×phJTO‚f{æ°*Íß¶Ma—ÎÙüÚOlÄ\t3)ƒQ- Û®zjŠ0äioJƒ/¸ÑÎ"'ËiüşÓ;ö§şö“ÃD"‹Î€/8 ]/°İ5qVZÌâæ6‘ÃÌ‹ãÊÅ¤î²‘KcGQ´·6À‡âR*‘ã¢ãğ pc¥‰Ö66V7Éj,ÃWD’fõ¾6;<uâf¶Í6Ym?'‚£É(=`9>»¦x0æùëÆ#{>"ORšĞÔQDS9¸Päpdß]ê:Q6D™¢ÛA³5Şß+ï¬·-à""\ÒĞ¯.¯8|êÄÁ dÂI_œ ]3ªy ]ûæğïgë!¢}¯Cå»¥ ‹ËÒ¤ğŸÖ=Ça`(|jƒ€&zGç U~¡	Y@ãúÓ—ô¨af<Wp˜á„çXß ] æâc“Ù§fİ(¬ O‘%ˆ[À5´ïG9˜x¼œ¸·€?Ş3£
+Ì|j@²µT6»í|àH#Zò§ÇÑ¨›hT‚°—?ûæ•C}ë›W¸0M5öUç$Ò®°·; f3müóÀWO/{û1ãq–²§Xô®èÀCÑà'@¦Q;- âfËÁÕä¤‚+ˆãº…ª±Ğn\wÔØQ=E^°mr ¼ápÜtMÉB5ˆvtkjÆªÙÅÅ9	TEîrÔÂãBG5LEL]P	mà?bÔê¿*³ßçœãE9äiİS$Üa8;Ş“aÆj=>¬¦FŒÿÊ&;ÑÖ³‹U“å¢õ?ßšÔmÇù©¿ Ïc‘ò¹Á™‡xº«é"»F]²–IEBúÈ6…q5ÆP	À;=™×à‹‡¶¹F¥³‰ÃG0@¨SÎîå èø©uÏƒæôLéÚ5<Å¦¾cÁSÆŠî³ŠßT=EÂ'éS€œKÃùÖwg~J÷¶t`Àn¸ùY€fíÓ§^ÓTV¿…˜WS²eˆ.»„4àº–<b$&M·A}²—z˜6„B•9Põ[ãç¯fŠ:U<âÇ ^¿Y#ğï‹ø×pß›uqAĞ7*/P/Üğ{ÎôŒ²MhûI…Ô[ÕKãZ^,E8¯;¬&1şù®¥n†?õß	øÄS]„6G§¢·¹2¼¾ "W„÷ ÑÌğ$sMñ®C”ı[SÜolÍQÌ!- èã ú²9Ç á$Ñ XiÃs­Ù0b¾r]QNÌU‚m÷C—×†—ë½Ë‰õÚú¡Ë¹åí@oRzß(.móâ!µÇ¥5 6×”.IÅoMeÌ€RDY°t» ÆLm?2¢U´¡ì )_å‡,cQºOÛTÎÜ}û!S£ävKYåX_}Ï‹V!B=¯=Ÿë \ÂÑ.Ò-Zw-¾Ö©Ëğ©¿ Ï«,!syğ ^!ekfÕyšæã''‚Âû`úzDf©È¾wYm¼tVT$ƒœ¶¢§HÔÛœò•åÑ‡G$è?y€oˆä²”ÙæY‘Ój«ì;–"r‡™ôíãF¯Ÿû@‡ˆ¥iOWVäôĞª¹v^ñ×ô ÑnõŠÖ4EîíVf¹5•#[GZ‡(Sm4Û]»œÉ.Ş«g…ğ!u m—”ùØ€Ò¢ìf~Ú½±HoÌ?¡ŒÅw—ü¢X=à,`˜tÌşgÓ ]mÿ©¿I^­º§9€ŞOÀæ©±Ñ<€WŸí<MR¡,ÉÓØm–‡Ïi›(IÕ.3ú¦¤?x:0M-DİnÇ±`‘ÃµÑ…ÇJF«^=+µâ!<@=r¶.¾)BH¨!å¥©>C™ıĞ#ªÛÀq>&ÏÊ µhÔhèêxîyó.†®·ÎÂz,nv¨dÖœ ²ÄÔr $Ì†àxÀ*bè]Ë¹d—Ì=Ea¢ëñÆ`6}—³ÇÓóÚTéñó c)B~x¤×6eg±fY•sÁobıäËyê/Yü	ºUµpy°à›,vÏä XYcîïš"²nçdriŠ7•UKQd{ê‹’@«}HnhjGT<s-³{Í+s˜úäŞQ‚Ğñ ™¤Ú¡)ò¾÷pmŠ€O²¼LG‘è¡šÉÀ|y¸¦2›dÈ½5•¹ÔÙSÌ„’™İS$aoK­x3yŠï«v hÇy^8²üû­ÓÏéï©¿ş&û×FˆÇ×5Z2ÃH´×±0D|ê= ÄIl9õx ù< ĞD§|ŒãZŠDÊ1\o·N!¦é±şŒsös³“8Ä;VJÍô¸ÈÆ·=Qt{ÏCks´ºó 16‘ª<9zVT*;ä(ÊÄª„©¾}•lxd‚; vìqm?nˆüSŠgeÖ˜¸p	×FLËÈˆÒo8Šø÷1ÒpŸ!s™Æ¿öâxÀBC€ÛWi€‰:|sû%²vVá0ú„'È¥<»”cÎÎbMò¥Ô½Ôyc=õ×öE–<Dê%DÂƒ}û
+kqm_Ø»%È»Ğæ›’#sÅGóÖTŸ;G±µ’µ·-ÅFä³Ú®»¨}róˆ¢JâŠ8*:Oó¬Èñ3ë¬µ€É §â›šLã8oMá.Ú‰l)Ê’0° ¦ºµz ¦Á=-2H[¹Ú`Ãs“ìdâ¡)é¨6Ò¹Bzœr`Şü f–K^-s7’şe.«a{m¥ŸİÜ!>V¯·}¬^+¯d9Šp¹I®§ßoZ~¬^ŸúKä°#Óı!ôqƒX»‰ğBYˆ] æfú©ûÙ*E«j‘¿—äJ†9=c„Nk*¹Ï’ˆe×XI§±à0›flq .Wu­¶MMuMSc!jĞöè)rì:2_Éæşæ›¬µ(6Læc8 äh†Í¼Áq¦ÃW‘¢ÔûWááØÒ‡‰8=;É)9†ojbëíseõ@Úª£(«G'Š²KûN1rı6«GäxÚ¶î0_é\êÓÏ6cÇq t$w 34Âø8€ÆÜ~H°+‰<]ß¾êq$s×Z°S¬p^$äD^½-ŠÆU-ÎóF(ã¸°ä»7t…øÊ"¯sŒ¯d‚Ã0Ç ³ä<¹±¡ÃÃZcòAÓ¿£XŠôL¢nˆ´zıªª=ÓS¬EıÁ= é#[ôM‰¤•¸,óòiKhG±ß! 3ŸX}Sƒ±]¿JtÜô<E‚-q]ê(rw‚íàâ$TNõ¥NÖ8«€ÊÚN€†IXğ rLÆ2—1™ÙbXBÚğıñc…={TåÉRÄ‡¦Írû\9eT{OQÖ¸Áë¯øªÌÃç–>5>±¼bm™³€³¼û¹Şã˜¯ã5RÓßúûñyèj±•Ït| ë8ŒÒŞ¦…DÙÎÄØĞ‘Üz:Üë’Y¬ËNx;,zÕ„^µ¾)2Şêëi*…ÃzÓ¨u6Õì-bE_÷k¢ŒÔ|ø¸Æ¥Â(WDn¹s)şä,C¬g ,yê\S£†«\ûqâE{ê•‰Õ Ëã…ÇÙ+ÑÛ+9¨Ÿ=Ÿ‰É"ƒ2‡S?ğ†Zñzu ÜNŸƒ¼q÷Ö²·d‘‰™$ËéĞ3¯Ÿd™ië¹m›ÿø¯\ºôõ_q_é¶-à,ö…3æ1 ûùøıS	1îL×—Pk},‰D@¥ÓÄµÿÌõ<€wÂ‡oŠH}8¾|7µ›N„BGDò’{Š$s)áÊ¼¨ÄO÷K/ùÇÖ ä¸ J¼È’%Z€1k,Í3×b"µÆb.¡Unû¿ô`+‡¦:Lù ó\"¤kŠ7!åk?ˆf*}Ÿ»FŠ8P”Õ/·û´˜¤kÙ#Nz»ù´)=öã$5û¢¡HZvš+˜&ğ2â(rĞ¥Ày¾šâ§ü¡)’Tb»â(’C ìı¸T‘ÖõæÏ6%œ•¼ñ`ú‰Õ÷Aüë¸›†ëı"Q–6*›uXƒŒ›3ÙÔ¥ßî§l,©{D9k‹†ü5ôıIQøÑ|XƒüĞãV<q†rß–+ï‹£ø¬¢œÕÊ!ï—ğõûËOıí‚%vİÂB²şî—ş‘‹n%Ä¿.€?™ş%uo‹•ı†…óüğœ©S)Ûû‰¥<)Û.+B¾Öà"G­r ”4”±TÔ™xà¡Š°åìÆC²]×E Æ©©6Q4§o
+·½“ij»Hé2Çfò;ñ˜ä ëâäÏ55j_»~q1õ^Ò!võ:¾!âÉ@ 6‡(h·œ¨nˆ[Ÿê¾×.´€A *ß„3 øèµ)J]ıÇ	±‘TæwÄºÙpÙê»S³Üâœvk‘  ºIÚox%ÜR´€‹èËV2~	j¿¿RşÔß^){ë\÷¼„"oKhç$ÖüB\"ÛeşÄ bo_|S<€àNrk*Ë]¨-"!ôá‚([àãÀ£œp÷€‡|@ôMURŸ¡ó]š"/VÎÓ#ÓlgŞ!Êé+†ÃÇqWŸ¾·c–æz(ş°ÃÄñÃxÔ+‡îjB1<º·ëZpf^Æ…hÿâ$új8L™›²üæ›(À½İç[&yWÁ!Êá‹íãÈhQ«i‘= b>8üÈ²ÒÔ{ğÖ”H“ˆ»ï`"tctã)&Ñ2É†|£(ı_Ò&ÎÛ}	›»Ô(¼Æ’»ÚÒîc¹-D–â»ŞXŠp^ˆ1h	¼_WöÑ§şZh°Îbü ««ëüû”9B™«‰—3 ãÆÉ@X‹PKwÂj¹Æe¤9|yŒBæ@İbÚ#•~Àh ÚPe!,²´¢Á€Iàà½¡ê ¼0cÙê ¢(†‘İ.‡èBú7‹AZr"%;‘ÀIäA ôO 9¬cÓã ˜xÏØ°ÕÃÈÕD®dYğÈ¹úÖ¸{¯x§tçìó9ø#[¶q9¯ÃñÏ íPßz‚’ş›Déµ¿u^ Ê
+;^À? |ÜÚ„f^1¸P;"K±Å1°	ƒBZÂ/Š?yGNˆâtà±¶¬¾Ğb%MJ®W¹½˜¡zŠÒ×Iè$Òëé ¨˜ğdÏCï\ş„‡6ÄÁeë‰ùÑ*ü•y¬ËğMu¬Ì^4ÄWWÖšéšÂÜŠ“ß­©õá¨xŠ,›ºÑ:À «Ôğ€„iÅôó‰€4izı¬¯±Õ.]|™§˜É÷İòõ«Ø£Æ>d/ [™z`şJÛ”¬İk—×An·_"ØS_ü!Ÿú/ ‘©q »¥³=€g%MVÓ\~âC7ƒÕ”GÌ8p{|AäT§¶)‘øs$tÚÛşÉ’ƒ´ŠœElDŠO;"w…kºw”¶ÌÇEJJ-E9sc}ı†QïY<Eğ¤_ ÆÜ>n—Å0˜î–6R ]xÀ‡<ã`)¢Æk¤+à¡b´ ãMìyàr>¥vçORí´Pe»Mñ@±wÍ¢s£ÈÓ`M¾Ÿx a L§xèrÁ #nb¼ÑRõrßR|eÕR´ âÿõÙ‘ûÄÔü#åD(,³şdA$şQdƒl7å¿XûşÿA;|ƒCÅJğ“ùß¶c®5ÿöøS÷øÛ2¢)ŸäĞ±È’¹…ÿ1f~—OYn4®õSıi¡ä6y”~ËêË¡>°?ÛúCN²˜ ¸úL;‘?W_¼lØúê?6}}"2G=‚Ò˜}z 98:@
+AÀ\¼Tajé02&“rNp 2ÉNëHaÀ@úAôáv`W5€v %«ä1:Vé{Ÿÿó3R%€Ñú¡«{}QyÎÌ\ÏXšš§;ZË¾¢ñ«ÓŒ‚[â<`ÈÚÕğò“ğÑÕcğ.Lşp‡ñLwñX|>Kÿş2ŸP"şï$Æÿöe]<šÌûkH{+²µ”—|NMûj³#|ş¿­
+0‹c<KÆ?g ¡bæüpúÿ–³ÅMú{•ã´ŒÓ‡fÑŸW}sZŸr­Xr%´‹,]¹üWkÿ÷cí_yû­I9Me¿îE‚o=OâMÑBÂ[=Â¿¦©Ëı©Â:Ä+Ïõê¼ÓrÒê*êO,Èş]®ÌEƒ¡“4_H®>^“ãP_ö`QÖ}}s®3]}[şÓ-[ŠÓ-ÌÊÿî+éxı½ÏÙw
+~6ş¹„¬d÷© uCxëÆŒAÓÜ¦kj_"Òñ_¨«s!Î±êQZE§_u[Ÿ²82’ÿ>WeüãìÄ+ØGè¡?Uå>øSµõÿoª†ÿ¨NlI689»Ş+u96ÈÒØöº3?ŞÚ²{½µÿÏŸêıîß?µd‚‚|uêß<ÖüyÁWÀßnD1Bl_£/'/ÌğL’S·×„Ï¸}Æõ¿_°şçµyËo$úKê·åÈrõTW eÎÈ)ñ~Fcü‹WA”ŒÀOÀ[s`Ã£ÍÖÉE»Ğºœ¸çƒÖ&)é<Z'ÿ”((-`¸ø ‰FY‡&“RÎ7W4L@H¯éğäPŸæõWÄ*]ŸüDæ‘h„Àí06k®)6^Ò+|7U_ÄÜb«={Š¢’FÙ"Mô¢H’¶ô"69k'Ñsb#µ]²_½Xé<&„ÃWcnsí8ã'Ç¥úyİ»ëŸ€›g°½²I7-ga˜°ßiãŠˆé­h2±p—°±bf&ãMûñ©‘(=úîäj2µm€,+ÅUÛ!N2–¤]H‡/âìq†Ù+Ü`¶í(bÒNØ¤ÛÈê;7q§EQóCO‘w™êíãÖrj-à¹€û^ê¸PLWEêY›bTË[}->xÖUş,>dcòxĞ—çF‚ ¦!G€GBXrrbêr[ä°s(s-Jó~G5ºÕµêÈXğÂŸœ[ôxåI ƒî±’y(wXeı›)^[Ô(±%µ;b'uZñ}ÆÅ‰-®ˆ¯à><"°>¸ Š:8Í8Du¬ãÊ*ádk:t,hÜOÜIFÅ›ŸCnD¾º!–šƒª(QT¨„‰ğ±v‘«UviÑ˜®ˆ³¬æ{•ëÁ.ìqèS´ŸÄäØÜ:ŠS–Â|S\KÎì$ø³ˆ¼6È4¾Î~òq‰šéÅ“‡ûABG1©~%7Š˜¦è)ØR—ƒjöóÄök †EÌ¶\’­ûÀã»êYŠp^;‰Mæ/Ëa%Ÿéoõ§¼câ6ò*”*b§¶Èã	T^g Fm²ÕlĞ–s›TĞNf«¢X÷[{dØÁjÊñ/LØşEM„SïKÃZ«{ÄB„Â®ˆšJ26ØH¡Ø,â¶îÁlöc¹ª‹óÀÊĞtĞwV&{õˆ“Pm(]gÄ„!d­~ü’†Bï¸ ÊÒ%j`òˆ¢­).Ïöy¶Ïû% ËFˆIƒkJv¥JLÕ7«)Bµ·à)¢7UŒÃ,EìKØºÃ0ÿ	µÛ‡§(+©Ñ<EävÎëìÛDÛ ZÀQæEÃâmã?U~ª¿kÌR. ßòŸ£i--‡áê” „¶¾ìp„½võ'1£,S’\¶vW?Œ>"ÆÆñ„Á®=9Yüãé02iŠÇP«_ƒ'%ZS#Y™Ãƒ6	<F“£v²ƒ_„úwƒèìÓQ$ÁšJ…LÒÖäèH¥  â[Ò/tøéÃ™ãŞWn>óŒ\8At%!ò ş\Ã™)üsYá°~|îÃÿúíæ.“c0„î¯ƒßºï+ıV—›»4ÿ³ºæù*V½ÌJ¿¼şÓµ=¯êÏ³¥è·£ [^CÕ'W>S]y“İMïÂLyçõ¤lt~^E;Æå¹nì‹P?NæáĞ<şœx£ÚòÂ­—LßÍÈnUCš·fˆŸ‹”Ã“ ÎçŠ(¢•U€#¼4a|î)&¡l(¶…ˆ³jÏÄV?zaEÃõ„ìYÉxØ4?¶Qs<”€Ìd©ñ Ñ11>t€fãµËq]ÕQà:À\HUbÂ;ŠG¬b'JWŠƒœM‡9‰s4ê	À"2<`A~˜oºüëğ å` Eq¹BvHå&ûb]•ŸòÂKAŞÊ]Ë/uÙL¥ïóûüik<œmÛô ÉuÛí\å„Á	A×ÒkmNÁ˜‹î•ÿ}®üù¶z<òë*ÿ©/bßˆ ú–ÿı`TÙÛ
+gmC©Ê¹hN_.gÛ¤K†ª ¦~—%¶|«4S.}™ÉRò–ÿó)'UL$4ûÛ?$Õè5¿Şø®~$ÅÕkdXn÷Œh<±¥à«KK©RfÇ÷­ò”íAç“-—à¿åÿü”YGY—góq•p#Ìsª©âuğ99ËŠ8oä0yĞs¹!×I¿ÊáË–&ìĞü˜ºÿ¸æ¹g iá¥ù©vC¾™ÙSŒÓ7#;V#è—`x¢¤åºcüó DÏÀıç›µ´E™Å®Ä#Nœ”®#$Ó³PÌsƒg€£H²%RLİ(6Bß»±ñ
+»#öş"vLåŠŸ²štÒ'^[Ä&t?/–h}QŒğ.Ì_ÒF6¤c2´7û“Tg]Õ›´ŸêOy%H§§ü™Nº’¶“Çìl›ã•ì¥MækÇéjC#hÑ‹V†fÀúæBÊe%ÑË S>8)E_üíJS^ [rR’¡7¶a#gÌáèE9^F\ë<`’f£z@DÉ=t(Ñ5Vü‡ˆé!9Ó¶ ƒ1¢	{ v×axğ›ÄŠ÷ÆCn)ë¹ÎQœr6å&İR,‘ääıJ‘°øÙ8Š•ä¡ ¨¨åğ¹M„'W_ªËF·ñry]Œ/>‹‡ş0#>Äu<r€¤17–([D8É¸ÚˆğGWªw®^Võ·üç˜dËŸc’-¯<é‹Îù–ÿûgMÀÿ%S_Êç‡ò.CÙ¦§CÂ0]ııq(¯™ˆ(¾w€èËeC<ôºrŞ5ª§?B°ør9ã5Q÷,ÿÒ7ëz[?R»Œ`òw EwqšŠ‡
+ÏÈk`Ğ8ÿœÊ,%_İjUI–ü¤Á™Ÿ*où :_Xåÿü”ORZ×ƒîWÀ¬4¹:rUÔK®aÏğõA_ä:Ïí#:´1†Û¸Ğ8<åE«XQoÌÿu.·şğø‘?4Ë7ÆFãï‚»M¬©!«Xmáö-3pö]3qD–eØ–ëó£H\;ºĞsT½4$›KÆ"Í#’f?º"‘Ô2Í²BdÒpâQmÇÆ	 ı<ãT‘ñÆöĞ1'§rõÚ¹1'ŠùÌû ¾ `9­8 æq9&ßá)±3¹5%‡¢A`Gqà©7_55ïŸŸ¨°VôMšI'˜ÿœAê¢¥¶ª?“ğW¢·ü§íÂõ¤1ytû—gi5Û‘«iê=—+¯ÒKÉ7Ï;A&lóğ'!šæÇ»"HçîÉµI¡áÊ»,[såRZrÍ€•ë¼}ı YOŸœˆ<D\¹¬qñå¢^•Ú]9’”Êè„\Ç01ZIï|ë0tÉB|G1U6??DY;ƒKDÌ2x1qeêpYq A²Dß”úòÛİ‹yÙf
+áÈ¢,šôø•ÇZÇ¨‡éˆØGNÊ"ÇT9Æ\Yé„kÈ~&‰n_Š.–âàÆ½Ö+<îÌRŸÜQ4€ó²0¹&ÿcÜ©NDÕ\~ª¿â/³…8°‹L'bá&Î|íB{wğ¢F-–w]DHş"77±mQÕ)ƒÖInUÇmMYo.†Â<”kN€ášA—ÕõÖÙJrèœ¬h£±ÊÒ#ÀÙ#ŞÊV:4ÒŸ£(›GüÌ.Kœl)®iÉmqKŠ²çT^^ `c“ıP!Ä‹¼2ÏñDÆÙS”¡Â¨ĞS¬IÙ®I{NİùEÏ~šE9R‘õâ ˜Ä ªĞõ‰¨ ¼~öÃç,)3ŸcGñÃ:ı9Õ'Šb{«¿bYûgı7å•KÉº•?Šµj+ak¶;k‰e#×¤C#êé·¾Ñ–>Ş±ùmì
+n­uĞólÂœ¥’#×ÕÕaÜÈ‰–'+²A¥³§İĞ&Á/“ïª©nm©orğÕ –{.pRvc¥s"†Í€Mû¡ÿDš'	İ˜wŒ5õ¤˜ˆë×€Ü˜'Ş'!+¸á‘˜ÇQ,ï8ßzkÃƒï}ÒXb‹Ş¾xh˜¿½ˆ] ×¸b*Ï˜ĞõÊß$ûjŠ~€£fH÷Y™Dw$Š(1=ÅÁ5n.×NzW‡h Ç¥¢ü˜Km]»Ê’c¾ª¿šxVK_şl%Où³³O™ş\¬f±-ze^ãßGNVü¬Ú)ç¡ZõJS.‡9$×¼œõúï»ù÷ğ=å„‰¹%7	²\}ó‘8„v÷ ^ÒĞ)Q_d[¹u ›·†¸ucéŸ³¶¥É<š®]*âNø9ß§‘„J\ız@ã"$x€Ôgúzf£7OòĞ<ŞÄ©©Ão"¿fV%Ë²ÒB"ö‹¨qW;ŒU'¸â<Ò=$&rÌÑJœ×¯zB<ÅGğ¾(f8JdÕ·‚?Æ¯F"åğFŞ”§úÚ¼¥gX¤MyåQ‡ƒÀSşlŞ\>¢~®fYÿ—„É–µßmSÖMÒ¸~£-e7Ì8Ã0\ ©9r˜·ëË™î}õòÂ¢UB#„šl§S%X6bàèÒ ĞÚXlMK“y^ö.ùÜ<yfÆ(Ç
+÷”vUkÎ²J j™Ê=€Î+¾»£Îœî‡O¶äYôNûÒsETÙ8ıP5j\»"VçG8¢;N7Ñvu[t&ÖfûM ‚<y@"’”ê jQ3es^ˆ‡~êØ ¦C?q]JÎ Ûç¾k€¥øŠúÅìÇ5 ÷æÏ)âõ,*H\Õß]¶à¢S628À¾ªF##{/M4—Øæ.h<ğç~—R1¶<“5É—fÄC9‚§?dé"Â¤-^å›İgL9‡…ÒnŸ!¤Ô‰Ã‘U‚<İ¶\6ùš1ùt 90G¢'{ ©3“ï`Næ"ØÃ°¶¶;Ü˜BÉ"’g:fâFäá›Ê<©¦xë…È9:ºH< Ò³”@vi=ö:@jªá =iş$Ï5-ç+×rÄÇCÃS$Û'Õº û<hŞ(¾âèà,§“úßî¹ŞëïŸê¯–Ìò‚2ø”¿÷_5êö%Ïæ½®¿1rƒ$Å•× Şd¾û'm¦—#”z[>œìØÕ °\×ÙuwbmÉõI”êÈ5YıKóË\'òÆ=Ú ƒK2\¼­›DÍ–‹9t»uå"n8ùÁa=¨¡]GGŞ²º†'âwTƒçœµ¢áÉv£HºyU,EÙ§z-üôUdXú,MÀ«)Á˜sUOŸåÊ\ã1¦MØd¯mºœy!mñĞO½”ÂÏ×M$MSp”UµOûs²¸]Vª?¿OUOùûT%ÂÊÑt‘OVÀå¥;r²’’k×‘ÃÀ'qàù"·îÒ
+N–Ù‘#–/öÉ®œH˜l8¦|` P|óÄ¨Ö7¤ó×LÜJqh“È¤1Ü¸& ZâĞp±jœ[s Z•ª( şôù@Š»¢œü¸É*ëBËgŒÁCÎ–éMíå‹ëímª“èêòµÜçğİ³¢Ëzğİu!î–â¶ à{Q	ŞŸC8 ˆÔ7 QÓÈ'@ÅôĞF%·½4–å'Q$Š¬n,—M2é]†¥ØEÕ'¢²pİ=óA¦1	.rf¿Îäµd8D8®%CöàqÌ)·ßše"„öVËW]¹¨6Œ³+Ç‰Péoù£°WÒçÅ~â{Ù‰Ò³!'B®¦ŸœLMâ9,r©¥9–ğ“b;&Gn’>dO®‹:£!·nWC/:<ŞêÛìÃ|Ö¶Áâlµ×_€¹ÜÛš úêÖqÛÅ®¬
+c„á¹Jiğ\sıœÄ¥cŒ®{"’[ØÎ, pàAÃ°M•&B—lÏí†(Aƒ£;DÂw¶1¯<Ö‰„Xi¼‚çà]ã(ûÁ•ÅVL!\yÄã]_w,ÅW¾,E8
+ŞL%¤?'w£zï•$OõWÀH¥ÀªhËñÄEğL99n4NÕSşîÒ¡ê}ËËÎ”©±vé˜I»iÈé‹¾î¾Ë}Î(¦œ¤1z7gš'ohcPÎÍÏ4Â~Ëq{}¹>.µrÈDS»0À=L/¾g®’¢ÖR «ç&^è„İSäÆ¢÷ ô@hDßæLeoJ{a›ÓU6áæÌÓuôÔóºN?LQ#ñÆæ)ŞËÊöDSjÿbå<×GğÃWSÙNR"†3ÿMJFTÛø§ú[>ÙT“+/¸lÏ­ü}ÔEVÇ½Ù.ëîºn"E6ä˜õ³bmËYfQØl3r!È­Ùé¹í,ÚÔ Ùmí\ºa:6¸Ş™AzÚT’Z,ÅíÅ…¬QùD‘ƒkb"CA)·O‹¸TKzŠÄÈh§¦2q:’+îïİ·¦*Ş¿ãÀc¤WXÉ‡óº»":†*òrœÕQ”v39n¬b…ÕÚQ|dÀQ´€³ppÒısN«Í6é©ş–ËÊ.›/¯XSwW^OÎc•?[Ïù)oì9pl/ä­†*g’àÊõ­?×Ií„ì­™Ş?¶–ï7Q;ò›—%mûš¹õ€*Z:ÑÓ,Ú,æÆ…Ìm<Û<Ú”İ2ØÖ6AÃ“"ûNâ Âäh 	0[ğœË8_yÈS•Xd=j9İº
+ƒæ–İDÒOşmvæ!š7Ì`tÂöx@#Oâ8´ñ‰Jbg«ÍĞ,Ÿ#+øø¬âç~@%™éĞ³²ÃáMë£ˆ¼D?•7)6<XÀQ¼EÉå	ï?¼æyª¿÷5¸_×²Êß'™Àl>/ù/»ëJÒY92:ëÚgÊ;iVâôåS‡æšï$rñÖüÈÒÍ³9r˜‚^×–Ë†]± ´ÍÈR¬ŞšáN†(ï¢(Ù3 Ö	Òšh ©è;Z3B€^{ú³Ë×ELb9 dìB' WÉÅo 9ÎàUœ²uĞvKÉío\7l5§ïqò${ïˆ[w:t¹¬2·†§Øõ)3_){Cö':eM¢å8—óÏišØ&Õg¤½Õßí0[¥md
+Ë¯|á`‘7´µMr…èÈ5Ò%¤¹‘ËhÚk%$Ètä:ÑÖĞql¹¦§òÍô±Ïşn&,MV­b²C#Ü_«ùÆwØcG{¤¶÷Ä÷İ¬Äo7r„Õ„z–w¦ùÄ_$8ÕŒj“6†§HØ0’D8 p[€Hg>tm$ÿg¸÷­¾±bãå(Ê–GÔö@ƒ† m45Ÿp<ˆ
+9É·|ëY”	ç)ŠL^SEÑ·Ğ°¯y„îÅÏ@¤¶„æ'ÅÚmSp”ÚLœc:©ï‹ÌŸİò§ú»[ş<`¾åÿ~vQÑQCñõ‰J8åëm¾œù9Ñ^mùQÕ8Ó.i•p¶õ¡9¢-ïä´a˜lyáv#ùò‰q§ÿ^ì8JòüË¼’#ë¡>ïÙ×' ^>ô›Èi%]¹8e–S¨:æ®åŸÚw)1ófb{ öÆá+¢£ÈÑä“¶ìTá™fu›f_˜Ó…„N3uú,¾ºuú,d%ùÏ[å)ošë®¸r™UÅæ)ÿç§œ° qÑ!·úøIÇ
+X–|3†zuä±Šë/réAÄÂ‰İ‘›¥jü}Kn¢J³¾¹‹dè)q8z‘ Äcüó ÚlºşŒ¤ÇÄæÓQ”A­9Ÿ ejàj!Í5ÏæEyØNZ_Uú”U3yŠ"Œ9L?8ºÀ ˆÀ»İó }b½öC'²_«"éT<ôÉÓãô€%†Xó&1Eãğşù–¢şK C4È·úÓFÁ”œmä!“d»|lÆëíä)çE{¤«^¢ûr\ŠùFÓ7¤³ùn¦¿Ò’¹‡­W¦T¿q‡>Ì¯å‚[íqøØA.»ûÇÌÇš'G¬mÂ¸r9çácË±i©Úöe±%å{½uCDÈ©zÄ(Œará<¦ÔÙb=+Ò±ü–À±ªû.åõkŸc–Kò½$zx"µà0¸Ë íw’ş:ÔÒ˜;¯K?ñ
+Åƒ¥£(hYï1,Ebß”:®_…fÊ¢Ì1Bú{À@åhŒÑHèef‰³eÎr^	œşö†PÙ£Ûªş´!Š½§Ê"C`çö.©l–¡‡ÖHÃ`ŸÑD³„ {ÑrÑŸ‰ÒeËeÇ©_Ü=åRª*¼-õMoò[SÖŞ¾Ñù°õ.Îküê›Ñ8F˜ Yz¢ìÈÍéö<c•ı‡j›:O€Êûpö áW"	‘.æÆ/ûD9tñAÏ=yŠD5WîB1k.Éê)ÒMzGg)Ê•Í(Ü:^6ô9z¢LÚ†Ÿ‘'E×”,ÆY5«ó½áfvèÇ>H0uïÇWÚ¾«ÅPCÔ?ß^Ô× ã©şî§½jğ×·üßÏ>›Ğ#]}¬XÃ<”“n{	SŞˆñ8åz®)¾œë&®xL¹¨¯3­ÜõÑÛQ½eâçK5>l«;APã~–ü‰I(»oH÷ê·†‡ÊŸioÃ·ü§şÁğ-ÿûÁÀ¹@ï¯%N¤õ@©acÁ½„©/:¨/İ—‹n8P˜ò¡ëxvôEïÃ°ÊÕŸ§gHmùç>Ä•‹,å®Ë„àGBò­ğÏ@NÕ«ÑwÈPj{+¼cm+üŒù
+†ËÍQşÍgøêö`7D„&‘Tß*O9±°¶uå˜sıcËåŒNäæ·üŸOy'6¢õ°bŠÏcãĞöÀFjÈq×Ã¡¼„FWWŞõÑÅ•O"â‡Ùr,e1O_X’ÃÎ0Épû‹ÈÕ±ãE9œ“]ç H\<ağß†ç!n®ÃÃÛidîúDn)I<¦CS™OÁJÆæ÷˜GW©­*‰–k9~’âøÚs]K¦Gì¢M©ª»#æñ"rƒO¸{ÇÊèà‘$Û”¬Mi.¼Àâ/V†“°h×ğ§úÓ†l<ÒÛ;™í «ß.´ŸòšÑ”|yjLg›‘³!ÉõnÍÈê$ªGÃ:¶;¶t¥z4ÑušœÑ:‘¯RuÌw€”æË‰HY<w¸/|øÒÌ~ÏûG½Ò?~Ê¶œËŸ|ŸNî¶‘~šŸzµÒnÍc³’böc'«	ÖÎÓÈ•’ïO…ÏÅü¥©„×¡‡øQı.ˆ9ÛÇÛ}:õ9Æ›éeèå@ÇØÙfúdDMÕÅÕ:ş³Ü[æºèwºÚ¼Ì%)–¤Ë#%‰£(COcì §% hÀÔ_ìç¿ä“qy{ª¿2H+ÔWù#³r ‘ıv#/ÊWKÔ‹H´äY@ä4íÊ«,²yÚrY+ešd×¼,ÀI™æçÚ‹zœ,¿à¹òÙD¶GpÍL®ëË¸}%©Ñ4×œ¥ÇÖ*"áùDã­_ÃòM‘çiO1…Z¸7v Hbá™ û¾OqjD…tÌÉ@`ˆ[¯²iÈµ{ŠxÕêûUCÖ5%Aä}çÖ-aA9=ÅF®yèYì™ÉÉuc¾Ëx9DÑÑ»HŞ•B{ÕSY–È~¶f×”œ–¿˜^ŠÀŠòÆÅéSı-'êßˆ®\¶Í~(GV²/'½UÛë?ÛçÄe~gsŠı*á½dâB/´¿Îå÷¨)l<Un4ş^ò+ÚçğL‚~¤d˜ŠOã|´êqç5l¤CÃòÍ³Ôä]èLÛpXy³ÇÕ@‡~G)_ˆï:@8¶~ È-Q‰ÙõÁ+õ¢Ô‡™=Eòo†~ ”@<Ûâ2O—‚u¿åúUØ‘ßÃÎøÓôà’·¤9Ã$Ò˜D]<pÖˆ¦ÒOY$pŞPÜ‰,á¿uà:ÙN€W–MSprVò‹	é|ã?Õ_Í;àª–Wù«°OBÎmäe Ò»0Âø”àÉi~DO³|q¹w ZU§5G·Ì1›#×Ùª6®w¢x’ÜÁ¡i4è­Ã±‰‰Ûn¹À®Y¶GnvQÃÊ¸q5õ]!i¿{é•UìŒY@sÌ $³Õ÷PTËéqí"õâ',®£X4q€ï<=‡~í=™ƒ“¶§ÈëiçÅÆ©«Üyì$Dk‡~Â4›G‘“ZwGÀÑ1¶3øLyŠD‚ÀâÆã+£Ñ ÂKøúñ‹è|¯zŸêÏbgËÿ´Ö=¯³/w©ÃøWò,İ3lLBú¾Š¹l" í‘eîUÒ¡|ró\3˜ª'Æò«™—o¬PUÏ·h„*ıÆüY{ê¡‡ngËÛÌ\âÚrbğå‘àŠªë¾¸ƒê©–c„û	z@±1CíãĞ 8ó jRâ‰…“Ùd™KƒĞ7ñÖÙ„ÈD-veª©££({d(Ùß¦Ì”Zbáü’ı´SKXRGŞ(ââ£X5Ùõ¡y{JñMÉ ­tíÎÚÚºGì$IîíÊãÀzFÏÊ¨ªt ÏrñÕÔô€ã:’EUO¿¼Î7rŞSı•tÙE¦ø’I)§¸nç&%ü® UæXóåÙÄ¾Ø6Ó¸Î(sk&s¶Ú]ô¨éÈI¿fİ9åF¼¶×2ïº*£†K£wOOv™ZãJP4“3ÇSÄ­Ÿø5"±-Óì†âÒ“hdzusRãË`rÈ< 
+yÂr÷<UGÓõ«*^Ú±6"İÑÇ{;°ÒääC.' —5Ñ]Sƒü­©W¢…£ğnr´+=n²?Õßòy[^ğ‡rRßV_Ş¶¸×o‘É466wåëŞŠ«ÈlÈ!K‚[>ræ|æËåØÚèbÓ<ñ(Bm¦ùô¢qû5£#7ÙŠo~òèézK·Å º^9 &7Óğ× ñ•İŒ< v#Ûo$ó!Ïß·>Vó¬¢,<1Å~ëRñè¬c¥5 ñ+æƒãÎJ=?o¬n·R¢İ†te¥‘$Xé8¼5?ƒ¸ü’ı¤ù¦Fà-b^y|<…ÅW¿(N8Ëéİñh˜û%§?™wêïæ&›yS¹û)¬Á:D?ä³LùğöJÜ§ÛvrúÖ›¾È½GRÑcƒo¦—H&ÔÕŒ,i¾KıÀ
+¦Y®¿±¦¶å²d÷|hïÅvoÿÀÙíVö‡àòè«fÛWŠ2vzz³qn(:KEœz¬WŠòŸÑvV–üÊA›œĞ¹r¬ÓˆN!‡ÏC8‡eÃÃşè"s2O‘K²¯:Š­ÎJÀÙÛW‘¤-÷¢ ã èè²‡Á”õãŞƒŒÜñĞK0-à•¿½©éGÁ¬²öÔ£ıïşöKh7(?Õ_”©ŒçK&‘gfÀLö…öŞ	É´ÌÑ‘Ã]”D)rmÒÇ“ëÜºN_>Z$2³Íx%±NŸ›™pÇ7ä¤•‘gsåjI¤§;²÷0¯, ¢8‹«§;kÜøªA’£H0»Ş<$®&çQPI1à¹²>æ kb^(A_C< ¦ñY²ìwbx­Ov—ï$
+@œ‡"éÙH÷âšj„p@Äv‚ëı"[3a>Ü7È~‰©Œ”Éé›zbAŞšzÓ!ÀQbñì
+GKŞï—ŸOÌÖ§ú[^óÔó )UŞ§ü½İÅ7mÍÊÿË«Ğ«nÈM-‹ƒ-5§èqÊ4ÓÕıtÜš¸0ğ©mÈh7£g4<Zc­BÊÑ#ƒQÓ3Ø™ ¦«ÔÇM‹È>†‹Ú‘$Ì	Ë
+³Üà XœFÇjÆÂê #†W³l+ux®EÔƒÿ¿¸»Ä'½¤·Eiœ©ùéÂ]Iñ:_ÈÑ ÊO:Pœd)=P¬ÂE¸Ï@ƒ‚™…§(š`Å$È\tš¢f†ŞıìŒkÉx:)j=Œ9ñÚq =xn_åKSïáà¸xtâ*í©×Gÿ©¾^dqĞ\dÊ(ïGa´@BÊí)µêšòŠ³E:”k(æîÊ™ƒvúÚ@Ä¸œnli°ÎÒYµ:‹ÇĞóz=lÑ„).h¢Yä‡c~-WWÇN,Á—7<_üÇ Ÿéïæ_¡91óÍó0USöŠ’’K÷£€’’õ…İxôçpi)¶1Ó	PZ#6dÒÔçâ¾R”ÊYu!>÷2<g‡HÀÍnˆ2Sähìû[Ó¹ÊQ¬rÈl¡])rûC?G±ÓáÕ‹Q”uZ¦ÃU–®o)¾2şEqzÀQøõtüjäõØŒüTËE \Ù[ş,
+³]°òè¼áU“8‘Væ›œjM•pS.'Ù9¤ÙrbV¦áË?Áb[@â<âœÙ)’iğhØã£~¡­;39`ai¹˜ÒÁjeË+zlsÍÈâOêÉw“ÜèÙ7ÃMÃÔ=@w%
+¾m3$WKËœí˜e3Üà›™äe®İX$ÈcÂMÊ±Ò
+ÎN'@Ç‹dz@—»®Ä–nêŒW>aì\Õíµ‰šV€ç|í Ì9À#Z_ÌM8ËÜ Áù¯vZÏîOõ·¼åz(çğÄNhÊåÀ›Õææ)vHt{Õ;Äl]6dëÉaH$18”C±úò‘"Q]ó#Ë ¢ã~5¿ĞC’=¹>¹ÛråDˆÕ-Ğ–7U]óÂlÒ3ãùë	ı V?†aˆ~¢–^$´L‰¶;·ë³åV÷åÌå¶§(RÚò†aX”µ%}”\K‘ı)ø¡à5©áƒå %~\P< ¡ p1ùYE˜Lp¹[?È Íš‡Gl$LÏíú¹²¨Ç¹‰Ï®h÷x˜yÄrŒjµd£M9ğÖà_Ãœ¨\ÿ/u¨ÂîÓáı­˜“ØÖÛ÷f}¤òßş÷N¼’=…ş?ÂCET	£’£ò×ş®-±ÿù_©ü³h½•e`+1T~YµÈ(zİª¿ }¨-¥FRDÊ4
+c‹ğ3I‰qã‰hZ¯µ É¦d›:!²Fæ? bü‘¢aE D•ÀŠÃQÄFö#Cñİd†Õê)VM…S=EÌpërã‘ŒÎÄ9r{Ä£âÈ“èM¾©^	†^®MÂµâP“Ñ;âäFñ¬LN¢Áwpäü…Úd	Ú;øáAö4.®ı$â¨–#b"à€h™À[{í¾©4Ã BãeE•¢(+1Ñ®<Š¾Ë+ƒg…Kò’üÎ…!ë×œeÚ÷têGÙãÿÃÛ»ìØvëhºı|‹Vc-À	è~ñ«»íÜËV…z÷ÃsIS”"ìªx9Æ/QÔ¢$Šä±Ÿ*ö[‡ŞU—™b¡°[sé[± Ãgú9É“º6> Ğ$~cËqÍñ{Ğ`fË$–¥¬U›1ºìĞ&Ï¼Ù-s’s%ââÆŠNâÖ]> 2”EO:x‡è dw)Zæ
+‘[doc®Ç°wKQäu—N·.Û½ºÒ«<Ë7£s\´ B/§r pOqhòˆ-Oº7yÔË‹v(ŠÛ2ì[, K­ˆqÈ´Í‰·@å@J9 ‘C ²Y6UÀû½LL[Ow—ô·zb;%û7KqL²ŠİçÙGÜi©Ûw³Oµ|Ò1‚8œï/„dwç\’õWÊÌ¸¬”5Tg)rxéñEvŠÜÓóNÒ ¢ö‰^mQD€]sìE%œ€ ?ì3Á	ãù¬“âÎ¼èÂ5¤+xuäVıš±µ‰6¬TYßp{j(Šüğx«ÿ¤¸,êÂkY»tÈÑ&±U´@
+8ı: tëĞN#‡S;á‰³|ÑN½qÑ¶“ˆlÈ®í$‹:1Ø,‘w/.'KQ6!ÎÇ½â"/p·fÛ	/+ğH`â¹b‹¢ZNvØ·¢RÀx¸[Š)W~`(ŠøÁ(çJQ¿:Û3SàEuœåÉË^º}»š‹BÉÎ“~4DKí€çíŒó?%ˆíQ´ìzó"hDm(Ño_º¼ZŠtY¯¯õãÊÊ™Y|à'"œy|R¬3cç¡ZŠ„"ê†ğvÜ‹
+±PÜ¡ºjïUe®Êt¡\«+Ë¡[-ÅÊV;­©Ñ©d?æxânxh]ı‘^yèéåEÏdd÷Ëó¸kF<`ÄpÈÈ}Ck·Œ”ÖqQ¼×A†-îÓH²F¶oEE<ºg·§ºsÚa§A.n< ûxÃ
+o­Z9ğ+¶O/IyëmÏÌıÂ…‡±_Ø)ı‚A²µg	Óy½ëÜ·¦ŠÅ|§ù®il$D×ôğâÆS¤„Sùø\Ğ°!ù 4:æ D(1€;ÍµŒ‡«¨O…'Ş5œ¸âK¥¤~D­€‘ù£ÑÇáí?õâİcÑÍêÆÎ/?¸§Ç8Y~ùÙ9¦ùØùï;ü¦ãîE¾}õî›ÄªXY?%ÖæP Ê®› ÀğäÀ„Ñ¹%Ç¯‘'0öDL:¯¢Ø ¶×±ºWbDëŞ‹—åEDE´92¶@²Ä™"8l?ä(:¦-Pq›u/²äqdrà_\{ï îwÊZÁ¿^ Npc³‚cÙ’ù‘àT[‚gp¥µóXÿc»*:¸ú!ıæÅ‰4ØK—%Í ‚ã}›À_à±·è+’®ÏŒ˜¸~ («Và¡*^‚üş{ç8¿¼ñÀC2h26™=D„ºdÌŸ×bYÉÄ‹	ïRêÇq¹¾53ÖÀó³CQ¸-áÌ­@sí&nçAXÆT÷Z]l&òÊü TzD°Q•_Û²<Æßê­(<›å|`^OÏÓZİ‡¢¬',»WŠcÆìwà÷ó$Âun8­©Ã‚‡ôúú½ÍôËÌ)²0”	<.Ë‚/:sF	B$-3K¶/ŞYŠAíæ£¤—p‡g‹Š‰ğ8áZO6ª6£<Ç»Œ1ÌáÔ­É²ÂÍ ^ÌE™o©/Ìï¬bÅC¸Dí^‡p(qè NY¸Â2@CËŞ…£J-E‰n0‹âMVîÙPÄ{¯óé`%€šÎ;gxˆôYŞ[~VWöË=kÌÙ¢Ú¡Æn‚$¼fŞVTÂd.^â2O¶Œ;p@±bšúåİ–N +İL?ç‰leê/„"ïÈæËì´&>ç‰Çíf< ‰°' ôÔ	ä¸Øer,n˜‹²saôÉ\œ3+ò°3[Š©´„Ãrdø* ÷¢°Ò‹½]Ûx|Â¤¥X§óÑR”š‡>WæEI©}eeL ),õEŞ Çº7Ç’ã¡îLF}ÿî—.ÙXşE]H¶ËXOdUpğ¢(Æb8z†jL–²y­îÆ|‰¨0ŞRŒˆ’p(*fWÚ‰95øìÁ	ÿ.İ4™½Í¥òÁœÈ”9ISfc{`NúÉåv(ê9æ²À3­W’³Ày¾'Öïvº´úX0]“Â‰úN¿‚—µã † İBbŒŒHXçìåşÂG›1p5•İ=c‹L‘OV^§ÔÒŸ€È=²? !’,‰ô9l<,:léÅ4Çk‰„í9 Xp´bâ^–¥V	ÁÙ±ĞÔ¹î5\³qKáœgËä_–ĞÌó|›‘˜Ó­¦kuY¼0]6¬ôîõİéà¹\Ær0EIëÈ²ú­w#˜ê0;Åˆo½z:»oÛ‰ô¬úu¼…+'©Š˜ ÆdûjN©½¨8Ï5Ùò©ç»µõ1yÒOàmb œÇán×Ç{Ísa&ÙÌÙÇõÓPG?´V‡ÿ™l3jÿ â¬}_æZÆÔè“•×\ãu|·€ìß“vÃ^”ˆN‘üåÊcÆ
+1ÏwŠ¥4Ïmt‡¯QT#ËCååÚ©²;¬ôEù#qkªN9@ç¥çèÕV î°R6\G»¹k'ÉÚS	m)âÏ˜s}C‘øé>Õ[;0+ˆ`)FbZtÛ²QÿôşÊ£è$O.&ãsÀ{cå9à5¬<¼x¦õ^Ôœç;f9}y…¤éÑëèßwúu—Êã÷P°s.A¾M`LëX‚2<<,”—cQ¤yÓb2r«H0¯ÏŒs5&Ğx^K€Ì]œ 3y hjèky TrBt\˜'6ysÉf¬iÖ_™oè[Ş[V8ã©îÀ
+î‰vc¥Ë¾VWÒb§k5e®âTs§8W)¼`¤h)¿ÁóÕGN'€èÈÕö•(Ùì„m—ˆª\{k®eœ9ş¿´Cä.Q£EY­E}9ğ5¬©ºÜüŠLØ‹ªv’šŒp™¤]qüíEù~ê¹N$£Î¬7¡€'÷©"áD$ô‰O áµ![ òü¹f[”l]¢î?ŠZ¶¯ÄsÍfí.ènıÂ#¯K}–ÙtÔ€Œßı	 V? •pI:×6æd›€îp­•L`Âc[Š8•õîDf[? ;òCÉ|'ÔäAÆoíe½.Ôn2bmºJ¹cËbšÙxp¶³Â¾‘Ñºm'Yõ¤ƒÛµ¤¹D²Í!“GöÁ´H@‰ºvÉX)9›(®³gy.–9B/;ïçv˜sqÏ¸çIÊ{¤ä¿?•r÷!#ı2×JÆ¸n c]tNGÍD9Kë½‡gïsÈHxfïGÆåúÃ‰ª³eyB³ .8¹u·€®İÁò2’Ç_™O-:BÎZŠ½‹à-Å¬FeR”&M.ÏÙã“zÈ(C#ãksğö:Än3VÂØ,=³×A¤®ï§æÂ9?Öuˆ¢O1—7 c’@Tqà%ÉËœtGĞ‹ôK­¢—©¯:ì1à±;]{&â±‹¨†õÀŠL´Û++‘ Í}™—Ÿ–¢¨L¾àÆãØïÇ”])~œ8=İWĞ{š‡eš‹î[Z£rTc•õ4ùCòåôÇ;Í¸à~§y‰ nÀĞàÇøëÔçV™Å±T>:·g+M`®b‹"6ggzî@’¥÷¦¨${ÆÂyÔ¥¨L0²œ,Å,bœg¤`—ªç‰{Qœscîz+ªÊ›àë†b%DL8T/†¥€Æk?æ¾„&r†9Vª>za®ã´jÕi­ÃD¶Ì¶VœjhäUD‘`ä{QÌ}ßë½(n¥=%;EŒ#ñncéÜò ©…Œ·<¤ÊC»…Àéíü|Ìº=ãœ§#–
+2a¿<Ó@éI? ü@ëIûğ( £-<ÀÓËÂOõ,ZT—Væ”’õB7t_3§êNn2v´ÕÛ¢2¦¹^‹*<¯í{­¼š Õ‰Ğ¤û¡(—RïE¯‚çÑ†¢Èí„Yà£ö Z¥&ï >¯kÉ–9Ù «û‰OæêÌ({C¬¯÷Œ²œê½ñ­V‘¨´XFï¬èœ'Ğ»<^ºå‘µO2ÜŠ’Vòº]ß)òÓ»; ²	fh2¥DRù|¨nÂ87İ«›‰…~è«9×vŠ;pœ„¸´,Õ‘>'aÌÍåI?úÏõÊ“Œ	ŒuÇB¹Ï0ärËJ‰ã†Ğ-EYXys xHLhĞmRÅ¥ááà3]yH,•d3JWpsÏXº( Ñ²’á¯Ó ¸I=4 (¶¸Í= " òÚcm•}LN{ËÆ9­=ªÎ˜×DR‹Ku—µ5èi²Dõ¨%ªÃUf' ò9€;’Ì•À^Ï(úRĞø£¹äw¨(–‘Óv;ôèõRïC/ªé|²CÛR—×Z=E&7^6İ(>wA†¢Lé’’³Àsáj÷´ıä!Xà2Ÿ[’}Å×çM¬" 4ô;ıœ¶•+b7	T¡9¸xéÒÄç$”ıµ#®óNQ4’ÎVõ“b˜QÂC>Pä>‘ º;E|b¦zãQª\4¶øN1ó`*” _5æ«pcš¼
+İ›³ÌÉmlnÕå Û0“±ºªQ¢nµªØÙ—C;5ìæÛ¡å9¨²'+1r¢Ø5ª¨íäè8JvØ0dúk8™ç‚'à%ÕP”®w8‘3€¨w²é¶(Ùø° ßj%“˜W'¶Ë"³E.XŠIu±ve>»¦¬E2ºÓsu+jÎ“ØŞk|}µ.ÊïôvQ~€1»eŞÖ­QKÉ²Äª›f)bÏ+Ì»G[”è}CıÏ¢¦â×ûÎR$¨Î¥À#eôm Ìs·<ğüĞ#è/ÕÍ(EİR$:o""ìT]¶CQêJ+Ü‹b3€§$“‘cÚıµšlûZâ h§v Ø}ĞÀTVdó¢Ñ¶#â"gè;ÅHìŸ¯•#PSçxÎPôMT›lÛ#©Ø]Æ	şnÍkŸÂC/CónÜÜX dÜÙ¢dWDdk­Æ\İ3îÀyKÒâ¾~¯¯+1çñÄœ|§Ÿ€ˆ$N),Ğe#“g	s{ëy¥›—¢Sê~® µ±şAQ5kpŒ±Àß‚FÑİQxd½J “88Ù™£ é‰+sÒyx·¶s$¦\9 ¿ŸÁEÔs×T¤'ğáã¿¯º‘Ø3V¼cÄxÏ˜8â–•æ	¨U,E©SÖåíB±á,Z¾¡E—C­ePD6¾ìÿz?´,£ï‡À~:zËµl,^Ş™kQÂ+’öFQ„&nämu"F8\	ìE©èPÙ|)
+3İ_î1ü«şµc²E‰¢™5ûS”LÊÇ°M…µ¢†Q#œpå‘Ó/·vÉÈÈ™²w×Œcw°×aˆŠÁg™5Øõ×&baŞF?é—mƒ¬8uæ¶óá´”ÀCüEMêbñîƒF%ò÷Œ%‹Nâ7VTñÀ³i² ±n÷¢¤ÃìVTÊUc˜ŠDärıÀC®2ı!G	¢ß!H“†Ø0Ì…Âµ{Ê\À9…Íˆö¯{šKFî°ñng2ò’Œ»ãKF}Ì2MF¬ÊîÇİ3Êæî6cÃä»^3²ÛR	¶µšlØ¹ØÇ£¹õÁÃ¯)Jtı‚ô­(Î=u±S”Ímõ‡ñ6'Ø^Ô\f>ìúÚXk9ì~Òë³BUéß¯q06äß1È= ²>"Ñlú&¬›ƒ—s<;39bÇƒö!Gâ•k9 ãVĞÊ*\ºÍ’×™±(¬õt|Ôj^	åÔ‚šH[İZì\5®7ë)‡,kÇÎùÖ‰W‘©¨:tÍ&ÇKíÀ#É]²¤d§ÁµÊ!~‹Ã)G­7¦&Gà‘F8ÄŞJ¶IDCÇ_œ­9ç<zÔoLiŠíZ*ä=(”ºËi<€YæùT;V/æø3Ó2SÅ×‡³×Àó%lŠ‡ôû=pœ÷ÀOšWâ¼îÀğ×dB“¹…=l(Â HÈ&Š7E!vtø ‰ô' Ko°æî@RÏ+É2Gtfâõ}2GÆìá¢ZŠYZPO–w€»â¶[€8_([à%^¨˜›ÄC“âl6å{“ÊæÏ•rh B+â@ÖPì±²s½Rì<'ê¶Vè¿•ë›"·U©¤+üºØî‰‡ìÚ¡(:çzÄk·ƒ•‰›ÒÚ²sÌN=Ó}˜ãaH™eX1ÅfÄ«‘ˆnµúíÎÊ˜¿“æ*»Nm¡‹öñå*›^^uˆ°÷¤Àã¾Ëï½=4èáë<C%H£VßÃSàåoóÏÉm£¾tàpĞRŒY&:Ç3Ûœ½NıpYŠ´„7ÕhÅëQÛd—`} æš\ã¦ŠÇ|†kN_\®×v¨ÂªÁf$uM{ÎêâaWuì™‚‰GRˆ‡– Ÿ²)[x!ƒâÊ|çu‚/Qo»²ïù 4öÜ–ÔƒÎ$ áagN$ êt[˜ó<ó`Ñ$Ì®Ss×	L‚áŸa¿ a2€Lš”cÉR°˜¹4à;Å1ß?(&œAá9Fùúğ--İwúEt" ¤·lœè–~xo¯‚àÆ|Æn­úa–kççÊ?ª;>ÙÜù"“Å©fK1c¼V_)Îá*ë]u¦ºQ_.uç; œ¿æû^Tåjéæ‰ë|±ñáŸİÎã’±bçR-+²Õğ8Ë´@CO.ˆ¼™ç©°‡i¶VH,\nÌgÆ§x(ÊãF=Š©ı:®Û‹
+ªÛ÷[_ášªàeŞdŒ•·ùÊ#!Z¶£ƒ—MúdùšßŠ§:§WiÈXNšY²ÎŞ‡8ÏŞêekĞ¿>¦"}‘&3ı®‹eùÚÖ¢x¶	í›¸ì¨¢ƒ:>›«5z²9F¨kQcvã‘«¶Eij‚F[Š‰è…î È¢ÌÜĞ‰$u¨•Lutã¡Jïé5×±´—Õü’QVÑ¬hg…Óß–e‰•iß(æ9‰¥ÈR»¡(Ê†N G_‡.‘¦ÈQÕÙEàïùV+.°{³ƒLÑg-E<”´t§¡­ÛŒ¸7]pÏ8æÉq.¨«/­ºV­ö~Î“·ŸšŒyÒ³zQ%à8°Ïé ûvßEŞ’HŞCQ„Ô#¤µ(¿l-¹çY3 ç +ƒ"¡38ç¿0Ï@+Ú›EÙ$êÛYÁ÷ìßŠâ‰0ŠnEµ":*²x§ÈÅ•Şê C)o™ÏG_’á;¾ÕxãA¦Cb>XŠ9²KOÄ„J¾t‰WWû©¢0YuÃµ¢À‹¬ó¶(¢©öa~(;Å9AVŠÉç™Ó8*_ÛO¡í¹æp
+ü¤·¥B²‰æ®ïuDuHñæ"/\ˆÆ(£¿<Š–İõ„ê˜|:¼À in O‰µ5x;À“ã9À¯‘'á*œ°C{ÙI8(»—’oŞŠ/œòàÌ •™Õ–c)üÁ˜¢îŠZr …å)æ*è¼Ÿ=•ÑqL(C.Ü8œ€ÌÉ†-\&Q–â ÇÓøë$´´¾¤Ê¦a$xFá– ¼GcYÇ%İhŞšëpì‡ô›ë@ÒB–§ Oš?ú„®vŒZGf|—¿ŸáfugÆëÓn3¢G²_X3¦÷LU¼Ë&ŞU›1qáG”ªKFQ!
+æ¥6cí>xç’‘¿8¼€oH¢î@)å5Tö¢J÷˜˜]‹’eºâ{ÉPlÒ\–Z@¶€t/Š—pµô­¨Ù\–Ø-ÅÎ;gB½¬ÜŠŠ¼ûâjáR+œ¸è6Õfl¼3p×ŒØKK-+ÒPø ·@Ä!\<•â^.ñ±ÿ4…?™c i#Bh ^7ºscîÌíÀXÊ>¦-Çíë§çšşmEø¤Ÿs•qIk?À˜«¨øuêtÉ({^b¼ZŠ"È27†¢lKyØ}¥ñÖ¥˜xKk ?2ûÚÔ2.Õ,€*BMïÌÉ.ªÅÖ®Ì¡‰×pÈHìæì¾ÈØ‚º5¬ ìs?4 ~#tTî 3-–nyè˜Å¥~ã§¹Ú	£œší„c•ˆ	ä^”L[¢úkQ{ÙTŠ÷É¶WxW¼R…ÓñÎPäŒX$5ç>Ò1Ëƒh™Uc*_xà·
+Ôâ˜¤;Å8Ï^©ŞQììÁ´LŞ·½À“|"†xd ½g¬'€80å ˆW5ìåD¥ÓYİõY	|K¬k2ñkÿ¤¨³–ˆ’Ù€Â+¶bÂâdØy¡*K»ò ¢Í—½^k.fö€/ìÀĞ²lŞ—>[×Ôævğmœ»³;ŞÙøEÜ¡Xš¢˜®…w—¢ˆ:1m4u«hr”Nä²Øã×`›œ×pWøƒ‡„õVŸsgD‹İ3¦ÀMu¸2ŸØÉ¦jYÉøR‡æ øoè÷æsĞdÜ€óäL<YJ_º5ÔôïÊ'ıè_ÙäË¦=O`,­¸q–DG]”-hÖ¹ST“³œ QáPwCº2Œ¢×ŸsÊ2§t›‘k¸ù¿ñˆ?ìœ«e%Q"û¡9x±Á)JÚ/hxãKQÂ¡×ßN‘Ó5\[€'^á H•ºª ÈI£œY 9W0;×Ø®èzöÁõ¢J'ù]{ÿçø½È8É»è­Ü²O®•_"tøaxqËÅ¼iÏŸ7ü“E	à5fˆ§Â}áÕ£-\†!.Çn)j î)Ših\Ó¸xÂˆÂæj¸54ÇyÎæ/~ğ]y :ÛĞ`‹åÂü&ã\J×xßéêsá;ıRç0Ò¼Æ¸ Ï Å|¾"ŒŸ¢ï‘ò"744â'Å×†ÚG?¼SÄØÆçz¥ˆµ´ëÁR”5^¸, =ÑñL` ÙDàâ `†ÏÖdg®`ò¡³åÌ\åöÖg›o/qÎ([ÒÏçî>Jœ³S*h@®ƒğV³µd”¡àB³=W­©XŠ"Ò8¾1O\ãÌ©¡ÈdäA«zŠ¥Ûv’)Õ=¯fQÜ÷ÌŒ²5Ç«—¥8'ÈFqÎ3Gö=¾œ°êÉÄ0Š3ù2£O7,RoY`LœJô<KÆG[\–è&ªoÏŸ_›ØNVK1À@êŠÉa R,Å$[Ï€FºSÄ«>ªn¥3ºÃí³oÜ& È‰¿e$ù-' ¦ıÀuÅ!k,–klÜûRÆ‹ë¹n6N€Ó¡¨îi C“w7Q6€©ä¹ÏİyÀÀ¯ek9,lYb»6¹DÊµ¬LìÚGÆ‹ÈE[ã?ó·¢^ÀNEaõCÄBôy$`€1wvà<9KÖptßéÉ˜]7ÓOu˜°ÎŞB2áëÕ„³ÚŒ(­†kFî´›ŸŒ]Oö@Ú§ãnÉ ‰'YÜì<$ù•pÑr¶yJƒûkÆ†mP¶¬Ü§øM ˆ…8ÓuÌƒ‡1Mm‹-ÂQÅ‘£ÌtnÌ·ÎÉD³¬Èî´ó’ØRvå¦(Ü¼XòR¦U".¦J=ô%Öğ² SÁT"ÎwnEqVŠc®ò¢”{Æ–‰7hYIp+õ èAòÈ"\9T7óª7§ğLâë8Ïn^E¦ã3õÏÙıõ¤_î|8ö!Œfûœ‹"º{õ6#{²™øÌ˜—IŒçˆ…ğrğ„’Ò-EBºh7Šì:æÒ#º0wı–"~?\=PÄÿ8o<jHôïb&„Q("Ğp•dŠÁ¤¡9níˆÍúóc’'BØæ{Æ.ƒA´³ÒEÑİd×€™‡)ª7‚_¸[s¨SZ=ŸÚ2ÊN“ÅºßxÄ£?­†ËéĞÀ¸ Ã0ÖzÇÛŞ•G™Fù†b$*·;Å]O”, £)¤×²b¼NİvæÆôÒcÊšŒpËÛãkõÏ-Yzb˜é—%¿sÕ²ë“àŒIL fÎ(±¶.ÑÑ»5ã˜Ä‹C6@åt;Z€VºÒî<°%Ño<”u.â€ŞRÌ›ÙELî°J¿ÕJÖ¬ÚŞN±ÊLä¶Ü¢ÛªåÁˆhÔ0‡†‡NÀ×n<ğ¾ àåc§(‹˜ÌBçEQØV—+E&©ËÅRô„L‰' ğî¬Z@º·‡µæÌVuçaî#q’í+|—F=Lß‚>‘Ño(ÃƒLîÅ®íºÓÇ†â˜„;ÅĞÙù/5")u…›-³üóãú’RÏ²ºªs¢•¥ßpSYk„ùJÿ0õÿ/h;µ9%|Ù‡üm2ÿ½7Ì5å/Ûˆï´wà×Î¢F¶ u’OAo`±|~NêïIŸ§‘ü)³ÌŠÇ÷wz}h+Ëä¾©ëEgÓs)z©IÏ$rÅ¤—eXD«Mï9yo2ğŠ˜³OèaŸH[`ØE<+S†auYorÄÖÚd„ÇŸ,©”‰Úv(œ›²!³ ®`y`oHel!ı”HQ‚õNà¯÷šÚp1 â%äğé¬)8^“=ÿN“£ÆN¤ê¥úF{rà{Xê&&úˆ›£ËˆÙæÈ¢qÒ`r<ÃİæøÛ Âç%‚øıÏÊ8ûÿÿã?½ûÿ­²CÒÿ.ªF!ºàœœ8!èœT%Ì
+J^„ÍG†×¿S(¬ Ç"”ërÿ:ƒ(½(‹ÿ.7w)D(‡Ò9ïÈK3½¾e	³*×„x­A$—¬Jÿ0õcêoyû®HYğ£{cÜ§ñ}ÆsŠs#9F‡²UWÕc‚a¨(~‡]ÌÊ°{}¯¥a¾ñ|ÒwQÛQl¶ï:ıËõJGTOB´“^
+Ğ'ì{ú mÑéyó^j1é÷ïïfYı6£ò‡M¤ıõk³c¾×ı¥#°PÅ-¢Ó•:‡‘VTªFÜñu)D|Éü¤}O!*TYÒÊ(w¼mƒmÚ×+úniÌåş„Jø2-;•WZ™àÿwÒº¿—(TÑkÙFŞ5+k°Í™ö×ËRüúµÁz¥ş¯wò¢#áÏw*FIôi6ì¯çeø
+ü2İš«ì¼[ã‚~FR÷¦kßé_ö¾:Ó5Â)×ÿ°tÃ-ïÒ:x¬FkWÑâ-Sïä‹ù±¬²k+²^?èKw¿ M¶¹3—/²Øl3„zÈÖ0!r3›ôXìùÉVû¼É&}ì$¹”F Ì'[Üå“­ÇÚò'“ÙZá(Êdó¨i¨ùú¨œw<
+ÈÉfÄë/Ô.âïPÃŒã’¼x’,2Üş¾ï<òtˆHê&£ôÖfW«F]µ}àÑê:P¶…nk§:HV”>KQº¾ñHèÂ
+†@x®5_æ´½ßXÁ÷f®KÇO pÃÚ@Ç¸ÍöN7#‘İgkyiGuy6yH²$sc2rè,ÒòZkœÜa-`XÁ/H_‡ù ràFÉ¢ôœ£å¡Š_öº4`åUŸ;4GKó(KQv	ııR+‘[0ÅP”¯üi8ª‡´v½2•¤Çcë<7°^ë}¸Õz® {Æ‚›xÆ_ÈM|jè¨ÉŸ2¸úr*SŞd„·úvQ®Uö¿!™l™³ôPoÙŠˆ	N€F¶÷wiYu<´ïDYÈÕÓ“ìÉu„‹ñ2Ì°6ù¼÷œíÕJS"–”|°ÊŞ]¤P¼—ˆ‡3âMFt²ä—şğhed$(eu‡S•í«¿—ÈÙa;eä² ”øYGiPÂ 2Ê:L´ã[‰²ın¸[5eÛ+¾İ2Šà”™“lwöôYçı9#şP	±Y18>PäH°¶;EQÕSÉHxAŸË5c‘ÁË¯ÉÈ!wê×V¼â«Édì^ü˜oı$KfÛvEÂü¦~d— œ+˜ŒØ{ãÃè–1âäëĞÁ‘(æåŞÁÄƒË28L?-’j£¸G&*v‹#fŞEâLş¨½C´=ßŸô Ç6}v¢y›ÃgŒ5öô²æ;]öô¢ÕfÿŞñ”É`ß¾Ëğ‰9ÒÑğÙHe6„Ş9â†éÏKŠgjÚX5x³µøxıünK‹ÛØŒÿas1Òk©%-;ŠVÿ^Ú÷}×2«tØ7ö–<CSıàü9ÎÇ7’L‡ùı}š™[“<O^Â¸¢È<°ÓÙÈqDÂkûı{Õ‰Ké½˜R|Qê\LÅãR&›,1˜»İ²5"æh¸à¢ûı»>^Èö;oïït +>ocÕ
+D0úäl\«x…]E"Å£³¼ÖÕë³f+ëEˆÂ\ e}ÏeÆXÊõ Ğ¢Å[æ
+UÛ^İÉR”à&cõíµü\2Ö’k	‡Z±dg–Ğh–"ĞÕ)–åaÖëä1½zU'RßL¯ä_fOòñzÆıö8¸Tßÿ|Ï´ø?Ó3O>`ßÁk¼¡S‰W½I_¥˜!›ï™§ö{ã°‰¥y£ßx6S³IßÕØúğ]:[Ï¶ï"òeîñ<+€[YkªÍ?«êO Åz x”İR¹¿^0ÀÓÉ’_Æ×¥Á!Á3>Ú<]&–l/W?}Û]áH¾=(ç‚k·>“<ß1ÎÇĞgÿÎĞĞ³Ï÷÷eQ@#ñrg8‹÷{7¾Øl²pj¼îs6Ù˜T.Õv.šĞâÑšùN„£µ6ïb¢'r+†cô”l1]¤"k''½#ìäæåa!„Ú\#üE2ß½“ûkÈ
+Dİ^y´o€ÀqT
+ vV/SÏ\«×¶áy ZúšŒÄÕH%Ü3FX!„€FÖŞ)òˆ™G17Š¢çv›¥˜_gt(x¦M‡Zã‘†G÷·¢DĞğlÉRl„¬Ë'à=kMQ;ğûiB}[”P3¡1åx­ã’:±·ğ3õø.ú+Ïöï™Ü<ßß,eu"è–RÑò˜û8€n#'ß;Îzöâe§B<)û½÷†g¢ı»¬M^nlq¤¨Ã?Ø*sÒç×¬Û²Y7Ô=Û¨ìQ*]µ¢n¾3›Êª­ïdOˆuáÏ»Š¡]µÑdú¡x¬ÈiµBÀ^; (ÑYæ°DvKç¨)aós6Dô¡VëøæoÍçi¼XÌà'úC4=‘÷ñXœããÌPÌ™vè‘éÒ~
+-ªå¡Ö¶Õ•ì'gÆ$ úªbµİ\y+óµV(-8C6Çüß)îÀQ0ğÔµ…¯¶‰púøi$ßqQKÀÖí{	8óû#xxêgzìûû¤AWùDáœ|Ù‰[Çı{u©²Gß‹©²ä$¢ŠŸ‹ÁP>¹hÈq§ÀSëı{Oì×Ãs!ÇBüQÌ²Ë­r^u"0ÎNOf8*óoü‹iˆ9CÑ#ÚZ° WºÂ€7ñ¹XDÔÉ¿Wjò³lÜ¡V2n¢g¸ ÷×ÁóEHşÑ~!¬‹dVkœCQÅé'K±à…ı‹,IÏ$+®€.{õlÇŠF{Ö ÕÈ¸œ¶ƒ3ûœ›F«ŒVn\7^ıfg)6ÁOÕSÿ£¨f³Lº2ƒ¾“	ñeÄÿ$ªÃû‡òJ›Û±ÊiĞMxÕ
+T¾mßq•ãÏbpP3ÀÏbòïdÈI?ËXæ{ãIa¹·bW=ÜjCÀåØ,9<²†–9Ñİƒ†ì>síhÕÛVà&†b	rXš_BèÈ GÕtÑ6„Wço§¢BUÃ*`ÿ@€&àãá£Q§Æ]Ók’œ«+bË¥VmÆÌV&øk­0ıËëà›¢AÖşÃpA4¸p/®uiÇeÚ&¼ÏX@ö;¥¤À® pÎ¾¹8NË(ÓCöqßLKbö4“éZe…`İ¾g\–Ô6¿%¾<?bá-Ï¥ºT‚“šlò¿I›ùœ­Š
+]ß¸@ÉÆ½úá»(íj¡³ÓdÛŞ\¹Ó¹¨{eå»ü³yÿÎë–ô‘aL¯À{k}túoÇú¸ç,Å_1y>).*¸È5Ú†bãõ‚³ ñV#q/*á ·+óÂ;×‰–"'y±yK‘—\	Ü(–×»¥(¢An)¢‘×zg/åCs4ù›·´>^Ç†hÒåµã0ŸYh(nÀqz&6:áËØ:=	 4“é‰uëÏş%²Dó=³·‹a~¦­(úÎìNÆûXe«LN2>È15À™ıŞZÆ÷İş½â}‡¢ı{–îb:llÉ^)»å;W7O\¦3^"[7äÆ ÊèFN¤kÁåÛ¥–­£3í)Ó_]ÅxC®Ë¢Kl€9•q9´÷j5t !î²3%ÉìÆ‰õÎù²Æb…ß£ÍÈQm
+áÊ£ÀM†"ÃâÎÔP”I öc7V’´IûĞÓ6÷O WáÁ
+¯Ã+€*»æÖªefÉ—kuñp¨›Š"O1xğigÕ,pœİ™kâüeÀ
+f+aÇÓL>tbÄ¸­dğK?›Z&Ç‡úÈö|q8İÈá•·²“Æl*®h á\‰<"Éö»Ì=îŞ¿Ë
+Ö9¤Ü¾W¶2è7ûwƒ±$Ã®Léãtc·É&UÏ­7rÒÅ¸‰4ß	ªR[1ÜÊá¦ãRŒÌb{dèÉf«¤–€×ˆLÙ”Äªÿ:ù¼%»nµ21«‹ù‘{Q•4{ÆH|Şæ®¥À‚©ƒ(/™K-d¬õmó¡ÎéR½K‰C¿{\MéÁúÎµ¨ÎD¤½r-Û'Â%[ŠcNîwà8Yš~ûîPKú¡bÂş$
+çî‡íãû3‰ñ·‹Ø{È¼oÍ¥[—¹‚Ï ¶ˆ9|Ï’äB®Ÿ¢Yî*ıÉèß¾·Ğ=6¥{1<ğÀÎ¥˜®¦£Áë¼¼	ö;FÇœG˜rdëê5šËGAiQ±‘>ùŸÓã3‡œaÉPÍ6c¡¤½—Œ²I[%[‡ÈN6ö‰ûkûĞ¢´Csàˆ]¡àÎ[W¶k¤ÏÖn\Wº¤Ú‰ğƒ)ŞÛé±0¬Œ9c(nÀy25|–|«BõQïfò¹”ı(kÈ ƒuÌPÆ³ìâR›ğ\ª\iìû6rB½Fÿ‘œ¬—ƒ©\Å|—mçF°Xzår&×87ÁkAO<ì÷Š›dû]zcpû=uß·³ÕkÔ‡ò¶<G­ØÖÑéàÂµyd›+·í#»Uì“¥ˆGKXoe@¤lÉÔëI7Æ;À›¯l—3)jÍò!ı•¨‡^§‰k)r²œc»R,Ä?t°ì8“Æ.1u²´;Ev«.*×pgî•ká-+sòî7à8«k–]Hşö0Iö˜5Îäs·ZÕæÌ|—µ–nß‰)€(ó=±5éö;úÙš<ß‡ˆW¿ƒı„ÇÚ¹f&u¤d²±% @ÖÈ†ªŸ¦¢)…eÎ²¶l²j¢tË6Ùh7·7zhPû¾ı»ğÀ›¹P4~ÕİzİpÆMP¨¨ÔgÖ<G?zK³S”u)ñÁ ˜§@&„¯·<pêK¾µ*Fó7ÙPLzÑe{×ãË£¢^j%z qƒ-EüZêš¹S$bZŠw±\Çš×R”Î×ó˜(ørë‡v"Ô‡^ï tÎ+ ‡"ÁW_¥{s×v¨XOÅÃ@âLÈ›y¶Ê„½¨8
+µojßm%™á>ÎäS(ˆÂØßñÀ–åùş¨ø¡gIyŠ%vã¼V-DìiÁdcwKìßÏlÃB¡p”UâÆÖ­ìÜ±i•­¼sö;Ò¢Ùïœß9ìE&mìvn}çZâË®b´‘Cÿæˆï °_HÕ<ŞP»‘¯ª&ÓíÜb8Š!ÚlF’•¥6Ş±é
+§¶@;zéa;ÅXDÌùâb^‚aV·c›®ª+Â…•„µu–•<Ñ“-ÅŒouÔo¬
+&˜a®Já‹p?È;Sğˆvpc¾Êo]†"‘ß£ïà™Î{Q;pœç&ñ_;™jÃ,øI>öÇônYÉ”äæPšF£ŒlÏ÷NL2û=ËšìØÎlß input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@IEEEsubequation=\count87
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count88
+\c@table=\count89
+\@IEEEeqnnumcols=\count90
+\@IEEEeqncolcnt=\count91
+\@IEEEsubeqnnumrollback=\count92
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count93
+\@IEEEquantizeboxA=\box27
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count94
+\@IEEEtranrubishbin=\box28
+) ("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip44
+\subfigcapskip=\skip45
+\subfigcaptopadj=\dimen128
+\subfigbottomskip=\skip46
+\subfigcapmargin=\dimen129
+\subfiglabelskip=\skip47
+\c@subfigure=\count95
+\c@lofdepth=\count96
+\c@subtable=\count97
+\c@lotdepth=\count98
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/subfigure\subfigure.cfg")
+\subfig@top=\skip48
+\subfig@bottom=\skip49
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/caption\caption.sty"
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen130
+\captionmargin@=\dimen131
+\captionwidth=\dimen132
+\caption@tempdima=\dimen133
+\caption@indent=\dimen134
+\caption@parindent=\dimen135
+\caption@hangindent=\dimen136
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \sffamily \footnotesize #1}\\{\normalfont \sffamily \footnotesize #2}\par
+ \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEf
+igurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \sffamily \footnotes
+ize {#1.}\nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbo
+x {\normalfont \sffamily \footnotesize {#1.}\nobreakspace }\parbox [t]{\hsize }
+{\normalfont \sffamily \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbo
+x to\hsize {\normalfont \sffamily \footnotesize \box \@tempboxa \hfil }\fi \fi 
+.
+\c@caption@flags=\count99
+\c@ContinuedFloat=\count100
+Package caption Info: subfigure package is loaded.
+) ("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen137
+))
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen138
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count101
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count102
+\leftroot@=\count103
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count104
+\DOTSCASE@=\count105
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen139
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
+\dotsspace@=\muskip10
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
+\tag@help=\toks17
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
+\andhelp@=\toks18
+\eqnshift@=\dimen140
+\alignsep@=\dimen141
+\tagshift@=\dimen142
+\tagwidth@=\dimen143
+\totwidth@=\dimen144
+\lineht@=\dimen145
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/comment\comment.sty"
+\CommentStream=\write3
+
+Excluding comment 'comment')
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count113
+\float@exts=\toks21
+\float@box=\box31
+\@float@everytoks=\toks22
+\@floatcapt=\box32
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip53
+\multirow@cntb=\count114
+\multirow@dima=\skip54
+\bigstrutjot=\dimen146
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(bare_jrnl_compsoc_v1.aux
+
+LaTeX Warning: Label `buddha2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@buddha2turtle' multiply defined.
+
+
+LaTeX Warning: Label `pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `buddha2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@buddha2turtle' multiply defined.
+
+
+LaTeX Warning: Label `pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `pillow2turtle' multiply defined.
+
+
+LaTeX Warning: Label `sub@pillow2turtle' multiply defined.
+
+)
+\openout1 = `bare_jrnl_compsoc_v1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+-- Lines per column: 61 (exact).
+("E:\ProgramFiles\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count115
+\scratchdimen=\dimen147
+\scratchbox=\box33
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen148
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks24
+) ("E:\ProgramFiles\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("E:\ProgramFiles\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/iftex\ifluatex.sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)))))
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("E:\ProgramFiles\MiKTeX 2.9\tex/generic/iftex\ifpdf.sty"
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocumen h3 {
     page-break-after: avoid; }
   @page {
     size: a3; }
