@@ -29,9 +29,9 @@ projects: []
 ---
 
 ## Bag of words (BOW)
-BOW is a method to extract features from text documents, which is usually used in **NLP**, **Information retrieve (IR) from documents** and **document classification**. In general, BOW summarizes words in documents into a vocabulary (like dict type in python) that **collects all the words in the documents along with word counts but disregarding the order they appear.** 
+BOW is a method to extract features from text documents, which is usually used in **NLP**, **Information retrieve (IR) from documents** and **document classification**. In general, BOW summarizes words in documents into a vocabulary (like dict type in python) that **collects all the words in the documents along with word counts but disregarding the order they appear.**
 
-For examples, two sentences: 
+For examples, two sentences:
 ```python
 Lei Li would like to have a lunch before he goes to watch a movie.
 ```
@@ -51,7 +51,7 @@ https://www.freecodecamp.org/news/an-introduction-to-bag-of-words-and-how-to-cod
 
 ## Principal Component Analysis (PCA)
 1. mean: $\mu_i = \frac{1}{n} \Sigma_{i=1}^n{x_i}$
-2. variance: $\sigma^2 = \frac{1}{n} \Sigma_{i=1}^n{(x_i - \mu_i)^2}$ 
+2. variance: $\sigma^2 = \frac{1}{n} \Sigma_{i=1}^n{(x_i - \mu_i)^2}$
 3. standard deviation: $\sigma^2 = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i - \mu_i)^2}$
 4. covariance: $cov(x,y) = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i-\mu_x)*(y_i -\mu_y)}$
 
@@ -69,13 +69,13 @@ where $p(x)$ denotes the probability that event $x$ happens.
 ### Entropy
 For a given event $X$, there may be several possible situations/results, and each situation/result has its own probability, then the amount of information that this event gives is denoted as:
 $$f(X)= -\Sigma_{i=1}^{n}p(x_i)log(p(x_i))$$   
-where $n$ denotes the number of situations/results and $p(x_i)$ is the probability of situation/result $x_i$ happens. 
+where $n$ denotes the number of situations/results and $p(x_i)$ is the probability of situation/result $x_i$ happens.
 
 ### Kullback-Leibler (KL) divergence
 The KL divergence aims to describe the difference between two probability distributions. For instance, for a given event $X$ consisting of a series events $\{x_1,x_2,...,x_n\}$, if there are two probability distributions of possible situations/results: $P=\{p(x_1),p(x_2),...,p(x_n)\}$ and $Q=\{q(x_1),q(x_2),...,q(x_n)\}$, then the KL divergence distance between $P$ and $Q$ is formulated as:
 
 $$D_{KL}(P||Q) = \Sigma_{i=1}^n p(x_i)log(\frac{p(x_i)}{q(x_i)})$$
-further, 
+further,
 $$D_{KL}(P||Q) = \Sigma_{i=1}^n p(x_i)log(p(x_i)) - \Sigma_{i=1}^n p(x_i)log(q(x_i))$$
 where $Q$ is closer to $P$ when $D_{KL}(P||Q)$ is smaller.
 
@@ -89,9 +89,8 @@ where the first term $\Sigma_{i=1}^n p(x_i)log(p(x_i))$ is a constant, then the 
 https://blog.csdn.net/tsyccnh/article/details/79163834
 
 ## Conv 1x1
-[Conv 1x1](https://arxiv.org/pdf/1409.4842.pdf) in Google Inception is quite useful when the filter dimension of input featues needs to be increased or decreased meanwhile keeping the spaital dimension, and reduces the convolution computation. For example, the input feautre dimension is $\(B, C, H, W\)$ where $B$ is batch size, $C$ is channel number, $H$ and $W$ are height and width. Using $M$ filters of Conv 1x1, then the output of Conv 1x1 is $\(B,M,H,W\)$, only channel number changes but spatial dimension ($H \times W$) is still the same as input. To demonstrate the computation efficiency using conv 1x1, take a look at next example. For instance, the output feature we want is $\(C, H, W\)$, using M filters of conv 3x3, then the compuation is $3^2C \times MHW$. Using conv 1x1, the computation is $1^2C \times MHW$, which is $\frac{1}{9}$ of using conv 3x3. 
+[Conv 1x1](https://arxiv.org/pdf/1409.4842.pdf) in Google Inception is quite useful when the filter dimension of input featues needs to be increased or decreased meanwhile keeping the spaital dimension, and reduces the convolution computation. For example, the input feautre dimension is $\(B, C, H, W\)$ where $B$ is batch size, $C$ is channel number, $H$ and $W$ are height and width. Using $M$ filters of Conv 1x1, then the output of Conv 1x1 is $\(B,M,H,W\)$, only channel number changes but spatial dimension ($H \times W$) is still the same as input. To demonstrate the computation efficiency using conv 1x1, take a look at next example. For instance, the output feature we want is $\(C, H, W\)$, using M filters of conv 3x3, then the compuation is $3^2C \times MHW$. Using conv 1x1, the computation is $1^2C \times MHW$, which is $\frac{1}{9}$ of using conv 3x3.
 
-[Why do we need to decrease filter dimension or the number of feature maps?](https://machinelearningmastery.com/introduction-to-1x1-convolutions-to-reduce-the-complexity-of-convolutional-neural-networks/) The filters or the number of feature maps often increases along with the depth of the network, it is a common network design pattern. For example, the number of feature maps in VGG19, is 64,128,512 along with the depth of network. Further, some networks like Inception architecture may also concatenate the output feature maps from multiple fronter convolution layers, which also rapidly increases the number of feature maps to subsequent convolutional layers. 
+[Why do we need to decrease filter dimension or the number of feature maps?](https://machinelearningmastery.com/introduction-to-1x1-convolutions-to-reduce-the-complexity-of-convolutional-neural-networks/) The filters or the number of feature maps often increases along with the depth of the network, it is a common network design pattern. For example, the number of feature maps in VGG19, is 64,128,512 along with the depth of network. Further, some networks like Inception architecture may also concatenate the output feature maps from multiple fronter convolution layers, which also rapidly increases the number of feature maps to subsequent convolutional layers.
 ### Reference
 https://stats.stackexchange.com/questions/194142/what-does-1x1-convolution-mean-in-a-neural-network
-
