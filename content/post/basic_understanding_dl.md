@@ -121,3 +121,13 @@ $$\Delta t_w = log(G_w/P_w)$$
 $$\Delta t_h = log(G_h/P_h)$$
 Next, we denote $W_i \Phi(P_i)$ where $i \in {x,y,w,h}$ as learned transformation through the neural network, then the loss function is to minimize the L2 distance between $\Delta t_i$ and $W_i \Phi(P_i)$ where $i \in \{x,y,w,h\}$ by SGD:
 $$L_{reg} = \sum_{i}^{N} (\Delta t_i - W_i \Phi(P_i))^2 + \lambda ||W||^2$$
+
+## Upsampling, Deconvolution and Unpooling
+**Upsampling**: upsample any image to higher resolution. It uses **upsample** and **interpolation**.
+
+**[Deconvolution](https://www.quora.com/How-do-fully-convolutional-networks-upsample-their-coarse-output)**: also called transpose convolution. For example, your input for deconvolution layer is 4x4, deconvolution layer multiplies one point in the input with a 3x3 weighted kernel and place the 3x3 results in the output image. Where the outputs overlap you sum them. Often you would use a stride larger than 1 to increase the overlap points where you sum them up, which adds upsampling effect (see blue points). The upsampling kernels can be learned just like normal convolutional kernels.
+{{< figure library="true" src="deconvolution_stride1.gif" title="Fig 4. Visualization of Deconvolution in [this Quora answer](https://www.julyedu.com/question/big/kp_id/26/ques_id/2139)." lightbox="true" >}}
+
+**[Unpooling](https://arxiv.org/pdf/1311.2901v3.pdf)**: We use an unpooling layer to approximately simulate the inverse of max pooling since max pooling is non-invertible. The unpooling operates on following steps: 1. record the maxima positions of each pooling region as a set of switch variables; 2. place the maxima back to the their original positions according to switch variables; 3. reset all values on non-maxima positions to $0$. This may cause some information loss.  
+### Reference:
+1. https://www.quora.com/What-is-the-difference-between-Deconvolution-Upsampling-Unpooling-and-Convolutional-Sparse-Coding

@@ -5,8 +5,8 @@ title: "Training_tricks_dl"
 subtitle: ""
 summary: "Summary neural network training tricks."
 authors: [admin]
-tags: [Computer Vision, DL]
-categories: [Academic]
+tags: [Academic]
+categories: [Computer Vision, DL]
 date: 2020-01-08T21:03:10Z
 lastmod: 2020-01-08T21:03:10Z
 featured: false
@@ -41,4 +41,22 @@ There are normally four different situations:
 3. **New dataset is big and similar to pre-trained datasets.** We can fine-tune the entire pre-trained CNN.
 4. **dataset is big but not similar to pre-trained datasets.** We can fine-tune the entire pre-trained CNN.
 
-In practise, a smaller learning-rate is suggested as the weights in network is already smooth and a larger learning-rate may distort the weights of pre-trained CNN. 
+In practise, a smaller learning-rate is suggested as the weights in network is already smooth and a larger learning-rate may distort the weights of pre-trained CNN.
+
+### Coding in experiments
+In Pytorch, you can set "param.requires_grad = False" to freeze any pre-trained CNN part.
+For example, to freeze some layers in BERT model, you could do something like [this](https://github.com/huggingface/transformers/issues/1431):
+```python
+   if freeze_embeddings:
+             for param in list(model.bert.embeddings.parameters()):
+                 param.requires_grad = False
+             print ("Froze Embedding Layer")
+
+   # freeze_layers is a string "1,2,3" representing layer number
+   if freeze_layers is not "":
+        layer_indexes = [int(x) for x in freeze_layers.split(",")]
+        for layer_idx in layer_indexes:
+             for param in list(model.bert.encoder.layer[layer_idx].parameters()):
+                 param.requires_grad = False
+             print ("Froze Layer: ", layer_idx)
+```
