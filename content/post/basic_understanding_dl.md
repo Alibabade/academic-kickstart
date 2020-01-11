@@ -129,5 +129,13 @@ $$L_{reg} = \sum_{i}^{N} (\Delta t_i - W_i \Phi(P_i))^2 + \lambda ||W||^2$$
 {{< figure library="true" src="deconvolution_stride1.gif" title="Fig 4. Visualization of Deconvolution in [this Quora answer](https://www.julyedu.com/question/big/kp_id/26/ques_id/2139)." lightbox="true" >}}
 
 **[Unpooling](https://arxiv.org/pdf/1311.2901v3.pdf)**: We use an unpooling layer to approximately simulate the inverse of max pooling since max pooling is non-invertible. The unpooling operates on following steps: 1. record the maxima positions of each pooling region as a set of switch variables; 2. place the maxima back to the their original positions according to switch variables; 3. reset all values on non-maxima positions to $0$. This may cause some information loss.  
-### Reference:
+### Reference:s
 1. https://www.quora.com/What-is-the-difference-between-Deconvolution-Upsampling-Unpooling-and-Convolutional-Sparse-Coding
+
+## ROI Pooling in Object Detection
+[ROI pooling](https://arxiv.org/pdf/1504.08083.pdf) is simple vertion of Spatial Pyramid Pooling (multiple division scales, i.e., divide the entire feature maps into (1,4,16) patches/grids), which has only one scale division. For example, the original input image size is (1056x640) and one region proposal ($x_1=0, y_1=80,x_2=245, y_2=498$), after convolutional layers and pooling layers, the feature map size is (66x40), then we should rescale the proposal from ($x_1=0, y_1=80,x_2=245, y_2=498$) to ($x_1=0, y_1=5,x_2=15, y_2=31$) as the scale is 16 (1056/66=16 and 640/40=16). Then we divide the proposal on feature map into 7x7 sections/grids (the proposal size is no need of 7 times) if the output size is 7x7. Next we operate max pooling on each grid, and place the maxima into output 7x7. Here is another simple example below, the input feature size is 8x8, proposal is (0,3,7,8), and the output size is 2x2 thus divide the proposal region into 2x2 sections:
+
+{{< figure library="true" src="roi_visualization.gif" title="Fig 5. Visualization of ROI pooling in [this blog](https://towardsdatascience.com/region-of-interest-pooling-f7c637f409af)." lightbox="true" >}}
+
+### Reference
+1. https://zhuanlan.zhihu.com/p/73654026ß

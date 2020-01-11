@@ -58,9 +58,17 @@ Based on the procedure above, there are twice fine-tuning:
 2. Fine-tune the pre-trained CNN for bounding-box regression. For example, we add a regression head behind the FC7 layer, and we need to fine-tune the network for bounding-box regression task.
 
 #### 2.1.1 Some common tricks used
-1. Non-Maximum Suppression
+**1. Non-Maximum Suppression**
+
 Commonly, sometimes the RCNN model outputs multiple bounding-boxes to localize the same object in the given image. To choose the best matching one, we use non-maximum suppression technique to avoid repeated detection of the same instance. For example, we sort all the boxes with confidence score, and remove those with low confidence score. Then we choose the box with highest IOU.   
 {{< figure library="true" src="non-max-suppression.png" title="Fig 3. Non-maximum suppression used in RCNN [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
+
+**2. Hard Negative Mining**
+
+Bounding-box containing no objects (i.e., cat or dog) are considered as negative samples. However, not all of them are equally hard to be identified. For example, some samples purely holding background are "easily negative" as they are easily distinguished. However, some negative samples may hold other textures or part of objects which makes it more difficult to identify. These samples are likely  "Hard Negative".
+
+These "Hard Negative" are difficult to be correctly classified. What we can do about it is to find explicitly those false positive samples during training loops and add them into the training data in order to improve the classifier.
+
 
 #### 2.1.2 Problems of RCNN
 RCNN extracts CNN features for each region proposal by feeding each of them into CNN once at a time, and the proposals selected by Selective Search are approximately 2k for each image, thus this process consumes much time. Adding pre-processing Selective Search, RCNN needs ~47 second per image.
@@ -73,7 +81,87 @@ To speedup RCNN, SPPNet focuses on how to fix the problem that each proposal is 
 By proposing spatial pyramid pooling layer, SPPNet is able to reuse the feature maps extracted from CNN by passing the image once through because all information that region proposals need is shared in these feature maps. The only thing we could do next is project the region proposals selected by Selective Search onto these feature maps (**How to project Region Proposals to feature maps? I still do not get it.**). This operation extremely saves time consumption compared to extract feature maps per proposal per forward (like RCNN does). The total speedup of SPPNet is about 100 times compared to RCNN.
 
 ## Fast RCNN
+{{< figure library="true" src="fast_rcnn2.png" title="Fig 6. The pipeline of Fast RCNN in [this blog](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)." lightbox="true" >}}
+
+[Fast RCNN](https://arxiv.org/pdf/1504.08083.pdf) attempts to overcome three notable **drawbacks** of RCNN:
+1. **Training a multi-stage pipeline**: fine-tune a ConvNet based on Region Proposals; train SVM classifiers with Conv Features; train bounding-box regressors.
+2. **Training is expensive in space and time**: 2.5 GPU-days for 5k images and hundreds of gigabytes of storage.
+3. **Speed is slow**: ~47 second per image even on GPU.
+
+**Solutions**:
+1. **Combine both classification (replace SVM with softmax) and bounding-box regression into one network with multi-task loss.**
+2. **Introduce ROI pooling for: 1. reuse Conv feature maps of one image; 2. speedup both training and testing.** Using VGG16 as backbone network, ROI (Region of Interest) pooling converts all different sizes of region proposals into 7x7x512 feature vector fed into Fc layers. Please go to post **basic_understanding_dl** for more details about ROI pooling.
+
+{{< figure library="true" src="speed_rcnn_fastrcnn.png" title="Fig 6. Speed comparison between RCNN and Fast RCNN in [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
+
+### Multi-task Loss for Classification and Bounding-box Regression
+$--------------------------------------------------------------------------------------------$
+
+**Symbol Explanation**
+
+$u$       Groundtruth class label, $u \in 0,1,...,K$; To simplify, all background class has $u=0$.
+
+$v$       Groundtruth bounding-box regression target, $v=(v_x,v_y,v_w,v_h)$.
+
+$p$       Descrete probability distribtion (per RoI), $p=(p_0,p_1,...,p_K)$ over $K+1$ categories. $p$ is computed by a softmax over the $K+1$ outputs of a fully connected layer.
+
+$t^u$     Predicted bounding-box vector, $t^u=(t_x^u,t_y^u,t_w^u,t_h^u)$.
+
+$--------------------------------------------------------------------------------------------$
+
+The multi-task loss on each RoI is defined as:
+
+$$L(p,u,t^u,v) = L_{cls}(p,u) + \lambda[u \geqslant 1]L_{loc}(t^u,v)$$
+where $L_{cls}(p,u)$=-log$p_u$ is a log loss for groundtruth class $u$. The Iverson bracket indicator function $[u \geqslant 1]$ is 1 when $u \geqslant 1$ (the predicted class is not background), and is 0 otherwise. The $L_{loc}$ term is using smooth L1 loss, which is denoted as:
+$$L_{loc}(t^u,v)=\sum_{i \in {x,y,w,h}}smooth_{L_1}(t_i^u-v_i)$$ and
+\begin{equation}
+smooth_{L_1}(x) = \begin{cases}
+                 0.5x^2, &|x| < 1 \newline
+                 |x|-0.5,&otherwise
+                 \end{cases}
+\end{equation}
+$smooth_{L_1}(x)$ is a robust $L_1$ loss that is less sensitive to outliers than $L_2$ loss.
+## Faster RCNN
+{{< figure library="true" src="faster_rcnn.png" title="Fig 7. The pipeline of Faster RCNN in [this blog](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)." lightbox="true" >}}
+
+[Faster RCNN](https://arxiv.org/pdf/1506.01497.pdf) focuses on solving the speed bottleneck of Region Proposal Selection as previous RCNN and Fast RCNN separately compute the region proposal by Selective Search on CPU which still consumes much time. To address this problem, a novel subnetwork called RPN (Region Proposal Network) is proposed to combine Region Proposal Selection into ConvNet along with Softmax classifiers and Bounding-box regressors.
+
+{{< figure library="true" src="RPN_mechanism.png" title="Fig 8. The pipeline of RPN in [the paper](https://arxiv.org/pdf/1506.01497.pdf)." lightbox="true" >}}
+
+To adapt the multi-scale scheme of region proposals, the RPN introduces an anchor box. Specifically, RPN has a classifier and a regressor. The classifier is to predict the probability of a proposal holding an object, and the regressor is to correct the proposal coordinates. Anchor is the centre point of the sliding window. For any image, scale and aspect-ratio are two import factors, where scale is the image size and aspect-ratio is width/height. [Ren et al., 2015](https://arxiv.org/pdf/1506.01497.pdf) introduce 9 kinds of anchors, which are scales (1,2,3) and aspect-ratio(1:1,1:2,2:1). Then for the whole image, the number of anchors is $W \times H \times 9$ where $W$ and $H$ are width and height, respectively.
+
+$-------------------------------------------------------------------------------------------$
+
+**Symbol  Explanation**
+
+**$i$**         the index of an anchor in a mini-batch.
+
+**$p_i$**       the probability that the anchor $i$ being an object.
+
+**$p_i^{\*}$**  the groundtruth label $p_i^{\*}$ is 1 if the anchor is positive, and is 0 if the anchor is negative.
+
+**$t_i$**       a vector $(x,y,w,h)$ representing the coordinates of predicted bounding box.
+
+**$t_i^{\*}$**  that of the groundtruth box associated with a positive anchor.
+
+$-------------------------------------------------------------------------------------------$
+
+The RPN also has a multi-task loss just like in Fast RCNN, which is defined as:
+
+$$L({p_i},{t_i}) = \frac{1}{N_{cls}} \sum_i L_{cls}(p_i,p_i^{\*}) + \lambda \frac{1}{N_{reg}} \sum_i p_i^{\*} L_{reg}(t_i, t_i^{\*})$$
+where the classification $L_{cls}$ is log loss over two classes (object vs not object). The regression loss $L_{reg}(p_i, p_i^{\*}) = smooth_{L1}(t_i - t_i^{\*})$. The term $p_i^{\*} L_{reg}(t_i, t_i^{\*})$ means the regression loss is activated if $p_i^{\*}=1$ and is disabled if $p_i^{\*}=0$. These two loss term are normalized by $N_{cls}$ and $N_{reg}$ and weighted by a balancing parameter $\lambda$. In implementation, $N_{cls}$ is the number of images in a mini-batch (i.e., $N_{cls}=256$), and the $reg$ term is normalized by the number of anchor locations (i.e., $N_{reg} \sim 2,400$). By default, the $\lambda$ is set to 10.
+
+Therefore, there are four loss functions in one neural network:
+1. one is for classifying whether an anchor contains an object or not (anchor good or bad in RPN);
+2. one is for proposal bounding box regression (anchor -> groundtruth proposal in RPN);
+3. one is for classifying which category that the object belongs to (over all classes in main network);
+4. one is for bounding box regression (proposal -> groundtruth bounding-box in main network);
+
+The total speedup comparison between RCNN, Fast RCNN and Faster RCNN is shown below:
+{{< figure library="true" src="comparison_speedup_rcnn_fastrcnn_fasterrcnn.png" title="Fig 9. The speedup comparison between RCNN, Fast RCNN and Faster RCNN in [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
 
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
+3. https://medium.com/egen/region-proposal-network-rpn-backbone-of-faster-r-cnn-4a744a38d7f9
+4. https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9
