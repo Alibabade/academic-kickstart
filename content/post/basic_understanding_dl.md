@@ -132,10 +132,22 @@ $$L_{reg} = \sum_{i}^{N} (\Delta t_i - W_i \Phi(P_i))^2 + \lambda ||W||^2$$
 ### Reference:s
 1. https://www.quora.com/What-is-the-difference-between-Deconvolution-Upsampling-Unpooling-and-Convolutional-Sparse-Coding
 
-## ROI Pooling in Object Detection
-[ROI pooling](https://arxiv.org/pdf/1504.08083.pdf) is simple vertion of Spatial Pyramid Pooling (multiple division scales, i.e., divide the entire feature maps into (1,4,16) patches/grids), which has only one scale division. For example, the original input image size is (1056x640) and one region proposal ($x_1=0, y_1=80,x_2=245, y_2=498$), after convolutional layers and pooling layers, the feature map size is (66x40), then we should rescale the proposal from ($x_1=0, y_1=80,x_2=245, y_2=498$) to ($x_1=0, y_1=5,x_2=15, y_2=31$) as the scale is 16 (1056/66=16 and 640/40=16). Then we divide the proposal on feature map into 7x7 sections/grids (the proposal size is no need of 7 times) if the output size is 7x7. Next we operate max pooling on each grid, and place the maxima into output 7x7. Here is another simple example below, the input feature size is 8x8, proposal is (0,3,7,8), and the output size is 2x2 thus divide the proposal region into 2x2 sections:
+## RoI Pooling in Object Detection (Fast RCNN)
+[RoI pooling](https://arxiv.org/pdf/1504.08083.pdf) is simple version of Spatial Pyramid Pooling (multiple division scales, i.e., divide the entire feature maps into (1,4,16) patches/grids), which has only one scale division. For example, the original input image size is (1056x640) and one region proposal ($x_1=0, y_1=80,x_2=245, y_2=498$), after convolutional layers and pooling layers, the feature map size is (66x40), then we should rescale the proposal from ($x_1=0, y_1=80,x_2=245, y_2=498$) to ($x_1=0, y_1=5,x_2=15, y_2=31$) as the scale is 16 (1056/66=16 and 640/40=16). Then we divide the proposal on feature map into 7x7 sections/grids (the proposal size is no need of 7 times) if the output size is 7x7. Next we operate max pooling on each grid, and place the maxima into output 7x7. Here is another simple example below, the input feature size is 8x8, proposal is (0,3,7,8), and the output size is 2x2 thus divide the proposal region into 2x2 sections:
 
 {{< figure library="true" src="roi_visualization.gif" title="Fig 5. Visualization of ROI pooling in [this blog](https://towardsdatascience.com/region-of-interest-pooling-f7c637f409af)." lightbox="true" >}}
-
 ### Reference
 1. https://zhuanlan.zhihu.com/p/73654026ß
+
+## RoIAlign Pooling in Object Detection
+RoI align Pooling is proposed in [Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) to address the problem that RoI pooling causes misalignments by rounding quantization.
+
+**Problem of RoI pooling.** There are twice misalignments for each RoI pooling operation. For example, the size of original input image is 800x800, and one region proposal is 515x482 and its corresponding coordinates are ($x_{tl}=20, y_{tl}=267, x_{br}=535, y_{br}=749$) where 'tl' means top left and 'br' means bottom right. And the stride of last conv layer is 16 which means each feature map extracted from the last conv layer is 50x50 (800/16). If the output size is fixed to 2x2, then RoI pooling would quantize (by floor operation) the region proposal to 41x41 and its corresponding coordinates to ($x_{tl}=1,y_{tl}=16, x_{br}=33, y_{br}=46$). The similar twice misalignments are visualized in the below figure.
+
+{{< figure library="true" src="roi_quantize.png" title="Fig 6. Visualization of ROI quantization in [this blog](https://zhuanlan.zhihu.com/p/37998710)." lightbox="true" >}}
+
+**Solution.** RoI Align removes all the quantizations of RoI and keeps the float number. Taking the example above, RoI Align Pooling keeps the projected region proposal size 41.4625x41.5625 and its corresponding coordinates are ($x_{tl}=1.25,y_{tl}=16.6875, x_{br}=33.4375, y_{br}=46.8125$). Then its corresponding grid size is 4.598x4.303. We assume the sample rate is 2, then 4 points will be sampled. For each grid, we compute the coordinates of 4 sampled points. The coordinates of top left sampled point is (1.25+(4.598/2)/2=2.3995, (16.6875+(4.303/2)/2)=17.76325), the top right sampled point is (1.25+(4.598/2)x1.5=4.6985, 17.76325), the bottom left sampled point is (1.25+(4.598/2)/2=2.3995, 16.6875+(4.303/2)x1.5=19.91475), and the bottom right samples point is (1.25+(4.598/2)x1.5=4.6985, 16.6875+(4.303/2)x1.5=19.91475). For the first sampled point, we compute the value at (2.3995,17.76325) by interpolating values at four nearest points ((2,17),(3,17),(2,18) and (3,18)) in each feature map. The computation can be visualized by below figure.
+
+{{< figure library="true" src="RoIAlign_computation.png" title="Fig 6. Visualization of one sampled value in ROI Align." lightbox="true" >}}
+### Reference
+1. https://zhuanlan.zhihu.com/p/61317964

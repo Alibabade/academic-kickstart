@@ -40,7 +40,7 @@ projects: []
 The $W$ weights and $b$ bias (parameters) in each layer are updated along with each SGD iterative optimization (back propagation), which makes the distribution of inputs to the next layer changes all the time. Thus the learning speed becomes slow as each layer has to adapt to input changes.
 
 **2. Slow convergence speed.**
-For saturating nonlinearities like Sigmoid and Tanh, more and more inputs to activation functions may lay in the saturation regions along with the $W$ and $b$ increase. This further causes the gradient becomes close to 0 and weights update in a slow rate. 
+For saturating nonlinearities like Sigmoid and Tanh, more and more inputs to activation functions may lay in the saturation regions along with the $W$ and $b$ increase. This further causes the gradient becomes close to 0 and weights update in a slow rate.
 
 These problems are described as **Internal Covariate Shift** in Loffe et al. 2015.
 ### Solutions to Internal Covariate Shift
@@ -51,12 +51,12 @@ Whitening aims to linearly transform the inputs to zero mean and unit variances,
 **2. Batch Normalization.**
 Motivation: 1. whitening costs too much computation if it is put before each layer; 2. the distribution of transformed inputs does not have expressive power as original inputs.
 
-Solutions: 
+Solutions:
 1. simplify the linearly transformation by following equations:
 $$ \mu_j = \frac{1}{m}\Sigma_{i=1}^{m}{x_j^i}$$
 $$\sigma^2_j = \frac{1}{m}\Sigma_{i=1}^{m}{(x_j^i - \mu_j)^2}$$
 $$x_j^{i\'} = \frac{x_j^i - \mu_j}{\sqrt{\sigma_j^2 + \varepsilon}}$$
-where $j$ denotes the $j$th layer, $\mu_j$ and $\sigma_j^2$ denote the mean and variance of inputs $x_j$. $x_j^{i\'}$ denotes the transformation output which has zero mean and unit variance, $m$ denotes the sample number in $x_i$ and $\varepsilon$ ($\varepsilon=10^{-8}$) prevents the zero in variance. 
+where $j$ denotes the $j$th layer, $\mu_j$ and $\sigma_j^2$ denote the mean and variance of inputs $x_j$. $x_j^{i\'}$ denotes the transformation output which has zero mean and unit variance, $m$ denotes the sample number in $x_i$ and $\varepsilon$ ($\varepsilon=10^{-8}$) prevents the zero in variance.
 
 2. learn a linear transformation with parameter $\gamma$ and $\beta$ to restore original input distribution by following equation:
 $$x_j^{i\"} = \gamma_j x_j^{i\'} + \beta_j$$  
@@ -74,10 +74,10 @@ where the transformed output will have the same distribution of original inputs 
 ### Disadvantages of BN
 1. NOT well for small mini-batch as the mean ans variance of small mini-batch differ great from other mini-batches which may introduce too much noise into the NN training.
 2. NOT well for recurrent neural network as one hidden state may deal with a series of inputs, and each input has different mean and variance. To remember these mean and variance, it may need more BN to store them for each input.
-3. NOT well for noise-sensitive applications such as generative models and deep reinforcement learning. 
+3. NOT well for noise-sensitive applications such as generative models and deep reinforcement learning.
 
 ### Rethink the resaon behind the effectiveness of BN
-**Why does the BN works so well in CNNs?** [This paper](https://arxiv.org/pdf/1805.11604.pdf) revisits the BN and proposes that the success of BN has little to do with reducing Internal Covariate Shift. Well, the ICS does exist in the deeper neural layers, but adding artifiical ICS after BN into a deep neural network, the added ICS does not affect the good performance of BN, which indicates that the performance of BN has little to do with ICS. Then what does the BN do to improve the training performance? The work mentioned above points out that BN smoothes the optimization landscape and makes the optimizer more easier to find the global minimic solution (c.f. Figure 4 in the paper). For more details, please refer to the paper. 
+**Why does the BN works so well in CNNs?** [This paper](https://arxiv.org/pdf/1805.11604.pdf) revisits the BN and proposes that the success of BN has little to do with reducing Internal Covariate Shift. Well, the ICS does exist in the deeper neural layers, but adding artifiical ICS after BN into a deep neural network, the added ICS does not affect the good performance of BN, which indicates that the performance of BN has little to do with ICS. Then what does the BN do to improve the training performance? The work mentioned above points out that BN smoothes the optimization landscape and makes the optimizer more easier to find the global minimic solution (c.f. Figure 4 in the paper). For more details, please refer to the paper.
 
 
 ## Weight Normalization (WN)
@@ -95,14 +95,14 @@ The mean of neurons still depends on $v$, thus the authors proposed a **'mean-on
 ## Layer Normalization
 
 ### Short description
-[Layer normalization]((https://arxiv.org/pdf/1607.06450.pdf)) is inspired by batch normalization but designed to small mini-batch cases and extend such technique to recurrent neural networks. 
+[Layer normalization]((https://arxiv.org/pdf/1607.06450.pdf)) is inspired by batch normalization but designed to small mini-batch cases and extend such technique to recurrent neural networks.
 
 ### Motivation and methodology
 As mentioned in short description. To achieve the goal, [Hinton et al. 2016](https://arxiv.org/pdf/1607.06450.pdf) **alter the sum statistic of inputs from batch dimension to feature dimension (multiple channels)**. For example, in a mini-batch (containing multiple input features), the computation can be described as following picture:
 
 {{< figure library="true" src="layer_normalization.png" title="Fig 1. Layer Normalization Visualization" lightbox="true" >}}
 
-As can be seen, batch normalization computes the sum statistic of inputs across the batch dimension while layer normalization does across the feature dimension. The computation is almost the same in both normalization cases, but the mean and variance of layer normalization is independent of other examples in the same mini-batch. Experiments show that layer normalization works well in RNNs.
+As can be seen, batch normalization computes the sum statistic of inputs across the batch dimension while layer normalization does across the feature dimension. The computation is almost the same in both normalization cases, but the mean and variance of layer normalization is independent of other examples in the same mini-batch. Experiments show that **layer normalization works well in RNNs**.
 
 ## Instance Normalization (IN)
 
@@ -111,7 +111,7 @@ As can be seen, batch normalization computes the sum statistic of inputs across 
 
 ## Group Normalization (GN)
 
-### Short description 
+### Short description
 [Group normalization](https://arxiv.org/pdf/1803.08494.pdf) computes the mean and variance across a group of channels in each training example, which makes it sound like a combination of layer normalization and instance normalization. For example, group normalization becomes layer normalization when all the channels are put into one single group, and becomes instance normalization when each channel is put into one single group.
 The picture below shows the visual comparisons of batch normalization, layer normalization, instance normalization and group normalization.
 
@@ -130,7 +130,7 @@ $$BIN(x) = \gamma (\rho BN(x) + (1-\rho) IN(x)) + \beta$$
 To some extend, this BIN inspires readers that models can learn to adaptively use different normalization methods using gradient descent. Would the network be capable of learning to use even wider range of normalization methods in one single model?
 
 ### Motivation
-Rethinking the instance normalization, [Nam et al. 2019](https://arxiv.org/pdf/1805.07925.pdf) regard instance normalization as an effective method to earse unnecessary style information from image and perserve useful styles for tasks like object classification, multi-domain learning and domain adaptation. 
+Rethinking the instance normalization, [Nam et al. 2019](https://arxiv.org/pdf/1805.07925.pdf) regard instance normalization as an effective method to earse unnecessary style information from image and perserve useful styles for tasks like object classification, multi-domain learning and domain adaptation.
 
 ## Switchable Normalization (SN)
 
@@ -158,4 +158,3 @@ BN is a millstone research on training deep neural network which makes it much e
 9. Spectral Normalization, https://arxiv.org/pdf/1802.05957.pdf
 10. https://zhuanlan.zhihu.com/p/34879333
 11. https://mlexplained.com/2018/11/30/an-overview-of-normalization-methods-in-deep-learning/
-

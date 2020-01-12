@@ -36,6 +36,8 @@ projects: []
 6. Reinforcement learning
 7. NAS
 8. Optimization: Adam, SGD
+9. Normalization
+10. AlexNet, VGG, Inception, ResNet (ResNet-50,ResNet-101, ResNeXt-50/101), Xecption.
 ## SOTA research areas
 1. Object recognition/detection: YOLO, LOGAN, Anchor, Anchor free, two-stage,one-stage
 2. Object tracking
@@ -50,4 +52,3 @@ projects: []
 11. FPN, Mask-rcnn,faster-rcnn, RPN, RetinaNet, ROI pooling,
 ## Machine Learning
 1. KNN,SVM, GBDT, XGBOOST
-
