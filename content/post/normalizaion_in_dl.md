@@ -3,10 +3,10 @@
 
 title: "Normalization_in_DL"
 subtitle: ""
-summary: "Some basic summary to understand normalizaion in DL"
+summary: "Some brief summary to understand normalizaion in DL"
 authors: [admin]
 tags: [Academic, Normalization--Neual Network Optimization]
-categories: [Computer Vision, Deep Learning]
+categories: [Computer Vision, DL]
 date: 2019-12-23T11:26:06Z
 lastmod: 2019-12-23T11:26:06Z
 featured: false

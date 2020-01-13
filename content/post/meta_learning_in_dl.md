@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Summary about the meta learning"
 authors: [admin]
 tags: [Academic, Meta-learning in dl]
-categories: [Computer Vision, Deep Learning]
+categories: [Computer Vision, DL]
 date: 2019-12-27T20:41:16Z
 lastmod: 2019-12-27T20:41:16Z
 featured: false
@@ -27,5 +27,3 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
-

@@ -3,7 +3,7 @@
 
 title: "Graph_NN"
 subtitle: ""
-summary: "Basic summary of Graph Convolutional Networks"
+summary: "Brief summary of Graph Convolutional Networks"
 authors: [admin]
 tags: [Academic]
 categories: [Computer Vision, DL]

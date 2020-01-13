@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Brief summary about attention"
 authors: [admin]
 tags: [Academic, attention in dl]
-categories: [Computer Vision, Deep Learning]
+categories: [Computer Vision, DL]
 date: 2019-12-28T22:03:15Z
 lastmod: 2019-12-28T22:03:15Z
 featured: false
