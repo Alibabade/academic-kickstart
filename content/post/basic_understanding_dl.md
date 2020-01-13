@@ -53,7 +53,7 @@ https://www.freecodecamp.org/news/an-introduction-to-bag-of-words-and-how-to-cod
 1. mean: $\mu_i = \frac{1}{n} \Sigma_{i=1}^n{x_i}$
 2. variance: $\sigma^2 = \frac{1}{n} \Sigma_{i=1}^n{(x_i - \mu_i)^2}$
 3. standard deviation: $\sigma^2 = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i - \mu_i)^2}$
-4. covariance: $cov(x,y) = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i-\mu_x)*(y_i -\mu_y)}$
+4. covariance: $cov(x,y) = \frac{1}{n-1} \Sigma_{i=1}^n{(x_i-\mu_x)\*(y_i -\mu_y)}$
 
 
 ## Cross Entropy
@@ -142,12 +142,14 @@ $$L_{reg} = \sum_{i}^{N} (\Delta t_i - W_i \Phi(P_i))^2 + \lambda ||W||^2$$
 ## RoIAlign Pooling in Object Detection
 RoI align Pooling is proposed in [Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) to address the problem that RoI pooling causes misalignments by rounding quantization.
 
-**Problem of RoI pooling.** There are twice misalignments for each RoI pooling operation. For example, the size of original input image is 800x800, and one region proposal is 515x482 and its corresponding coordinates are ($x_{tl}=20, y_{tl}=267, x_{br}=535, y_{br}=749$) where 'tl' means top left and 'br' means bottom right. And the stride of last conv layer is 16 which means each feature map extracted from the last conv layer is 50x50 (800/16). If the output size is fixed to 2x2, then RoI pooling would quantize (by floor operation) the region proposal to 41x41 and its corresponding coordinates to ($x_{tl}=1,y_{tl}=16, x_{br}=33, y_{br}=46$). The similar twice misalignments are visualized in the below figure.
+**Problem of RoI pooling.** There are twice misalignments for each RoI pooling operation. For example, the size of original input image is 800x800, and one region proposal is 515x482 and its corresponding coordinates are ($x_{tl}=20, y_{tl}=267, x_{br}=535, y_{br}=749$) where 'tl' means top left and 'br' means bottom right. And the stride of last conv layer is **16** which means each feature map extracted from the last conv layer is **50x50** (800/16). If the output size is fixed to 7x7, then RoI pooling would quantize (by floor operation) the region proposal to **32x30** and its corresponding coordinates to ($x_{tl}=1,y_{tl}=16, x_{br}=33, y_{br}=46$). The twice misalignments in each feature map are visualized in the below figure (acutal coordinates in blue colour).
 
-{{< figure library="true" src="roi_quantize.png" title="Fig 6. Visualization of ROI quantization in [this blog](https://zhuanlan.zhihu.com/p/37998710)." lightbox="true" >}}
+{{< figure library="true" src="RoI_misalignments.png" title="Fig 7. Visualization of RoI quantization/misaligments and RoIAlign corrections." lightbox="true" >}}
 
-**Solution.** RoI Align removes all the quantizations of RoI and keeps the float number. Taking the example above, RoI Align Pooling keeps the projected region proposal size 41.4625x41.5625 and its corresponding coordinates are ($x_{tl}=1.25,y_{tl}=16.6875, x_{br}=33.4375, y_{br}=46.8125$). Then its corresponding grid size is 4.598x4.303. We assume the sample rate is 2, then 4 points will be sampled. For each grid, we compute the coordinates of 4 sampled points. The coordinates of top left sampled point is (1.25+(4.598/2)/2=2.3995, (16.6875+(4.303/2)/2)=17.76325), the top right sampled point is (1.25+(4.598/2)x1.5=4.6985, 17.76325), the bottom left sampled point is (1.25+(4.598/2)/2=2.3995, 16.6875+(4.303/2)x1.5=19.91475), and the bottom right samples point is (1.25+(4.598/2)x1.5=4.6985, 16.6875+(4.303/2)x1.5=19.91475). For the first sampled point, we compute the value at (2.3995,17.76325) by interpolating values at four nearest points ((2,17),(3,17),(2,18) and (3,18)) in each feature map. The computation can be visualized by below figure.
+**Solution.** RoI Align removes all the quantizations of RoI and keeps the float number. Taking the example above, RoI Align Pooling keeps the projected region proposal size **32.1875x30.125** and its corresponding coordinates are ($x_{tl}=1.25,y_{tl}=16.6875, x_{br}=33.4375, y_{br}=46.8125$). Then its corresponding grid size is **4.598x4.303**. We assume the **sample rate is 2**, then 4 points will be sampled. For each grid, we compute the coordinates of 4 sampled points. The coordinates of top left sampled point is (1.25+(4.598/2)/2=2.3995, (16.6875+(4.303/2)/2)=17.76325), the top right sampled point is (1.25+(4.598/2)x1.5=4.6985, 17.76325), the bottom left sampled point is (1.25+(4.598/2)/2=2.3995, 16.6875+(4.303/2)x1.5=19.91475), and the bottom right samples point is (1.25+(4.598/2)x1.5=4.6985, 16.6875+(4.303/2)x1.5=19.91475). For the first sampled point, we compute the value at (2.3995,17.76325) by interpolating values at four nearest points ((2,17),(3,17),(2,18) and (3,18)) in each feature map. The computation of one sampled point can be visualized by the below figure.
 
-{{< figure library="true" src="RoIAlign_computation.png" title="Fig 6. Visualization of one sampled value in ROI Align." lightbox="true" >}}
+{{< figure library="true" src="RoIAlign_computation2.png" title="Fig 6. Visualization of one sampled value computation in RoI Align." lightbox="true" >}}
+where area0=(2.3995-2)x(17.76325-17)=0.304918375, area1=(3-2.3995)x(17.76325-17)=0.458331625, area2=(2.3995-2)x(18-17.76325)=0.094581625, area3=(3-2.3995)x(18-17.76325)=0.142168375.
+
 ### Reference
 1. https://zhuanlan.zhihu.com/p/61317964

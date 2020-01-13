@@ -161,11 +161,28 @@ The total speedup comparison between RCNN, Fast RCNN and Faster RCNN is shown be
 {{< figure library="true" src="comparison_speedup_rcnn_fastrcnn_fasterrcnn.png" title="Fig 9. The speedup comparison between RCNN, Fast RCNN and Faster RCNN in [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
 
 ## Mask RCNN
+{{< figure library="true" src="mask_rcnn.png" title="Fig 10. The pipeline of Mask RCNN, which is Faster RCNN + Instance Segmentation + improved RoIAlign Pooling." lightbox="true" >}}
 
+[Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) has three branches: RPN for region proposal + a pretrained CNN + Headers for classification and bounding-box regression + Mask Network for pixel-level instance segmentation. Mask RCNN is developed on Faster RCNN and adds RoIAlign Pooling and instance segmentation to output object masks in a pixel-to-pixel manner. The RoIAlign is proposed to improve RoI for pixel-level segmentation as it requires much more fine-grained alignment than Bounding-boxes. The accurate computation of RoIAlign is described in RoIAlign Pooling for Object Detection in Basic_understanding_dl post.  
 
+{{< figure library="true" src="mask_rcnn_results.png" title="Fig 11. Mask RCNN results on the COCO test set. Image source: [Mask RCNN paper](https://arxiv.org/pdf/1703.06870.pdf)" lightbox="true" >}}
+
+### Mask Loss
+During the training, a multi-task loss on each sampled RoI is defined as : $L=L_{cls} + L_{bbox}+L_{mask}$. The $L_{cls}$ and $L_{bbox}$ are identical as those defined in [Faster RCNN](https://arxiv.org/pdf/1506.01497.pdf).
+
+The mask branch has a $K\times m^2$ dimensional output for each RoI, which is $K$ binary masks of resolution $m \times m$, one for each the $K$ classes. Since the mask branch learns a mask for every class with a per-pixel **sigmoid** and a **binary cross-entropy loss**, there is no competition among classes for generating masks. Previous semantic segmentation methods (e.g., [FCN for semantic segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)) use a **softmax** and a **multinomial cross-entropy loss**, which causes classification competition among classes.  
+
+$L_{mask}$ is defined as the **average binary mask loss**, which **only includes $k$-th class** if the region is associated with the groundtruth class $k$:
+$$L_{mask} = -\frac{1}{m^2} \sum_{1 \leqslant i,j \leqslant m} (y_{ij}log\hat{y}_{ij}^k +(1-y_{ij})log(1-\hat{y}_{ij}^k))$$
+where $y_{ij}$ is the label (0 or 1) for a cell $(i,j)$ in the groundtruth mask for the region of size $m \times m$, $\hat{y}_{ij}$ is the predicted value in the same cell in the predicted mask learned by the groundtruth class $k$.
+
+## Summary for R-CNN based Object Detection Methods
+
+{{< figure library="true" src="rcnn-family-summary.png" title="Fig 12. Summary for R-CNN based Object Detection Methods . Image source: [this blog](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html)" lightbox="true" >}}
 
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
 3. https://medium.com/egen/region-proposal-network-rpn-backbone-of-faster-r-cnn-4a744a38d7f9
-4. https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9
+4. https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-
+5. https://zhuanlan.zhihu.com/p/37998710

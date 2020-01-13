@@ -1,5 +1,8 @@
 1. add a new post:
+
 hugo new --kind post content/post/post_name.md
+   add a new project:
+hugo new --kind project content/project/project_name.md    
 2. open server for sites
 hugo server
 3. git status
