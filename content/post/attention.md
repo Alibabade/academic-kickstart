@@ -3,7 +3,7 @@
 
 title: "Attention"
 subtitle: ""
-summary: "Basic summary about attention"
+summary: "Brief summary about attention"
 authors: [admin]
 tags: [Academic, attention in dl]
 categories: [Computer Vision, Deep Learning]
@@ -29,11 +29,11 @@ projects: []
 ---
 
 ## Attention
-The attention mechanism was created to simulate the human visual attention on images or understanding attention on texts. It was firstly born for solving a problem that widely exists in natural language processing (NLP) models like seq2seq, which NLP models often tend to forget the first part of processed sentences. 
+The attention mechanism was created to simulate the human visual attention on images or understanding attention on texts. It was firstly born for solving a problem that widely exists in natural language processing (NLP) models like seq2seq, which NLP models often tend to forget the first part of processed sentences.
 
 ### Seq2seq model
 The encoder-decoder architecture commonly used in Seq2seq model:
-1. encoder, compress the input sentence into a context vector in a fixed length way which is regarded as a representation of the meaning of input sentence. 
+1. encoder, compress the input sentence into a context vector in a fixed length way which is regarded as a representation of the meaning of input sentence.
 2. decoder, fed by the context vector and translate the vector to output. In some early works, the last state of encoder is usually used as the initial state of decoder.  
 
 Both of the encoder and decoder are recurrent neural networks, using LSTM or GRU units.
@@ -50,14 +50,14 @@ Let **x**=$\(x_1, x_2,...,x_n\)$ denote the source sequence of length $n$ and **
 $$h_i = \[\overrightarrow{h_i}^T; \overleftarrow{h_i}^T\], i=1,2,...,n$$
 
 The hidden states at position $t$ in decoder includes previous hidden states $s_{t-1}$, previous output target $y_{t-1}$ the context vector $c_t$, which is denoted as $s_{t} = f(s_{t-1}, y_{t-1}, c_{t})$, where the context vector $c_{t}$ is a sum of encoder hidden states of input sequence, weighted by alignment scores. For output target at position $t$, we have:
-$$c_{t} = \sum_{i=1}^{n} \alpha_{t,i} h_i$$ 
+$$c_{t} = \sum_{i=1}^{n} \alpha_{t,i} h_i$$
 
 $$ \alpha_{t,i}= align\(y_t, x_i\) = \frac{exp(score(s_{t-1},h_i))}{\Sigma^n_{i=1} exp(score(s_{t-1},h_{i}))} $$
 The score $\alpha_{t,i}$ is assigned to the pair $\(y_t, x_i\)$ of input at position $i$ and output at position $t$, and the set of weights ${\alpha_{t,i}}$ denotes how much each source hidden state matches for each output. In [Bahdanau et al. 2015](https://arxiv.org/pdf/1409.0473.pdf), the score $\alpha$ is learnt by a feed-forward network with a single hidden layer and this network is jointly learnt with other part of the model. Since the score is modelled in a network which also has weight matrices (i.e., $v_a$ and $W_a$) and activation layer (i.e., tanh), then the learning function is fomulated as:
 $$score(s_t, h_i) = v_a^T tanh(W_a\[s_t;h_i\])$$
 
 ## Self-attention
-Self-attention (or intra-attention) is such an attention mechnaism that assigns correlation in a single sequence for an effective representation of the same sequence. It has been shown to be very useful in machine reading, abstractive summarizatin or image description generation. 
+Self-attention (or intra-attention) is such an attention mechnaism that assigns correlation in a single sequence for an effective representation of the same sequence. It has been shown to be very useful in machine reading, abstractive summarizatin or image description generation.
 
 In [Cheng et al., 2016](https://arxiv.org/pdf/1601.06733.pdf), an application of self-attention mechanism is shown in machine reading. For example, the self-attention mechanism enables the model to learn a correlation between the current word and the previous part of the input sentence.
 {{< figure library="true" src="self_attention.png" title="Fig 2. An example of self-attention mechanism in Cheng et al., 2016" lightbox="true" >}}
@@ -89,4 +89,3 @@ And since hard attention is non-differentiable, models using this method have to
 
 ### Reference
 1. This attention blog heavily borrowed from Lilian Weng's blog, more details refer to https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html
-

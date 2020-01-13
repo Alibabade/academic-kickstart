@@ -5,8 +5,8 @@ title: "Object_detection"
 subtitle: ""
 summary: "Summary of object detection in DL"
 authors: [admin]
-tags: [Computer Vision, DL]
-categories: [Academic]
+tags: [Academic]
+categories: [Computer Vision, DL]
 date: 2020-01-09T12:21:28Z
 lastmod: 2020-01-09T12:21:28Z
 featured: false

@@ -1,9 +1,9 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Record_discrete_knowledge"
+title: "Archive_discrete_knowledge"
 subtitle: ""
-summary: "a simple record of discrete knowledge"
+summary: "A simple archive for discrete knowledge"
 authors: [admin]
 tags: [Academic]
 categories: [DL/ML, CV/CG]

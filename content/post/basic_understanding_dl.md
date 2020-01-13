@@ -1,11 +1,11 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Basic_understanding_dl"
+title: "Discrete_specific_techniques_dl"
 subtitle: ""
-summary: "Some discrete knowledge across research areas like NLP, IR, image/video and geometry"
+summary: "Some discrete techniques across research areas like NLP, IR, image/video and geometry"
 authors: [admin]
-tags: [Academic, Discrete knowledge in ML/DL]
+tags: [Academic, Discrete techniques in ML/DL]
 categories: [ML/DL]
 date: 2019-12-24T15:52:34Z
 lastmod: 2019-12-24T15:52:34Z
