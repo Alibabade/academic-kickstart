@@ -45,7 +45,7 @@ The new architecture for encoder-decoder machine translaion is as following:
 {{< figure library="true" src="attention_encoder-decoder-attention.png" title="Fig 1. The encoder-decoder architecture in Bahdanau et al. 2015" lightbox="true" >}}
 The encoder is composed by a bidirection RNN, a context vector is the sum of weighted hidden states and the decoder translates the context vector to a output target based on previous output targets.  
 
-### Fomula
+### Formula
 Let **x**=$\(x_1, x_2,...,x_n\)$ denote the source sequence of length $n$ and **y**=$\(y_1, y_2,...,y_m\)$ denote the output sequence of length $m$, $\overrightarrow{h_i}$ denotes the forward direction state and $\overleftarrow{h_i}$ presents the backward direction state, then the hidden state for $i$th input word is fomulated as:
 $$h_i = \[\overrightarrow{h_i}^T; \overleftarrow{h_i}^T\], i=1,2,...,n$$
 

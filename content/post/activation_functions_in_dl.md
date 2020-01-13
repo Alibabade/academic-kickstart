@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Brief summary for understanding activation functions in NN"
 authors: [admin]
 tags: [Academic, Activation functions in DL]
-categories: [Computer Vision, Deep Learning]
+categories: [Computer Vision, DL]
 date: 2019-12-24T21:15:41Z
 lastmod: 2019-12-24T21:15:41Z
 featured: false
