@@ -39,6 +39,7 @@ In this project, I also provide a torch implementation of the Domain Transform (
 
 
 ## Introduction
+<<<<<<< HEAD
 Photographic style transfer aims to transfer only the colour information from a given reference image to a source image without detail distortions. However, neural style transfer methods (i.e., [Neural-Style](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) and [Fast-Neural-Style](https://cs.stanford.edu/people/jcjohns/eccv16/)) usually tend to distort the details of source image to complete artistic transformation (including colours and textures) for reference images. Thus preserving details or structures in source images without affecting colour transformation is the key to photographic style transfer.
 
 ## Method
@@ -64,3 +65,9 @@ Here are more stylized examples by this method:
 
 ## One more thing
 The github code is released in [here](https://github.com/Alibabade/Fast-photographic-style-transfer).
+=======
+Photographic style transfer aims to transfer only the colour information from a given reference image to a source image without detail distortions. However, neural style transfer methods (i.e., [Neural-Style](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) and [Fast-Neural-Style](https://cs.stanford.edu/people/jcjohns/eccv16/)) usually tend to distort the details of source image to complete artistic transformation (including colours and textures) for reference images. Thus preserving details or structures in source images withour affecting colour transformation is the key to photographic style transfer.
+
+## Method
+To be continued...
+>>>>>>> 07be90b11e8063ea80c7512a48545a7a33e1c6ac
