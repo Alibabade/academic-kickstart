@@ -72,4 +72,4 @@ user_groups:
 - Visitors
 ---
 
-I am currently a PhD candidate of Computer Vision and Computer Graphics at National Centre for Computer Animation, Bournemouth University, UK. My research focuses on image/video based neural style transfer, particular photographic style transfer and video stabilization for arbitrary artistic style transfer using deep learning techniques. I received my M.Eng and B.Sci degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively. Then I got a 4-year PhD scholarship from Bournemouth University and China Scholarship Council.
+I am currently a PhD candidate of Computer Vision and Computer Graphics at National Centre for Computer Animation, Bournemouth University, UK. My research focuses on image/video based neural style transfer, in particular, photographic style transfer and video stabilization for arbitrary artistic style transfer using deep learning techniques. I received my M.Eng and B.Sci degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively. Then I got a 4-year PhD scholarship from Bournemouth University and China Scholarship Council.
