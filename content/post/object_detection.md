@@ -180,6 +180,9 @@ where $y_{ij}$ is the label (0 or 1) for a cell $(i,j)$ in the groundtruth mask 
 
 {{< figure library="true" src="rcnn-family-summary.png" title="Fig 12. Summary for R-CNN based Object Detection Methods . Image source: [this blog](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html)" lightbox="true" >}}
 
+## Classic One-Stage Methods
+To be continued...
+
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
