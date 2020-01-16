@@ -31,6 +31,6 @@ This is a small prototype that I had been working on when I was a visiting schol
 
 **Background:** Two independent programs for data receiving via Bluetooth and visualization via browser respectively. In addition, two programs depend on various softwares and libraries (i.e., google chrome browser, tkinter, matplotlib etc.), which makes it difficult to install.  
 
-**Goal:** combine two programs into one executable file without any other software and library dependence.  
+**Goal:** integrate two programs into one executable file without any other software and library dependence.  
 
-**Method:** 1.  combine two programs into one program file with multiprocessing; 2. Visualize the sensor data and complete functions (i.e., extract data during usr specific time, export data into csv file, sample rate etc.) on a window created via tkinter and matplotlib; 3. convert python code into an single executable file via pyinstaller.  
+**Method:** 1. Integrate two programs into one program with multiprocessing; 2. Visualize the sensor data and complete functions (i.e., extract data during usr specific time, export data into csv file, sample rate etc.) on a window created via tkinter and matplotlib; 3. Convert python code into an single executable file via pyinstaller.  
