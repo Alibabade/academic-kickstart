@@ -25,8 +25,8 @@ date_format = "Jan 2006"
   location = "Campobasso, Italy"
   date_start = "2019-09-21"
   date_end = "2019-10-20"
-  description = """develop a software release for real-time recording sensor data"""
-  
+  description = """Develop a software release for real-time recording sensor data"""
+
 [[experience]]
   title = "Internship"
   company = "ITware"
@@ -43,5 +43,5 @@ date_format = "Jan 2006"
   location = "Beijing, China"
   date_start = "2013-01-21"
   date_end = "2013-05-20"
-  description = """develop an inter-company office software and dealt with bugs"""
+  description = """Develop an inter-company office software and dealt with bugs"""
 +++
