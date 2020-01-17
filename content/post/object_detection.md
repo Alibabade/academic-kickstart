@@ -60,7 +60,7 @@ Based on the procedure above, there are twice fine-tuning:
 #### 2.1.1 Some common tricks used
 **1. Non-Maximum Suppression**
 
-Commonly, sometimes the RCNN model outputs multiple bounding-boxes to localize the same object in the given image. To choose the best matching one, we use non-maximum suppression technique to avoid repeated detection of the same instance. For example, we sort all the boxes with confidence score, and remove those with low confidence score. Then we choose the box with highest IOU.   
+Commonly, sometimes the RCNN model outputs multiple bounding-boxes to localize the same object in the given image. To choose the best matching one, we use non-maximum suppression technique to avoid repeated detection of the same instance. For example, we have a set $B$ of candidate boxes, and a set $S$ of corresponding scores, then we choose the best box by following steps: 1. sort all the boxes with the scores, and remove the box $M$ with highest score from $B$, and add to set $D$; 2. check any box $b_i$ left in $B$, if the IoU of $b_i$ and $M$, remove $b_i$ from $B$; 3. repeat 1-2 until $B$ is empty. The box in $D$ is what we want.      
 {{< figure library="true" src="non-max-suppression.png" title="Fig 3. Non-maximum suppression used in RCNN [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
 
 **2. Hard Negative Mining**
@@ -189,3 +189,4 @@ To be continued...
 3. https://medium.com/egen/region-proposal-network-rpn-backbone-of-faster-r-cnn-4a744a38d7f9
 4. https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-
 5. https://zhuanlan.zhihu.com/p/37998710
+6. https://blog.csdn.net/heiheiya/article/details/81169758
