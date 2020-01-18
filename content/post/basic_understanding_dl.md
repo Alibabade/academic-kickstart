@@ -153,3 +153,27 @@ where area0=(2.3995-2)x(17.76325-17)=0.304918375, area1=(3-2.3995)x(17.76325-17)
 
 ### Reference
 1. https://zhuanlan.zhihu.com/p/61317964
+
+## mAP (mean average precision) in Object Detection
+mAP is a measurement metric for the accuracy of object detectors, and it actually computes the mean average precision values along with recall from 0 to 1. Before going deep into mAP, a few concepts should be introduced first, i.e., True Positive, True Negative, False Positive, False Negative, Precision and Recall.
+
+For example, there is a classification task to distinguish whether an image contains apples, then for an image dataset:
+
+**True Positive (TP)**: is how many images containing apples (True) and you predict them contain apples (Positive).  
+
+**True Negative (TN)**: is how many images containing apples (True) but you predict them **NOT** contain apples (Negative).
+
+**False Positive (FP)**: is how many images not containing apples (False) but you predict them contain apples (Positive).
+
+**False Negative (FN)**: is how many images not containing apples (False) and you predict them **NOT** contain apples (Negative).
+
+**Precision**: is the percentage of TP among the total number of images that you predict containing apples, which is denoted in math as:
+$$P = \frac{TP}{TP+FP}$$
+
+**Recall**: is the percentage of TP among how many images you predict correctly including TP and FN. Correct prediction consists of two parts: 1. you predict an image contains apples and the fact is that it indeed contains apples (this is actually TP); 2. you predict an image not contain apples and the fact is that it indeed not contain apples (this is actually FN). Thus recall is denoted as:
+$$R = \frac{TP}{TP+FN}$$
+
+### AP
+
+### Reference
+1. https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
