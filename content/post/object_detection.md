@@ -163,7 +163,7 @@ The total speedup comparison between RCNN, Fast RCNN and Faster RCNN is shown be
 ## Mask RCNN
 {{< figure library="true" src="mask_rcnn.png" title="Fig 10. The pipeline of Mask RCNN, which is Faster RCNN + Instance Segmentation + improved RoIAlign Pooling." lightbox="true" >}}
 
-[Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) has three branches: RPN for region proposal + a pretrained CNN + Headers for classification and bounding-box regression + Mask Network for pixel-level instance segmentation. Mask RCNN is developed on Faster RCNN and adds RoIAlign Pooling and instance segmentation to output object masks in a pixel-to-pixel manner. The RoIAlign is proposed to improve RoI for pixel-level segmentation as it requires much more fine-grained alignment than Bounding-boxes. The accurate computation of RoIAlign is described in RoIAlign Pooling for Object Detection in Basic_understanding_dl post.  
+[Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) has three branches: RPN for region proposal + (a pretrained CNN + Headers for classification and bounding-box regression) + Mask Network for pixel-level instance segmentation. Mask RCNN is developed on Faster RCNN and adds RoIAlign Pooling and instance segmentation to output object masks in a pixel-to-pixel manner. The RoIAlign is proposed to improve RoI for pixel-level segmentation as it requires much more fine-grained alignment than Bounding-boxes. The accurate computation of RoIAlign is described in RoIAlign Pooling for Object Detection in Basic_understanding_dl post.  
 
 {{< figure library="true" src="mask_rcnn_results.png" title="Fig 11. Mask RCNN results on the COCO test set. Image source: [Mask RCNN paper](https://arxiv.org/pdf/1703.06870.pdf)" lightbox="true" >}}
 
@@ -180,8 +180,27 @@ where $y_{ij}$ is the label (0 or 1) for a cell $(i,j)$ in the groundtruth mask 
 
 {{< figure library="true" src="rcnn-family-summary.png" title="Fig 12. Summary for R-CNN based Object Detection Methods . Image source: [this blog](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html)" lightbox="true" >}}
 
-## Classic One-Stage Methods
-To be continued...
+## 3. Classic One-Stage Methods
+
+### 3.1 YOLO (You Only Look Once)
+
+**Introduction.** YOLO is the first approach removing region proposal and learns an object detector in an end-to-end manner. Due to no region proposal, it frames object detection as a total regression problem which spatially separates bounding boxes and associated class probabilities. The proposed YOLO performs extremely fast (around 45 FPS), but less accuracy than main approaches like Faster RCNN.
+
+#### 3.1.1 Pipeline
+{{< figure library="true" src="yolo.png" title="Fig 13. YOLO pipeline. Image source: [original paper](https://arxiv.org/pdf/1506.02640.pdf)" lightbox="true" >}}
+
+1. Resize input image from 224x224 to 448x448;
+2. Pre-train a single CNN (DarkNet: 24 conv layer + 2 fc) on ImageNet for classification.
+3. Split the input image into $S \times S$ grid, for each cell in the grids:
+
+   3.1. predict coordinates of B boxes, for each box coordiantes: $(x,y,w,h)$ where $x$ and $y$ are the centre location of box, $w$ and $h$ are the width and height of box.
+   
+   3.2. predict a confidence score, $Pr(obj) \times IoU(trurh, pred)$ where $Pr(obj)$ denote whether the cell contains an object, $Pr(obj)=1$ if it contains an object, otherwise $Pr(obj)=0$. $IoU(truth, pred)$ is the interaction under union.
+#### 3.1.2 Loss functions
+
+#### 3.1.3 Difference
+
+#### 3.1.4 Limitations
 
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
