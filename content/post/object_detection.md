@@ -80,7 +80,7 @@ To speedup RCNN, SPPNet focuses on how to fix the problem that each proposal is 
 
 By proposing spatial pyramid pooling layer, SPPNet is able to reuse the feature maps extracted from CNN by passing the image once through because all information that region proposals need is shared in these feature maps. The only thing we could do next is project the region proposals selected by Selective Search onto these feature maps (**How to project Region Proposals to feature maps? Please go to basic_understanding post for ROI pooling.**). This operation extremely saves time consumption compared to extract feature maps per proposal per forward (like RCNN does). The total speedup of SPPNet is about 100 times compared to RCNN.
 
-## Fast RCNN
+### 2.3 Fast RCNN
 {{< figure library="true" src="fast_rcnn2.png" title="Fig 6. The pipeline of Fast RCNN in [this blog](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)." lightbox="true" >}}
 
 [Fast RCNN](https://arxiv.org/pdf/1504.08083.pdf) attempts to overcome three notable **drawbacks** of RCNN:
@@ -94,7 +94,7 @@ By proposing spatial pyramid pooling layer, SPPNet is able to reuse the feature 
 
 {{< figure library="true" src="speed_rcnn_fastrcnn.png" title="Fig 6. Speed comparison between RCNN and Fast RCNN in [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
 
-### Multi-task Loss for Classification and Bounding-box Regression
+#### Multi-task Loss for Classification and Bounding-box Regression
 $--------------------------------------------------------------------------------------------$
 
 **Symbol Explanation**
@@ -121,7 +121,7 @@ smooth_{L_1}(x) = \begin{cases}
                  \end{cases}
 \end{equation}
 $smooth_{L_1}(x)$ is a robust $L_1$ loss that is less sensitive to outliers than $L_2$ loss.
-## Faster RCNN
+### 2.4 Faster RCNN
 {{< figure library="true" src="faster_rcnn.png" title="Fig 7. The pipeline of Faster RCNN in [this blog](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)." lightbox="true" >}}
 
 [Faster RCNN](https://arxiv.org/pdf/1506.01497.pdf) focuses on solving the speed bottleneck of Region Proposal Selection as previous RCNN and Fast RCNN separately compute the region proposal by Selective Search on CPU which still consumes much time. To address this problem, a novel subnetwork called RPN (Region Proposal Network) is proposed to combine Region Proposal Selection into ConvNet along with Softmax classifiers and Bounding-box regressors.
@@ -160,14 +160,14 @@ Therefore, there are four loss functions in one neural network:
 The total speedup comparison between RCNN, Fast RCNN and Faster RCNN is shown below:
 {{< figure library="true" src="comparison_speedup_rcnn_fastrcnn_fasterrcnn.png" title="Fig 9. The speedup comparison between RCNN, Fast RCNN and Faster RCNN in [this blog](https://blog.csdn.net/v_JULY_v/article/details/80170182)." lightbox="true" >}}
 
-## Mask RCNN
+### 2.5 Mask RCNN
 {{< figure library="true" src="mask_rcnn.png" title="Fig 10. The pipeline of Mask RCNN, which is Faster RCNN + Instance Segmentation + improved RoIAlign Pooling." lightbox="true" >}}
 
 [Mask RCNN](https://arxiv.org/pdf/1703.06870.pdf) has three branches: RPN for region proposal + (a pretrained CNN + Headers for classification and bounding-box regression) + Mask Network for pixel-level instance segmentation. Mask RCNN is developed on Faster RCNN and adds RoIAlign Pooling and instance segmentation to output object masks in a pixel-to-pixel manner. The RoIAlign is proposed to improve RoI for pixel-level segmentation as it requires much more fine-grained alignment than Bounding-boxes. The accurate computation of RoIAlign is described in RoIAlign Pooling for Object Detection in Basic_understanding_dl post.  
 
 {{< figure library="true" src="mask_rcnn_results.png" title="Fig 11. Mask RCNN results on the COCO test set. Image source: [Mask RCNN paper](https://arxiv.org/pdf/1703.06870.pdf)" lightbox="true" >}}
 
-### Mask Loss
+#### Mask Loss
 During the training, a multi-task loss on each sampled RoI is defined as : $L=L_{cls} + L_{bbox}+L_{mask}$. The $L_{cls}$ and $L_{bbox}$ are identical as those defined in [Faster RCNN](https://arxiv.org/pdf/1506.01497.pdf).
 
 The mask branch has a $K\times m^2$ dimensional output for each RoI, which is $K$ binary masks of resolution $m \times m$, one for each the $K$ classes. Since the mask branch learns a mask for every class with a per-pixel **sigmoid** and a **binary cross-entropy loss**, there is no competition among classes for generating masks. Previous semantic segmentation methods (e.g., [FCN for semantic segmentation](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)) use a **softmax** and a **multinomial cross-entropy loss**, which causes classification competition among classes.  
@@ -176,7 +176,7 @@ $L_{mask}$ is defined as the **average binary mask loss**, which **only includes
 $$L_{mask} = -\frac{1}{m^2} \sum_{1 \leqslant i,j \leqslant m} (y_{ij}log\hat{y}_{ij}^k +(1-y_{ij})log(1-\hat{y}_{ij}^k))$$
 where $y_{ij}$ is the label (0 or 1) for a cell $(i,j)$ in the groundtruth mask for the region of size $m \times m$, $\hat{y}_{ij}$ is the predicted value in the same cell in the predicted mask learned by the groundtruth class $k$.
 
-## Summary for R-CNN based Object Detection Methods
+### 2.6 Summary for R-CNN based Object Detection Methods
 
 {{< figure library="true" src="rcnn-family-summary.png" title="Fig 12. Summary for R-CNN based Object Detection Methods . Image source: [this blog](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html)" lightbox="true" >}}
 
@@ -237,12 +237,59 @@ L_{total} &=& L_{loc} + L_{cls} \\\\\\
 #### 3.1.3 Differences ( or contributions)
 1. remove region proposal and complete the object detection task in an end-to-end manner.
 2. the first approach achieves real-time speed.
+3. **the coordinate loss uses $(x,y,w,h)$ to represent bounding box, which is different from R-CNN based methods. This is because YOLO does not pre-define bounding boxes (i.e., region proposals or anchor boxes), thus YOLO can not use offset of coordinates to compute the loss or train the neural network.**
 #### 3.1.4 Limitations
 1. Less accurate prediction for irregular shapes of object due to a limited box candidates.
 2. Less accurate prediction for small objects.
 
-### SSD (single shot multibox detector)
+### 3.2 SSD (single shot multibox detector)
+**Introduction.** [SSD](https://arxiv.org/pdf/1512.02325.pdf) is one of early approaches attempts to detect multi-scale objects based on pyramid conv feature maps. It adopts the pre-defined anchor box idea but applies it on multiple scales of conv feature maps, which achieves real-time application via removing region proposal and high detection accuracy (even higher than Faster RCNN) via multi-scale object detection as well, e.g., it is capable of detecting both large objects and small objects in one image which increases the mAP.
 
+{{< figure library="true" src="ssd.png" title="Fig 14. SSD pipeline based on [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
+
+### 3.2.1 Pipeline
+1. Modify pre-trained VGG16 with replaced conv6-7 layers and extra multi-scale conv features. To detect multiple scales of input objects, a few (4 in this case) extra sizes of conv features are added into base model (see light green color in Fig14).
+2. Several default anchor boxes with various scale and ratio (width/height) are introduced for each cell in all feature maps. **For each of $m$ level conv feature maps, we compute the scale $s_k$, aspect ratio $a_r$, width $w_k^a$, height $h_k^a$ and centre location ($x_k^a, y_k^a$) of default boxes** as:
+
+* scale: $$s_k = s_{min} + \frac{s_{max} -s_{min}}{m-1}(k-1), k \in [1,m], s_{min}=0.2, s_{max}=0.9$$
+* aspect ratio: $a_r \in$ {1,2,3,$\frac{1}{2}, \frac{1}{3}$}, additional ratio $s_k^{\'}=\sqrt{s_k s_{k+1}}$,  6 default boxes in total.
+* width: $w_k^a=s_k \sqrt{a_r}$
+* height: $h_k^a= s_k / \sqrt{a_r}$
+* centre location ($x_k^a, y_k^a$):$(\frac{i+0.5}{|f_k|}, \frac{j+0.5}{|f_k|})$ where $|f_k|$ is the size of the $k$-th square feture map, $i,j \in \[0, |f_k|\]$ .
+
+where $s_{min}$ is 0.2 and $s_{max}$ is 0.9, which means the lowest layer has a scale of 0.2 and the highest layer has a scale of 0.9. Therefore, for each input object, there are $\sum_{i=0}^m C_i \times 6$ anchor boxes where $C_i$ is the channel of $i$-th level feature maps. And for all the multiple level feature maps, there are $\sum_{i=0}^{m} C_i H_i W_i \times 6$ anchor boxes in total where $H_i$ and $W_i$ are the height and width of $i$-th level feature maps.
+
+{{< figure library="true" src="ssd_2.png" title="Fig 14. Learning strategy of anchor boxes during training. Image source: [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
+
+**Advantage of pre-defined anchor boxes in SSD (matching strategy).** During training, we first match each groundtruth box to the default box with highest jaccard overlap, then match default boxes to any groundtruth boxes with jaccard overlap higher than a threshold (0.5). **This enables SSD to predict mulitple high acores for multiple overlapping default boxes rather than requiring it to pick only the one with maximum overlap**. Thus the network learns match suitable scale of default boxes to groundtruth box. For example, in Fig 15, the network learns from training that anchor boxes of dog on higher layer $4 \times 4$ are matched to groundtruth as the scale of anchor boxes on one $8 \times 8$ feature map are too small to cover the large size of dog.
+
+3. Hard negative mining. During training, the number of input objects (or labeled anchor boxes) is quite smaller compared to the total number of default anchor boxes, thus most of them are negative samples. This introduces a significant imbalance between negative and positive training examples. The authors of SSD narrow down negative samples by choosing default boxes of top confidence loss, which makes sure the ratio between negative and positive samples at most 3:1.
+
+4. **Data augmentation (this contributes most improvement).** To make the detector more robust to various input object sizes, SSD introduces a data augmentation which choose training samples by three following options:
+* use the original input image
+* sample a patch of original input image, whose IoU with its corresponding groundtruth box is 0.1,0.3,0.5,0.7 or 0.9.
+* randomly sample a patch of the original input image.
+
+The size of sampled patch is \[0.1,1\] of the original input image and its aspect ratio is between $\frac{1}{2}$ and 2. The overlapped region of the groundtruth box is kept if the centre of it is in the sampled patch. After the sampling step above, all the sampled patches are resized to fixed size and is horizontally flipped with probabilitiy of 0.5.
+
+5. Compute the loss functions.
+6. Non-maximum suppression to find the best match predicted boxes.
+
+### 3.2.2 Loss functions
+The training objective is the weighted combination of a *localization loss* and a *classification loss*:
+$$L = \frac{1}{N}(L_{loc} + \alpha L_{cls})$$
+where $N$ is the number of matched boxes and $\alpha$ is picked by cross validation.
+
+The localization loss is the smooth L1 between the predict offset of default boxes and those of matched groundtruth boxes, which is as same as the bounding box regression in RCNN:
+
+$$L_{loc} = \sum_{i=0}^N \sum_{j\in(cx,cy,w,h)} \mathbb{1}_{ij}^k smooth_{L1}(\Delta t_{j}^i - \Delta p_{j}^i)$$
+$$\Delta t_{cx}^i = (g_{cx}^i - p_{cx}^i) / p_w^i, \Delta t_{cy}^i = (g_{cy}^i - p_{cy}^i) / p_h^i,$$
+$$\Delta t_{w}^i = log(\frac{g_{w}^i}{p_{w}^i}), \Delta t_{h}^i = log(\frac{g_{h}^i}{p_{h}^i}),$$
+where $\Delta t_{j}^i$ is the offset of groundtruth boxes, and $\Delta p_{j}^i$ is the offset of predicted boxes. $\mathbb{1}_{ij}^k$ is an indicator for matching $i$-th default box to the $j$-th ground truth box of category $k$.
+
+The classification loss is the softmax loss over multiple classes confidences ($c$) using cross entropy loss:
+$$L_{cls} = - \sum_{i=0}^N \mathbb{1}_{ij}^k log(\hat{c}_i^k) - \sum_{j=0}^M log(\hat{c}_j^0), \hat{c}_i^k = softmax(c_i^k) $$
+where $N$ and $M$ indicates the positive and negative samples, $c_{i}^k$ is the predicted class probability for $k$-th object class, and $c_i^0$ is the predicted negative probability for non-object class (or background class).
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
