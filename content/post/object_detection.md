@@ -245,9 +245,9 @@ L_{total} &=& L_{loc} + L_{cls} \\\\\\
 ### 3.2 SSD (single shot multibox detector)
 **Introduction.** [SSD](https://arxiv.org/pdf/1512.02325.pdf) is one of early approaches attempts to detect multi-scale objects based on pyramid conv feature maps. It adopts the pre-defined anchor box idea but applies it on multiple scales of conv feature maps, which achieves real-time application via removing region proposal and high detection accuracy (even higher than Faster RCNN) via multi-scale object detection as well, e.g., it is capable of detecting both large objects and small objects in one image which increases the mAP.
 
-{{< figure library="true" src="ssd.png" title="Fig 14. SSD pipeline based on [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
+{{< figure library="true" src="ssd.png" title="Fig 14. SSD pipeline recreated based on [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
 
-### 3.2.1 Pipeline
+#### 3.2.1 Pipeline
 1. Modify pre-trained VGG16 with replaced conv6-7 layers and extra multi-scale conv features. To detect multiple scales of input objects, a few (4 in this case) extra sizes of conv features are added into base model (see light green color in Fig14).
 2. Several default anchor boxes with various scale and ratio (width/height) are introduced for each cell in all feature maps. **For each of $m$ level conv feature maps, we compute the scale $s_k$, aspect ratio $a_r$, width $w_k^a$, height $h_k^a$ and centre location ($x_k^a, y_k^a$) of default boxes** as:
 
@@ -259,7 +259,7 @@ L_{total} &=& L_{loc} + L_{cls} \\\\\\
 
 where $s_{min}$ is 0.2 and $s_{max}$ is 0.9, which means the lowest layer has a scale of 0.2 and the highest layer has a scale of 0.9. Therefore, for each input object, there are $\sum_{i=0}^m C_i \times 6$ anchor boxes where $C_i$ is the channel of $i$-th level feature maps. And for all the multiple level feature maps, there are $\sum_{i=0}^{m} C_i H_i W_i \times 6$ anchor boxes in total where $H_i$ and $W_i$ are the height and width of $i$-th level feature maps.
 
-{{< figure library="true" src="ssd_2.png" title="Fig 14. Learning strategy of anchor boxes during training. Image source: [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
+{{< figure library="true" src="ssd_2.png" title="Fig 15. Matching strategy of anchor boxes during training. Image source: [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
 
 **Advantage of pre-defined anchor boxes in SSD (matching strategy).** During training, we first match each groundtruth box to the default box with highest jaccard overlap, then match default boxes to any groundtruth boxes with jaccard overlap higher than a threshold (0.5). **This enables SSD to predict mulitple high acores for multiple overlapping default boxes rather than requiring it to pick only the one with maximum overlap**. Thus the network learns match suitable scale of default boxes to groundtruth box. For example, in Fig 15, the network learns from training that anchor boxes of dog on higher layer $4 \times 4$ are matched to groundtruth as the scale of anchor boxes on one $8 \times 8$ feature map are too small to cover the large size of dog.
 
@@ -275,7 +275,7 @@ The size of sampled patch is \[0.1,1\] of the original input image and its aspec
 5. Compute the loss functions.
 6. Non-maximum suppression to find the best match predicted boxes.
 
-### 3.2.2 Loss functions
+#### 3.2.2 Loss functions
 The training objective is the weighted combination of a *localization loss* and a *classification loss*:
 $$L = \frac{1}{N}(L_{loc} + \alpha L_{cls})$$
 where $N$ is the number of matched boxes and $\alpha$ is picked by cross validation.
@@ -290,6 +290,32 @@ where $\Delta t_{j}^i$ is the offset of groundtruth boxes, and $\Delta p_{j}^i$ 
 The classification loss is the softmax loss over multiple classes confidences ($c$) using cross entropy loss:
 $$L_{cls} = - \sum_{i=0}^N \mathbb{1}_{ij}^k log(\hat{c}_i^k) - \sum_{j=0}^M log(\hat{c}_j^0), \hat{c}_i^k = softmax(c_i^k) $$
 where $N$ and $M$ indicates the positive and negative samples, $c_{i}^k$ is the predicted class probability for $k$-th object class, and $c_i^0$ is the predicted negative probability for non-object class (or background class).
+
+#### 3.2.3 Difference (or contributions)
+1. Multi-scale object detection via extra multiple scales of conv feature maps and matching strategy between default anchor boxes and ground truth boxes.
+2. Training tricks: hard negative mining and data augmentation which increases the mAP most.
+
+#### 3.2.4 Limitations
+Some posts (e.g., [this blog](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06) and [this blog](https://medium.com/@smallfishbigsea/understand-ssd-and-implement-your-own-caa3232cd6ad)) point out that matching strategy may not help to improve the prediction accuracy for smaller object as it basically only depends on lower layers with high resolution feature maps. These lower layers contain less information for classification. (well, I have not done further experiments to prove this).
+
+### 3.3 YOLOv2/YOLO9000
+[YOLOv2](https://arxiv.org/pdf/1612.08242.pdf) is an improvement version of YOLOv1 with several fine-tuning tricks (including adding anchor boxes, multi-scale training etc. see next section), and YOLO9000 is built on top of YOLOv2 but with a joint training strategy of COCO detection dataset and 9000 classes from ImageNet. The enhanced YOLOv2 achieves higher detection accuracy (including bounding box prediction and classification) and
+even more faster speed (480x480,59FPS) than SSD.
+
+#### 3.3.1 Tricks in YOLOv2
+**Batch Normalization.** YOLOv2 adds BN after each convolutional layer and it helps to fast convergence, and improves the mAP about 2.4\%.
+
+**High Resolution Classifier.** YOLOv1 fine-tunes a pre-trained model with 448x448 resolution image from detection dataset (e.g., COCO). However, the pre-trained model is trained with 224x224 resolution images, which means directly fine-tuning this pre-trained model with higher resolution will not extract features with powerful expression of images. To address this problem, YOLOv2 first trains the pre-trained model with 448x448 resolution images for classification task, then trains the model with high resolution images for detection task. The high resolution is multiple of 32 as its network has 32 stride.
+
+**Convolutional Anchor Boxes.** Instead of using 2 fc layers to regress the location of bounding boxes, inspired by RPN with anchor boxes, YOLOv2 uses convolutional layers and anchor boxes to predict bounding boxes and confidence scores. Each anchor box has a predicted $K$ class probability, thus **the spatial location of anchor boxes and classfication is decoupled.** By adding anchor boxes, the mAP of YOLOv2 decreases a bit but it increases recall from 81% to 88%.
+
+**Dimension Clusters.** Unlike the sizes of anchor box in Faster RCNN are hand-made, YOLOv2 chooses sizes of anchor box better suit to groundtruth bounding boxes. To find more suitable sizes, YOLOv2 uses k-means to cluster groundtruth bounding boxes and choose the sizes of anchor boxes more close to the centroid of each cluster by the following distance metric:
+$$d(box, centroid) = 1 - IoU(box, centroid)$$
+and the best number of centroid $k$ can be chosen by the [elbow method](https://en.wikipedia.org/wiki/Elbow_method_(clustering)).
+
+**Direct location prediction.** In Faster RCNN, the offset of an anchor box is predicted by the detector, and it is presented by ($\Delta x,\Delta y, \Delta w,\Delta h$). Then the predicted centre location of a bounding box is:
+$$x_p=x_a+(\Delta x \times w_a), y_p=y_a+(\Delta y \times h_a)$$
+where $x_a$ and $y_a$ are centre location of an anchor box, $w_a$ and $h_a$ are the width and height. The centre location of a predict bounding box can be anywhere in a feature map, for example, if $\Delta x=1$, then the predicted $x_p$ will more a width distance horizontally from $x_a$. This is not good to locate the bounding boxes and could make training unstable. Therefore, YOLOv2 decides to predict the offset to the top-left corner of a grid which the anchor box locates at. The scale of a grid is default 1. Given an anchor box of size (w_a, h_a)  
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
@@ -297,3 +323,5 @@ where $N$ and $M$ indicates the positive and negative samples, $c_{i}^k$ is the 
 4. https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-
 5. https://zhuanlan.zhihu.com/p/37998710
 6. https://blog.csdn.net/heiheiya/article/details/81169758
+7. https://lilianweng.github.io/lil-log/2018/12/27/object-detection-part-4.html
+8. https://zhuanlan.zhihu.com/p/35325884
