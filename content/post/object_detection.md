@@ -234,7 +234,7 @@ L_{total} &=& L_{loc} + L_{cls} \\\\\\
 &+& \sum_{i=0}^{S^2} \sum_{ij}^{B}  (\mathbb{1}_{ij}^{obj} + \lambda_{noobj} (1 - \mathbb{1}_{ij}^{obj})) (C_{ij}^p - C_{ij}^t)^2 \\\\\\
 &+& \sum_{i=0}^{S^2} \mathbb{1}_{ij}^{obj} \sum_{c\in classes} (p_i^p(c) - p_i^t(c))^2
 \end{eqnarray}$$
-#### 3.1.3 Differences ( or contributions)
+#### 3.1.3 Differences ( or insights)
 1. remove region proposal and complete the object detection task in an end-to-end manner.
 2. the first approach achieves real-time speed.
 3. **the coordinate loss uses $(x,y,w,h)$ to represent bounding box, which is different from R-CNN based methods. This is because YOLO does not pre-define bounding boxes (i.e., region proposals or anchor boxes), thus YOLO can not use offset of coordinates to compute the loss or train the neural network.**
@@ -291,7 +291,7 @@ The classification loss is the softmax loss over multiple classes confidences ($
 $$L_{cls} = - \sum_{i=0}^N \mathbb{1}_{ij}^k log(\hat{c}_i^k) - \sum_{j=0}^M log(\hat{c}_j^0), \hat{c}_i^k = softmax(c_i^k) $$
 where $N$ and $M$ indicates the positive and negative samples, $c_{i}^k$ is the predicted class probability for $k$-th object class, and $c_i^0$ is the predicted negative probability for non-object class (or background class).
 
-#### 3.2.3 Difference (or contributions)
+#### 3.2.3 Differences (or insights)
 1. Multi-scale object detection via extra multiple scales of conv feature maps and matching strategy between default anchor boxes and ground truth boxes.
 2. Training tricks: hard negative mining and data augmentation which increases the mAP most.
 
@@ -303,11 +303,11 @@ Some posts (e.g., [this blog](https://medium.com/@jonathan_hui/ssd-object-detect
 even more faster speed (480x480,59FPS) than SSD.
 
 #### 3.3.1 Tricks in YOLOv2
-**Batch Normalization.** YOLOv2 adds BN after each convolutional layer and it helps to fast convergence, and improves the mAP about 2.4\%.
+**Batch Normalization.** YOLOv2 adds BN after each convolutional layer and it helps to fast convergence, and **increases the mAP about 2.4\%**.
 
 **High Resolution Classifier.** YOLOv1 fine-tunes a pre-trained model with 448x448 resolution image from detection dataset (e.g., COCO). However, the pre-trained model is trained with 224x224 resolution images, which means directly fine-tuning this pre-trained model with higher resolution will not extract features with powerful expression of images. To address this problem, YOLOv2 first trains the pre-trained model with 448x448 resolution images for classification task, then trains the model with high resolution images for detection task. The high resolution is multiple of 32 as its network has 32 stride.
 
-**Convolutional Anchor Boxes.** Instead of using 2 fc layers to regress the location of bounding boxes, inspired by RPN with anchor boxes, YOLOv2 uses convolutional layers and anchor boxes to predict bounding boxes and confidence scores. Each anchor box has a predicted $K$ class probability, thus **the spatial location of anchor boxes and classfication is decoupled.** By adding anchor boxes, the mAP of YOLOv2 decreases a bit but it increases recall from 81% to 88%.
+**Convolutional Anchor Boxes.** Instead of using 2 fc layers to regress the location of bounding boxes, inspired by RPN with anchor boxes, YOLOv2 uses convolutional layers and anchor boxes to predict bounding boxes and confidence scores. Each anchor box has a predicted $K$ class probability, thus **the spatial location of anchor boxes and classification is decoupled.** By adding anchor boxes, the mAP of YOLOv2 decreases a bit but it increases recall from 81% to 88%.
 
 **Dimension Clusters.** Unlike the sizes of anchor box in Faster RCNN are hand-made, YOLOv2 chooses sizes of anchor box better suit to groundtruth bounding boxes. To find more suitable sizes, YOLOv2 uses k-means to cluster groundtruth bounding boxes and choose the sizes of anchor boxes more close to the centroid of each cluster by the following distance metric:
 $$d(box, centroid) = 1 - IoU(box, centroid)$$
@@ -315,7 +315,39 @@ and the best number of centroid $k$ can be chosen by the [elbow method](https://
 
 **Direct location prediction.** In Faster RCNN, the offset of an anchor box is predicted by the detector, and it is presented by ($\Delta x,\Delta y, \Delta w,\Delta h$). Then the predicted centre location of a bounding box is:
 $$x_p=x_a+(\Delta x \times w_a), y_p=y_a+(\Delta y \times h_a)$$
-where $x_a$ and $y_a$ are centre location of an anchor box, $w_a$ and $h_a$ are the width and height. The centre location of a predict bounding box can be anywhere in a feature map, for example, if $\Delta x=1$, then the predicted $x_p$ will more a width distance horizontally from $x_a$. This is not good to locate the bounding boxes and could make training unstable. Therefore, YOLOv2 decides to predict the offset to the top-left corner of a grid which the anchor box locates at. The scale of a grid is default 1. Given an anchor box of size (w_a, h_a)  
+where $x_a$ and $y_a$ are centre location of an anchor box, $w_a$ and $h_a$ are the width and height. The centre location of a predict bounding box can be anywhere in a feature map, for example, if $\Delta x=1$, then the predicted $x_p$ will more a width distance horizontally from $x_a$. This is not good to locate the bounding boxes and could make training unstable. Therefore, YOLOv2 decides to predict the offset to the top-left corner ($c_x,c_y$) of a grid which the anchor box locates at. The scale of a grid is default 1. Then the location ($b_x,b_y,b_w,b_h$) of predicted bounding box is formulated as:
+$$b_x = (\sigma(\Delta x) \times 1) + c_x, b_y = (\sigma(\Delta y) \times 1) + c_y$$
+$$b_w=a_w e^{\Delta w}, b_h=a_w e^{\Delta h}$$
+where $\sigma(\cdot)=sigmoid(\cdot)$, $a_w$ and $a_h$ are width and height of an anchor box, and the width and height of the grid is set default 1. In this way, the movement of $b_x$ and $b_y$ is constrained in the grid as their maximum move distance is $\sigma(\cdot) \times 1 = 1$. **Combining dimension clustering and direct location prediction increases mAP by 5\%.** The below figure illustrates the process:
+
+{{< figure library="true" src="yolov2.png" title="Fig 16. Illustration of direct location prediction. Image source recreated on [original paper](https://arxiv.org/pdf/1612.08242.pdf)." lightbox="true" >}}
+
+**Add fine-grained feature via passthrough layer.** Inspired by [ResNet](https://arxiv.org/pdf/1512.03385.pdf), YOLOv2 also designs a passthrough layer to bring the fine-grained features from an earlier layer to the last output layer. This **increases the mAP about 1\%.**
+
+**Multi-scale Training.** To be robust to various input sizes, YOLOv2 inserts a new size of randomly sampled input images every 10 batches. The new sizes are multiple of 32 as its stride is 32.
+
+**Light-weighted base model.** YOLOv2 use DarkNet-19 as base model which has 19 conv layers and 5 maxpooling layers. The key point is to add global avg pooling and 1x1 conv layers between 3x3 conv layers. **This does not increases significant mAP but decreases the computation by about 33\%.**
+
+#### 3.3.2 YOLO9000: Joint Training of Detection and Classification
+Since drawing bounding boxes in images for detection is much more expensive than tagging image for classification, the paper proposes a joint training strategy which combines small detection dataset and large classification dataset, and extand the detection from around 100 categories in YOLOv1 to 9000 categories. The name of YOLO9000 comes from the top 9000 classes of ImageNet. If one input image is from classification dataset, then the network only back propagates the classification loss during training.
+
+The small detection dataset basically has the coarse labels (e.g., cat, person), while the large classification dataset may contain much more detailed labels (e.g., persian cat). Without mutual exclusiveness, this does not make sense to apply softmax to predict all over the classes. Thus YOLO9000 proposes a WordTree to combine the class labels into one hierarchical tree structure with reference to [WordNet](https://wordnet.princeton.edu/). For example, the root node of the tree is a physical object, then next level is coarse-grained labels like animal and artifact, then next level is more detailed labels like cat, dog, vehicle and equipment. Thus, physical object is the parant node of animal and artifact, and animal is the parent node of cat and dog. The labels on the same level should be classified by softmax as they are mutual exlusive.
+
+{{< figure library="true" src="yolo2_wordtree.png" title="Fig 17. Word tree in YOLO9000. Image source: [original paper](https://arxiv.org/pdf/1612.08242.pdf)." lightbox="true" >}}
+
+To predict the probability of a class node, we follow the path one node to the root, the searching stops when the probability is over a threshold. For example, the probability of a class label persian cat is:
+\begin{eqnarray}
+Pr(perisan \ cat \ | \ contain \ a \ physical \ object)
+&=& Pr(persian \ cat \ | \ cat) \\\\\\
+&\times& Pr(cat \ | \ animal) \\\\\\
+&\times& Pr(animal \ | \ physical \ object)
+\end{eqnarray}
+where $Pr(animal \ | \ physical \ object)$ is the confidence score, predicted separately from the bounding box detection.
+
+#### 3.3.3 Differences (or insights)
+1. Dimension clustering and direct location prediction gives the most contribution of increasing mAP.
+2. Word Tree is a creative thing in YOLO9000.
+
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
