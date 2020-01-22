@@ -348,6 +348,16 @@ where $Pr(animal \ | \ physical \ object)$ is the confidence score, predicted se
 1. Dimension clustering and direct location prediction gives the most contribution of increasing mAP.
 2. Word Tree is a creative thing in YOLO9000.
 
+#### 3.3.4 Limitations ( or unsolved problems)
+During training, the significant imbalance number between positive anchor boxes containing objects and negative boxes containing background still hinders further improvement of detection accuracy.
+
+### 4. RetinaNet
+[RetinaNet](https://arxiv.org/pdf/1708.02002.pdf) is an one-stage object detector, which proposes two critical contributions: 1. focal loss for addressing class imbalance between foreground containing objects of interest and background containing no object; 2. FPN + ResNet as backbone network for detecting objects at different scales.
+
+#### 4.1 Focal Loss
+The extreme imbalance between training examples is one critical issue for object detection. To address the problem,  a focal loss is designed to increase weights for hard yet easily misclassified examples (e.g., background )
+
+TO BE CONTINUED...
 ## Reference
 1. https://blog.csdn.net/v_JULY_v/article/details/80170182
 2. https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html
