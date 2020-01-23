@@ -116,8 +116,8 @@ where $L_{cls}(p,u)$=-log$p_u$ is a log loss for groundtruth class $u$. The Iver
 $$L_{loc}(t^u,v)=\sum_{i \in {x,y,w,h}}smooth_{L_1}(t_i^u-v_i)$$ and
 \begin{equation}
 smooth_{L_1}(x) = \begin{cases}
-                 0.5x^2, &|x| < 1 \newline
-                 |x|-0.5,&otherwise
+                 0.5x^2, \ |x| < 1 \newline
+                 |x|-0.5, \ otherwise
                  \end{cases}
 \end{equation}
 $smooth_{L_1}(x)$ is a robust $L_1$ loss that is less sensitive to outliers than $L_2$ loss.
@@ -261,7 +261,7 @@ where $s_{min}$ is 0.2 and $s_{max}$ is 0.9, which means the lowest layer has a 
 
 {{< figure library="true" src="ssd_2.png" title="Fig 15. Matching strategy of anchor boxes during training. Image source: [original paper](https://arxiv.org/pdf/1512.02325.pdf)." lightbox="true" >}}
 
-**Advantage of pre-defined anchor boxes in SSD (matching strategy).** During training, we first match each groundtruth box to the default box with highest jaccard overlap, then match default boxes to any groundtruth boxes with jaccard overlap higher than a threshold (0.5). **This enables SSD to predict mulitple high acores for multiple overlapping default boxes rather than requiring it to pick only the one with maximum overlap**. Thus the network learns match suitable scale of default boxes to groundtruth box. For example, in Fig 15, the network learns from training that anchor boxes of dog on higher layer $4 \times 4$ are matched to groundtruth as the scale of anchor boxes on one $8 \times 8$ feature map are too small to cover the large size of dog.
+**Advantage of pre-defined anchor boxes in SSD (matching strategy).** During training, we first match each groundtruth box to the default box with highest jaccard overlap, then match default boxes to any groundtruth boxes with jaccard overlap higher than a threshold (0.5). **This enables SSD to predict multiple high scores for multiple overlapping default boxes rather than requiring it to pick only the one with maximum overlap**. Thus the network learns match suitable scale of default boxes to groundtruth box. For example, in Fig 15, the network learns from training that anchor boxes of dog on higher layer $4 \times 4$ are matched to groundtruth as the scale of anchor boxes on one $8 \times 8$ feature map are too small to cover the large size of dog.
 
 3. Hard negative mining. During training, the number of input objects (or labeled anchor boxes) is quite smaller compared to the total number of default anchor boxes, thus most of them are negative samples. This introduces a significant imbalance between negative and positive training examples. The authors of SSD narrow down negative samples by choosing default boxes of top confidence loss, which makes sure the ratio between negative and positive samples at most 3:1.
 
@@ -351,11 +351,91 @@ where $Pr(animal \ | \ physical \ object)$ is the confidence score, predicted se
 #### 3.3.4 Limitations ( or unsolved problems)
 During training, the significant imbalance number between positive anchor boxes containing objects and negative boxes containing background still hinders further improvement of detection accuracy.
 
+#### Insight Questions for Object Detection
+**Why does the measurement of object detection only use mAP but no classification measurement?** Honestly, I don't know.
+
+**Why does improving the classification (binary classification: contains objects of interests or not) increase the detection accuracy?** Well, I think that better classification will reduce negative samples (including easy and hard negative examples), then the network focuses on learning more positive samples to predict bounding boxes, which increases the mAP.
+
 ### 4. RetinaNet
 [RetinaNet](https://arxiv.org/pdf/1708.02002.pdf) is an one-stage object detector, which proposes two critical contributions: 1. focal loss for addressing class imbalance between foreground containing objects of interest and background containing no object; 2. FPN + ResNet as backbone network for detecting objects at different scales.
 
 #### 4.1 Focal Loss
-The extreme imbalance between training examples is one critical issue for object detection. To address the problem,  a focal loss is designed to increase weights for hard yet easily misclassified examples (e.g., background )
+The extreme class imbalance between training examples is one critical issue for object detection. To address the problem, a focal loss is designed to increase weights for hard yet easily misclassified examples (e.g., background with noisy texture or partial object) and down-weight easy classified examples (e.g., background obviously contains no objects and foreground obviously contains object of interests).
+
+Starting with normal Cross Entropy loss for binary classification:
+
+$$CE(p,y) = -ylog(p) - (1-y)log(1-p)$$
+where $y \in$ {0,1} is a groundtruth binary label which indicates a bounding box contains an object or not. $p \in$ [0,1] is the predicted probability of a bounding box containing an object (aka confidence score).
+
+For notational convenience, let $p_t$:
+
+\begin{equation}
+p_t = \begin{cases}
+      p, \ &if \ y=1 \newline
+      (1-p), \ &otherwise,
+      \end{cases}
+\end{equation}   
+then
+$$CE(p,y) \ = \ CE(p_t) \ = \ -log(p_t)$$
+
+To down-weigh the $CE(p_t)$ when $p \gg 0.5$ (e.g., easily classified examples) and increase weight of loss when $p$ approaching 0 (e.g., hard classified examples), a focal loss is designed by adding a weight $(1-p_t)^\gamma$ into CE loss, which comes to the form:
+
+$$FL(p_t) = -(1-p_t)^\gamma log(p_t)$$
+here is the illustration of focal loss, as can be seen, easily classified examples with $p \gg 0.5$ is decreased and the loss of hard examples increases rapidly when $p$ is more closer to 0.   
+
+{{< figure library="true" src="retinanet_focal_loss.png" title="Fig 18. The Focal Loss decreases along with predicted probability with a factor of $(1-p_t)^\gamma$. Image source: [original paper](https://arxiv.org/pdf/1708.02002.pdf)." lightbox="true" >}}
+
+In practise, RetinaNet uses an $\alpha$-balanced variant of the focal loss:
+$$FL(p_t) = - \alpha (1-p_t)^\gamma log(p_t)$$
+and **there are experiments prove this form slightly improves accuracy over the non-$\alpha$-balanced form. In addition, implementing the loss layer with sigmoid operation for computing $p$ results in greater numerical stability**.
+
+To better illustrate the $\alpha$-balanced FL form, here are a few weighted Focal Loss with various combinations of $\alpha$ and $\gamma$:
+
+{{< figure library="true" src="focal-loss-weights.png" title="Fig 19. The illustration of various combinations of $\alpha$ and $\gamma$ in $\alpha$-balanced Focal Loss. Image source: [LilianWeng's blog](https://lilianweng.github.io/lil-log/2018/12/27/object-detection-part-4.html)." lightbox="true" >}}
+
+#### 4.2 FPN + ResNet as Backbone Network
+[Feature Pyramid Network](https://arxiv.org/pdf/1612.03144.pdf) (FPN) proposes that the hierarchic feature pyramids boost the detection accuracy. Thus, RetinaNet exploits this feature pyramid into their backbone network. Here is a brief introduction about the FPN.
+
+The key point of feature pyramid network is that multi-scale features in different stages are combined together via bottom-up and top-down pathways. For example, Fig 20, the basic pathways in FPN:
+* **bottom-up pathway:** a forward pass via ResNet and features from different residual blocks (**downscale by 2**) form the scaled pyramid.
+* **top-down pathway:** merges the strong semantic features from later coarse layer back to front fine layer by **x2 upscale and 1x1 lateral connection and element-wise addition**. The upscale operation is using nearest neighbour upsample in RetinaNet. While other upscale methods like deconv may also be suitable. The conv 1x1 lateral connection is to reduce the feature channel. The prediction happens after each top-down stage by a conv 3x3.
+
+{{< figure library="true" src="featurized-image-pyramid.png" title="Fig 20. The illustration of feature pyramid network. Image source: [LilianWeng's blog](https://lilianweng.github.io/lil-log/2018/12/27/object-detection-part-4.html)." lightbox="true" >}}
+
+The improvement rank of these introduced components is as follows: **1x1 lateral connnect** > detect object across multiple layers > top-down enrichment > pyramid representation (compared to only use single scale image like the finest layer).
+
+#### 4.3 Model Architecture
+{{< figure library="true" src="retinanet_architecture.png" title="Fig 21. The model architecture in RetinaNet: ResNet + FPN + Class subnet (focal loss) + Box subnet. Modified on fig 3 in [original paper](https://arxiv.org/pdf/1708.02002.pdf)." lightbox="true" >}}
+
+The basic model architecture of RetinaNet is built on top of ResNet by adding FPN and two subnets for classification and box regression. The ResNet has 5 residual blocks which are used to extract feature pyramid. Let $C_i$ denote the output of last conv layer of the $i$-th pyramid level (residual block) and $P_i$ denote the prediction based on $C_i$. As the downscale is 2 used between every two residual blocks,  then $C_i$ is $2^i$ downscale lower than the original input image resolution.
+
+RetinaNet uses prediction $P_s$ to $P_7$ for prediction, where:
+* $P_3$ to $P_5$ are computed on features obtained from the element-wise addition of features after 1x1 conv $C_i$ (bottom-up pathway) and x2 upscaled $C_{i+1}$ (top-down pathway).
+* $P_6$ is computed on features after 3x3 stride-2 conv on $C_5$.
+* $P_7$ is computed on features after 3x3 stride-2 conv plus relu on $C_6$.
+
+Prediction on higher level features leads to better detect large objects. In addition,  all pyramid features are fixed to channel=256 as they share the same class subnet and box subnet.
+
+The anchor boxes are also applied in RetinaNet, and they are set default to **3 scales {$2^0, 2^{\frac{1}{3}}, 2^{\frac{1}{2}}$}** and **3 aspect ratios {$\frac{1}{2},1,2$}**, thus 9 pre-defined anchor boxes in total.  For each anchor box, the model predicts a classification probability for $K$ classes after passing through the class subnet (applying the proposed *focal loss*), and regresses the offset of the anchor box to the nearest groundtruth box via the box subnet.       
+
+#### 4.3 Insights
+1. **Focal loss** does a good job to address the imbalance between foreground containing objects of interests and background containing no object.
+2. **FPN+ResNet** will be backbone for further one-stage object detectors.
+
+### YOLOv3
+[YOLOv3](https://arxiv.org/pdf/1804.02767.pdf) proposes a series of incremental tricks for YOLOv2, and these tricks are inspired by recent researches:
+
+1. **logistic regression for objectiveness score (aka confidence score).** Unlike using squared error for location loss in YOLOv1-2, YOLOv3 change this loss to a logistic loss to predict the offset of bounding boxes. The yolov3 paper tells that linear regression for predicting offset decreases in mAP.
+
+2. **independent logistic classifier instead of softmax for class prediction.**
+
+3. **FPN works well in YOLOv3.** YOLOv3 adopts the FPN to predict boxes at 3 different scales of features.
+
+4.  **Features extracted from a new net called DarkNet-53.** DarkNet-53 adopts the shortcut connections (residual blocks) from ResNet, and it performs similar to ResNet-152 but 2x faster.
+
+Well, the authors of YOLO series tried focal loss, but it dropped mAP about 2 points. It maybe has something with no subnets for class and box prediction in YOLOv3, or the parameters $\lambda_{coord}$ and $\lambda_{noobj}$ in YOLO have done the job to balance the loss. Not sure yet.
+
+**Overall, YOLOv3 is still a good real-time object detector, it performs less accruacy than RetinaNet-101 (ResNet-101-FPN) but around 3.5~4.0x faster.**
 
 TO BE CONTINUED...
 ## Reference
