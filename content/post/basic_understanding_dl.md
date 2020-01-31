@@ -184,3 +184,19 @@ We first smooth out the precision zigzag pattern (recall between 0.3 and 0.6,0.6
 
 ### Reference
 https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+
+## Cross Validation
+### Model vs Learner
+Model is general a mapping function from input to output, and it could be a machine learning algorithm (e.g., Logistic regression/SVM) or deep neural network (e.g., CNN/GCN/GAN). While Learner is general a model with learned weights which is a learned model after training.
+### Hyperparameters vs parameters in Model
+Hyperparameters are the user pre-defined parameters of a model before training (e.g., learning-rate), while parameters are the learned weights after training, for example, $w^T$ in linear regression $f(x) = w^T x + b$.
+### K-fold Cross Validation
+Given a dataset, we first divide it into training set and testing set which is not accessible to model during training stage. Then we further divide the training set into a training part and a validate part by k-fold cross validation.
+
+For example, if we choose $k=5$ then the training set will be divided into 5 parts of equal size, like part 1, part 2, part 3, part 4 and part 5. During training, we take part 1 as validate samples and the rest as true training samples, which means the model will be trained with the part 2-4 and validated by part 1. Then we choose part 2 as validate samples and the rest as true training samples, which means the model will be trained with part1,3-5 and validated by part 2. Continue, until each part has been chosen as validate samples. Thus this process is repeated $k=5$ times. After this, the model has been trained with all the samples of the training set (though it is not in once time). Then we use mean of mean square error:
+$$cv_{k} = \frac{1}{k} \sum_{i=1}^k MSE(x_i)$$
+to see the cross validate score. The illustration is as follow:
+
+{{< figure library="true" src="k-fold_cross_validate.png" title="Fig 8. A simple illustration of k-fold cross validation ($k=5$ in this case)." lightbox="true" >}}
+### References
+https://zhuanlan.zhihu.com/p/24825503

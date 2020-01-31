@@ -155,7 +155,7 @@ then we get:
 $$L = \frac{1}{2N} \sum_{i=0}^{N} (w^T x_i  - y_i)^2$$
 and we get:
 $$L = \frac{1}{2N} \sum_{i=0}^{N} ((w^T x_i)^2 - 2 w^T x_i y_i + y_i^2)$$
-and the partial derivative is:
+and the partial derivative (I still do not know how to compute this partial derivative) is:
 $$\frac{\partial^2 L}{\partial w_i \partial w_i} = \frac{1}{N} \sum_{k=1}^N x_{k,i}x_{k,j}$$
 then the Hessian Matrix is:
 {{< figure library="true" src="linear_regression_hessianmatrix.png"  lightbox="true" >}}
