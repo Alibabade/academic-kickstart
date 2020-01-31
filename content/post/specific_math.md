@@ -143,7 +143,31 @@ The most important property of a convex optimization is that **if we find a poin
 ### 2.5 The convex optimization used in Machine Learning
 
 #### 2.5.1 Linear regression
-TO BE CONTINUED...
+In machine learning, linear regression is a simple supervised learning algorithm. Given feature vectors $x_i$ and its corresponding groundtruth labels $y_i$ where $i =$ {$1,2,...,N$}, then the linear function can be written as:
+$$f(x)=w^T x + b$$
+and the loss function is denoted as the mean square error between the value $f(x_i)$ and its corresponding label $y_i$:
+$$L = \frac{1}{2N} \sum_{i=0}^{N} (f(x_i) - y_i)^2$$
+then we replace $f(x_i)$ with its function and get:
+$$L = \frac{1}{2N} \sum_{i=0}^{N} (w^T x_i + b - y_i)^2$$
+if we assume that:
+$$[w, b] \rightarrow w, \ and \ [x, 1] \rightarrow x$$
+then we get:
+$$L = \frac{1}{2N} \sum_{i=0}^{N} (w^T x_i  - y_i)^2$$
+and we get:
+$$L = \frac{1}{2N} \sum_{i=0}^{N} ((w^T x_i)^2 - 2 w^T x_i y_i + y_i^2)$$
+and the partial derivative is:
+$$\frac{\partial^2 L}{\partial w_i \partial w_i} = \frac{1}{N} \sum_{k=1}^N x_{k,i}x_{k,j}$$
+then the Hessian Matrix is:
+{{< figure library="true" src="linear_regression_hessianmatrix.png"  lightbox="true" >}}
+the Hessian Matrix can be written in matrix-format:
+
+{{< figure library="true" src="hessianmatrix_in_matrix.png" lightbox="true" >}}
+where $X$ is a column of vector $x_i$ ($i =$ {$1,2,...,N$}), we can prove that this Hessian Matrix is a positive semi-definite matrix. For example, $\forall x \in \mathbb{R}^N$ and $x \neq 0$:
+$$x^TX^TXx = (Xx)^T Xx \geq 0$$
+thus **the loss function of linear regression is a convex function without any constrains, we can find the global optimal solution by SGD or other methods**.
+
+### 2.5.2 Other ML algorithms
+Similarly, we can use the same way to prove that the optimization problem of *Logistic Regression* $f(x)=\frac{1}{1+e^{-x}}$, *Softmax Regression* $f(x) = \frac{e^{x_i}}{\sum_{j=0}^N e^{x_j}}$ and SVM is also a convex optimization. However, the optimization using Deep Neural Network is not a convex optimization thus people do not understand the mathematic behind it and regard it as a black-box.
 
 ### Reference:
 https://zhuanlan.zhihu.com/p/37108430
