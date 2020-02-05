@@ -250,7 +250,6 @@ L_{total} &=& L_{loc} + L_{cls} \\\\\\
 #### 3.2.1 Pipeline
 1. Modify pre-trained VGG16 with replaced conv6-7 layers and extra multi-scale conv features. To detect multiple scales of input objects, a few (4 in this case) extra sizes of conv features are added into base model (see light green color in Fig14).
 2. Several default anchor boxes with various scale and ratio (width/height) are introduced for each cell in all feature maps. **For each of $m$ level conv feature maps, we compute the scale $s_k$, aspect ratio $a_r$, width $w_k^a$, height $h_k^a$ and centre location ($x_k^a, y_k^a$) of default boxes** as:
-
 * scale: $$s_k = s_{min} + \frac{s_{max} -s_{min}}{m-1}(k-1), k \in [1,m], s_{min}=0.2, s_{max}=0.9$$
 * aspect ratio: $a_r \in$ {1,2,3,$\frac{1}{2}, \frac{1}{3}$}, additional ratio $s_k^{\'}=\sqrt{s_k s_{k+1}}$,  6 default boxes in total.
 * width: $w_k^a=s_k \sqrt{a_r}$

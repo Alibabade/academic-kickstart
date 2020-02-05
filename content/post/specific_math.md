@@ -167,7 +167,7 @@ $$x^TX^TXx = (Xx)^T Xx \geq 0$$
 thus **the loss function of linear regression is a convex function without any constrains, we can find the global optimal solution by SGD or other methods**.
 
 ### 2.5.2 Other ML algorithms
-Similarly, we can use the same way to prove that the optimization problem of *Logistic Regression* $f(x)=\frac{1}{1+e^{-x}}$, *Softmax Regression* $f(x) = \frac{e^{x_i}}{\sum_{j=0}^N e^{x_j}}$ and SVM is also a convex optimization. However, the optimization using Deep Neural Network is not a convex optimization thus people do not understand the mathematic behind it and regard it as a black-box.
+Similarly, we can use the same way to prove that the optimization problem of *Logistic Regression* $f(x)=\frac{1}{1+e^{-x}}$, *Softmax* $f(x) = \frac{e^{x_i}}{\sum_{j=0}^N e^{x_j}}$ and SVM is also a convex optimization. However, the optimization using Deep Neural Network is not a convex optimization thus people do not understand the mathematic behind it and regard it as a black-box.
 
 ### Reference:
 https://zhuanlan.zhihu.com/p/37108430
