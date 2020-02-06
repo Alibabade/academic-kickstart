@@ -86,26 +86,32 @@ The operation is first divide the input channels $N$ into $G$ groups, which resu
 {{< figure library="true" src="computation_cost4.png" title="Fig 5. The illustration of channel shuffle operation. Image recreated from [this blog](https://medium.com/@yu4u/why-mobilenet-and-its-variants-e-g-shufflenet-are-fast-1c7048b9618d)." lightbox="true" >}}
 ## 3. ResNet, ResNeXt
 
+### 3.1 Bottleneck architecture comparison
+Basic idea in ResNeXt is to replace standard conv $3\times3$ by group conv $3\times3$.
+{{< figure library="true" src="resnet_resnext.png" title="Fig 6. Architecture comparison of ResNet and ResNeXt." lightbox="true" >}}
+### 3.2 FLOPs comparison
+Note that FLOPs of ResNeXt is only reduced by a small budget of computational cost and it's up to group number $G$ when $N_r=N_x$ and $M_r=M_x$.
+{{< figure library="true" src="resnet_resnext_1.png" title="Fig 7. FLOPs comparison of ResNet and ResNeXt." lightbox="true" >}}
 ## 4. MobileNet v1 vs v2
 ### 4.1 MobileNet v1 (VGG)
 **Key point is to replace all standard conv $3\times3$ with depthwise conv $3\times3$ + conv $1\times1$ in standard VGGNet**. [This blog](https://cloud.tencent.com/developer/article/1461275) says that the ReLU is also replaced by ReLU6 (ReLU6 = $max(max(0,x),6)$) in MobileNet v1, but the original paper does not say anything about it. Perhaps in engineering projects, people usually use ReLU6.
-{{< figure library="true" src="vgg_mobilenetv1_1.png" title="Fig 6. Comparison of standard conv $3\times3$ in VGG and Separable Depthwise conv $3\times4$ + conv $1\times1$ in MobileNetv1. Image recreated from [original paper](https://arxiv.org/pdf/1704.04861.pdf)." lightbox="true" >}}
+{{< figure library="true" src="vgg_mobilenetv1_1.png" title="Fig 8. Comparison of standard conv $3\times3$ in VGG and Separable Depthwise conv $3\times4$ + conv $1\times1$ in MobileNetv1. Image recreated from [original paper](https://arxiv.org/pdf/1704.04861.pdf)." lightbox="true" >}}
 
 Therefore, the FLOPs is reduced about $\frac{1}{8}$ ~ $\frac{1}{9}$ in MobileNetv1 compared to VGGNet.
-{{< figure library="true" src="vgg_mobilenetv1.png" title="Fig 7. FLOPs Comparison of standard conv $3\times3$ in VGG and Separable Depthwise conv $3\times4$ + conv $1\times1$ in MobileNetv1. Image recreated from [This blog](https://cloud.tencent.com/developer/article/1461275)." lightbox="true" >}}
+{{< figure library="true" src="vgg_mobilenetv1.png" title="Fig 9. FLOPs Comparison of standard conv $3\times3$ in VGG and Separable Depthwise conv $3\times4$ + conv $1\times1$ in MobileNetv1. Image recreated from [This blog](https://cloud.tencent.com/developer/article/1461275)." lightbox="true" >}}
 ### 4.2 MobileNet v2 (ResNet)
 **Key point is to replace the last ReLU with linear bottleneck and introduce an inverted residual block in ResNet**. The reason behind of replacing relu with a linear transformation is that relu causes much information loss when input dimension is low. The inverted residual block consists of a conv $1\times1$ (expanse low dimension input channels to high dimension channels) + a depthwiseconv $3\times3$ + a conv $1\times1$ (decrease high dimension input channels to low dimension (original) channels).
-{{< figure library="true" src="mobilenet2_relu.png" title="Fig 8. Reason behind of replacing relu with linear botthleneck. Image source from [original paper](https://arxiv.org/pdf/1801.04381.pdf)." lightbox="true" >}}
+{{< figure library="true" src="mobilenet2_relu.png" title="Fig 10. Reason behind of replacing relu with linear botthleneck. Image source from [original paper](https://arxiv.org/pdf/1801.04381.pdf)." lightbox="true" >}}
 Inverted residual block in Mobilenet v2 (see figure 9). Only the last ReLU is replaced by a linear transformation, because the input dimensions of conv $1\times1$ and depthwise conv $3\times$ are increased compared to original dimension, thus relu works fine. But when the input dimension is decreased by the last conv $1\times1$, relu will lose much information, thus we replace relu with a linear transformation to preserve as much as original information.
-{{< figure library="true" src="resnet_mobilenetv2.png" title="Fig 9. Comparison of standard residual block in ResNet and inverted residual block in MobileNetv2." lightbox="true" >}}
+{{< figure library="true" src="resnet_mobilenetv2.png" title="Fig 11. Comparison of standard residual block in ResNet and inverted residual block in MobileNetv2." lightbox="true" >}}
 Here we compute the FLOPs for a standard residual block in ResNet and an inverted residual block in MobileNet v2. As can be seen, when the ResNet input channel $N_r$ and output channel $M_r$ is equal to MobileNet v2 input channel $N_{m2}$ and output channel $M_{m2}$, MobileNet v2 has a larger FLOPs than ResNet. However, the advantage of MobileNet v2 is that it only needs a much smaller input channel and output channel while achieves similar accuracy of ResNet, which eventually leads to smaller FLOPs than ResNet.
-{{< figure library="true" src="resnet_mobilenetv2_1.png" title="Fig 10. FLOPs Comparison of standard residual block in ResNet and inverted residual block in MobileNetv2." lightbox="true" >}}
+{{< figure library="true" src="resnet_mobilenetv2_1.png" title="Fig 12. FLOPs Comparison of standard residual block in ResNet and inverted residual block in MobileNetv2." lightbox="true" >}}
 
 ### 4.3 Comparison
 Here shows the convolution block in MobileNet v1 and v2, and their FLOPs comparison.
-{{< figure library="true" src="mobilenet_v1-2.png" title="Fig 11. Comparison of a convolution block in MobileNet v1 and two types of inverted residual block in MobileNetv2. There is no shortcut connection when stride=2 in DepthwiseConv $3\times3$ in MobileNet v2." lightbox="true" >}}
+{{< figure library="true" src="mobilenet_v1-2.png" title="Fig 13. Comparison of a convolution block in MobileNet v1 and two types of inverted residual block in MobileNetv2. There is no shortcut connection when stride=2 in DepthwiseConv $3\times3$ in MobileNet v2." lightbox="true" >}}
 Note that the FLOPs for a single inverted residual block has an extra term ($N_{m2}$) as there is an extra conv $1\times1$ used compared to MobileNet v1. However, MobileNet v2 still has smaller params and FLOPs than MobileNet v1 as the input channel $N_{m2}$ and output channel $M_{m2}$ could be smaller than $N_{m1}$ and $M_{m1}$ of MobileNet v1. Please refer to Table 3 in original [MobileNet v2 paper](https://arxiv.org/pdf/1801.04381.pdf) for more details.
-{{< figure library="true" src="mobilenet_v1-2-FLOPs.png" title="Fig 12. Comparison of FLOPs of a convolution block in MobileNet v1 and an inverted residual block in MobileNetv2." lightbox="true" >}}
+{{< figure library="true" src="mobilenet_v1-2-FLOPs.png" title="Fig 14. Comparison of FLOPs of a convolution block in MobileNet v1 and an inverted residual block in MobileNetv2." lightbox="true" >}}
 
 **Why MobileNet v2 is not faster than MobileNet v1 on Desktop computer?** On desktop, the separable depthwise convolution is not directly supported in GPU firmware (cuDNN library). While MobileNet v2 could be slightly slower than MobileNet v1 as V2 has more separable depthwise convolution operations and more larger input channels (96/192/384/768/1536) of using separable depthwise convolution than V1 (64/128/256/512/1024).
 
@@ -113,7 +119,7 @@ Note that the FLOPs for a single inverted residual block has an extra term ($N_{
 ## 5. ShuffleNet v1 vs v2
 ### 5.1 ShuffleNet v1 (ResNeXt)
 ResNeXt is an efficient model for ResNet by introducing group conv $3\times3$ to reduce computational cost. However, the computational cost of conv $1\times1$ become the operation consuming most of time. To reduce the FLOPs of conv $1\times1$, [ShuffleNet v1](https://arxiv.org/pdf/1707.01083.pdf) introduce group conv $1\times1$ tp replace the standard conv $1\times1$. However, the features won't be shared between groups by using group conv $1\times1$, which causes less feature reuse and accuracy. To address this problem, a channel shuffle operation is introduced to share features between groups. The basic blocks of ResNeXt and ShuffleNet v1 is shown in the below figure.
-{{< figure library="true" src="resnext_shufflenetv1.png" title="Fig 13. Comparison of a residual block in ResNeXt and ShuffleNet v1." lightbox="true" >}}
+{{< figure library="true" src="resnext_shufflenetv1.png" title="Fig 15. Comparison of a residual block in ResNeXt and ShuffleNet v1." lightbox="true" >}}
 
 
 Here we also give the computational cost of each method:
@@ -124,7 +130,7 @@ ShuffleNet v1 FLOPs = $WH(2N_{s1}M_{s1}/G + 9M_{s1})$, where $G$ is the group nu
 
 It is obviously that ShuffleNet v1 FLOPs < ResNeXt FLOPs when $N_r=N_{s1}$ and $M_r = M_{s1}$.
 
-{{< figure library="true" src="resnext_shufflenetv1_1.png" title="Fig 13. FLOPs comparison of a residual block in ResNeXt and ShuffleNet v1." lightbox="true" >}}
+{{< figure library="true" src="resnext_shufflenetv1_1.png" title="Fig 16. FLOPs comparison of a residual block in ResNeXt and ShuffleNet v1." lightbox="true" >}}
 
 
 ### 5.2 ShuffleNet v2
@@ -149,16 +155,25 @@ MAC &=& WHN + WHM + \frac{NM}{G} \\\\\\
 \end{eqnarray}
 Thus MAC increase with the growth of $G$.
 * **G3. Network fragmentation reduces degree of parallelism**. More fragmentation causes more computational cost in GPU. For example, under the same FLOPs, the computation efficiency is as following order: 1-fragmentation > 2-fragmentation-series > 2-fragmentation-parallel > 4-fragmentation-series > 4-fragmentation-parallel.
-{{< figure library="true" src="shufflenetv2_guideline3.png" title="Fig 14. Computational cost of different network fragmentations." lightbox="true" >}}
+{{< figure library="true" src="shufflenetv2_guideline3.png" title="Fig 17. Computational cost of different network fragmentations." lightbox="true" >}}
 * **G4. Element-wise operations consume much time**. Except convolution operations, the element-wise operation is the second operation consuming much time.
-{{< figure library="true" src="shufflenetv2_guideline4.png" title="Fig 15. Computational cost of different operations." lightbox="true" >}}
+{{< figure library="true" src="shufflenetv2_guideline4.png" title="Fig 18. Computational cost of different operations." lightbox="true" >}}
 
 Based on the guidelines above, we can analyse that shufflenet v1 introduces group convolutions which is against G1, and if it uses bottleneck-like blocks (using conv$1\times1$ change input channels) then it is against G1. MobileNet v2 introduces an inverted residual bottleneck which is against G1. And it uses depthwise conv $3\times3$ and ReLU on expansed features and leads to more element-wise operation which violates G4. The autogenerated structures ([searched network](https://arxiv.org/pdf/1802.01548.pdf)) add more fragmentations which violates G3.
 
 #### 5.2.2 ShuffleNet v2 architecture
-{{< figure library="true" src="shufflenetv2.png" title="Fig 16. Architecture of ShuffleNet v1 (a and b) and ShuffleNet v2 (c and d). Image source: [original paper](https://arxiv.org/pdf/1807.11164.pdf)" lightbox="true" >}}
-### 5.3 Comparison
-TO BE CONTINUED...
+Following the guidelines in aforementioned section, shufflenet v2 introduces their new version of shufflenet.
+{{< figure library="true" src="shufflenetv2.png" title="Fig 19. Architecture of ShuffleNet v1 and ShuffleNet v2." lightbox="true" >}}
+Since the channel split, concat and channel shuffle are basic not multiplication-adds operations, the FLOPs is computed in the block inside. Note that $N_{s2}=M_{s2}=\frac{N_{s1}}{2}$, thus shuffleNet v2 is more efficient than ShuffleNet v1 ($G=4$) even under FLOPs evaluation.
+{{< figure library="true" src="FLOPs_shufflenetv1_2.png" title="Fig 20. FLOPs comparison of ShuffleNet v1 and ShuffleNet v2." lightbox="true" >}}
+
+{{< figure library="true" src="shufflenetv1_2.png" title="Fig 21. Architecture comparison of Shufflenet v1 and v2. Image source: [original paper](https://arxiv.org/pdf/1807.11164.pdf)" lightbox="true" >}}
+### 5.3 Comparison to other state-of-the-art methods
+{{< figure library="true" src="shufflenetv2_comparison.png" title="Fig 22. Comparison to other state-of-the-art methods. Image source: [original paper](https://arxiv.org/pdf/1807.11164.pdf)" lightbox="true" >}}
+
+#### 5.2.3 One more thing
+ShuffleNet v2 shares the similar idea with DenseNet that is strong feature reuse, which makes ShuffleNet v2 achieve similar high accuracy as DenseNet but in a more efficient manner. More recently, a [CondenseNet](https://arxiv.org/pdf/1711.09224.pdf) (upgraded DenseNet) points out that the more short distance features the more important they are to current layer features. Similar to Condensenet, feature map at $j$-th bottleneck building in ShuffleNet v2 reuses $\frac{c_i}{2^{j-i}}$ of feature maps at $i$-th bottleneck building, which reuses more feature maps when $j$ is more close to $i$.
+
 ## Reference:
 1. https://zhuanlan.zhihu.com/p/37074222
 2. https://medium.com/@yu4u/why-mobilenet-and-its-variants-e-g-shufflenet-are-fast-1c7048b9618d
