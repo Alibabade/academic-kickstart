@@ -58,14 +58,16 @@ Following this idea, we need to handle another two problems: **1. inconsistent t
 3. Enhance temporal consistency with loose constraints on both rgb-level and feature level.
 ## 4. Qualitative Evaluation
 ### 4.1 Ablation study
-{{< figure src="11.png" title="Ablation study on proposed mask techniques." >}}
-{{< figure src="4.png" title="Ablation study on proposed sharpness loss." >}}
+{{< figure src="11.png" title="Fig 1. Ablation study on proposed mask techniques." >}}
+{{< figure src="12.png" title="Fig 2. Ablation study on proposed sharpness loss." >}}
 ### 4.2 Comparison to state-of-the-art methods
 We compare our approach with state-of-the-art methods, and these experiments demonstrate that our method produces more stable and diverse stylised video than them.
 {{< video src="3_ijcv.mp4" controls="yes" >}}
 {{< video src="1_ijcv.mp4" controls="yes" >}}
 {{< video src="3_cvst.mp4" controls="yes" >}}
 {{< video src="6_cvst.mp4" controls="yes" >}}
+{{< video src="3_cvpr2017.mp4" controls="yes" >}}
+{{< video src="3_flownet2.mp4" controls="yes" >}}
 ## 5. More results
 
 TO BE CONTINUED...
