@@ -56,8 +56,11 @@ Following this idea, we need to handle another two problems: **1. inconsistent t
 1. Prevent flow errors (ghosting artefacts) via multi-scale flow, incremental mask and multi-frame fusion.
 2. Prevent image degeneration (blurriness artefacts) via sharpness loss consists of perceptual losses and pixel loss.
 3. Enhance temporal consistency with loose constraints on both rgb-level and feature level.
-## 4. Results
-
-## 5. One more thing
+## 4. Qualitative Evaluation
+### 4.1 Ablation study
+{{< figure src="11.png" title="Ablation study on proposed mask techniques." >}}
+{{< figure src="4.png" title="Ablation study on proposed sharpness loss." >}}
+### 4.2 Comparison to state-of-the-art methods
+## 5. More results
 
 TO BE CONTINUED...
