@@ -64,6 +64,8 @@ Following this idea, we need to handle another two problems: **1. inconsistent t
 We compare our approach with state-of-the-art methods, and these experiments demonstrate that our method produces more stable and diverse stylised video than them.
 {{< video src="3_ijcv.mp4" controls="yes" >}}
 {{< video src="1_ijcv.mp4" controls="yes" >}}
+{{< video src="3_cvst.mp4" controls="yes" >}}
+{{< video src="6_cvst.mp4" controls="yes" >}}
 ## 5. More results
 
 TO BE CONTINUED...
