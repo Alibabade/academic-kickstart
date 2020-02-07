@@ -49,7 +49,7 @@ To address the flickering problem, a few approaches made their attempts to achie
 ## 2. Motivation
 We notice that all the methods aforementioned above are built upon feed-forward networks which are sensitive to small perturbations among adjacent frames, for example, lighting, noises and motions may cause large variations in stylised video frames. Thus **there are still space to be improved**. Besides, their networks are all **in a per-network-per-style pattern**, which means a training process is needed for each style and the training time may range from hours to days. In contrary, optimisation-based approaches are more stable for perturbations and naturally made for arbitrary styles. Thus we follow the optimisation-based routine.
 
-Now we need to deal with the problems such as slow runtime and ghosting artefacts. We dig into the reason behind these problems, and observe that there are two drawbacks of previous optimisation-based methods (e.g., [Anderson et al.](https://arxiv.org/pdf/1605.08153.pdf) and [Ruder et al.](https://arxiv.org/pdf/1604.08610.pdf)): **1. their methods complete the entire style transformation for each video frame, which causes 3 or 5 mins; 2. they have too much temporal consistency constraints between adjacent frames, which causes ghosting artefacts.** To avoid these drawbacks, we come up with a straightforward idea that we only constrain loose temporal consistency among already stylised frames.  
+Now we need to deal with the problems such as slow runtime and ghosting artefacts. We dig into the reason behind these problems, and observe that there are two drawbacks of previous optimisation-based methods (e.g., [Anderson et al.](https://arxiv.org/pdf/1605.08153.pdf) and [Ruder et al.](https://arxiv.org/pdf/1604.08610.pdf)): **1. their methods complete the entire style transformation for each video frame, which causes 3 or 5 mins; 2. they have too much temporal consistency constraints between adjacent frames, which causes ghosting artefacts.** To avoid these drawbacks, we come up with a straightforward idea that we only constrain loose temporal consistency among already stylised frames. In this way, the optimisation process only completes a light style transformation for producing seamless frames, thus it runs much more fast (around 1.8 second including per-frame stylising process) than previous methods.
 
 Following this idea, we need to handle another two problems: **1. inconsistent textures between adjacent stylised frames due to flow errors (ghosting artefacts); 2. image degeneration after long-term running (blurriness artefacts).**
 ## 3. Methodology
@@ -69,7 +69,8 @@ We compare our approach with state-of-the-art methods, and these experiments dem
 {{< video src="3_cvpr2017.mp4" controls="yes" >}}
 {{< video src="3_flownet2.mp4" controls="yes" >}}
 ## 5. More results
+Here we show more video style transfer results by our approach with challenging style images.
 {{< video src="10_Johnson.mp4" controls="yes" >}}
 {{< video src="12_huang.mp4" controls="yes" >}}
-{{< video src="15_huang.mp4" controls="yes" >}}
-TO BE CONTINUED...
+{{< video src="20_huang.mp4" controls="yes" >}}
+{{< video src="20_Johnson.mp4" controls="yes" >}}
