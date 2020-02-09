@@ -34,3 +34,5 @@ This is a small prototype that I had been working on when I was a visiting schol
 **Goal:** integrate two programs into one executable file without any other software and library dependence.  
 
 **Method:** 1. Integrate two programs into one program with multiprocessing; 2. Visualize the sensor data and complete functions (i.e., extract data during usr specific time, export data into csv file, sample rate etc.) on a window created via tkinter and matplotlib; 3. Convert python code into a single executable file via pyinstaller.  
+
+{{< video src="prototype720p.mp4" controls="yes" >}}
