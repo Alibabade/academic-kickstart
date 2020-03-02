@@ -175,7 +175,7 @@ $$R = \frac{TP}{TP+FN}$$
 
 ### AP
 AP is the **exact area under the precision-recall curve**. In object detection, the prediction is correct if IoU $\geqslant$ 0.5, which means the True Positive is when your prediction satisfies IoU $\geqslant$ 0.5. Then False Positive is IoU < 0.5. For example, if we have a precision-recall curve (red line) like below figure, we first smooth out the zigzag pattern, then at each recall level, we replace each precision value with the maximum precision value to the right of that recall level.
-s
+
 {{< figure library="true" src="mAP.png" title="Fig 7. Visualization of mAP." lightbox="true" >}}
 
 We first smooth out the precision zigzag pattern (recall between 0.3 and 0.6,0.6 and 0.8) by replacing maximum precision value to the right of that recall level (blue line). This happens when the FP number increases first then TP number increases. ($Precision = \frac{TP}{TP+FP}$, FP $\uparrow$, Precision $\downarrow$. TP $\uparrow$, Precision $\uparrow$. ). Then $AP = \frac{1}{10}(1 \times 3 + 0.7 \times 3 + 0.6 \times 4)=0.75$ (green area).
@@ -200,3 +200,16 @@ to see the cross validate score. The illustration is as follow:
 {{< figure library="true" src="k-fold_cross_validate.png" title="Fig 8. A simple illustration of k-fold cross validation ($k=5$ in this case)." lightbox="true" >}}
 ### References
 https://zhuanlan.zhihu.com/p/24825503
+
+## Why do Variational Autoencoders (VAE) compute KL divergence loss?
+Variational autoencoders aim to map the input data into a distribution (aka latent vector) instead of just a *fixed vector*, as once the model is learned we can generate arbitrary output by just sampling from this learnt distribution. In this way, during test time, we can discard the encoder part and just use the decoder to produce new outputs that are not seen in training set. However, in general cases, the distribution of learned latent vector could be variant to inputs in training dataset. To address this problem, we assign the learned distribution of latent vectors to be a Gaussian distribution, then we sample arbitrary $z$ from this distribution and produce new outputs by passing $z$ into the decoder. To enforce the learned distribution, we use Kullback-Leibler (KL) divergence loss to emphasize the distribution distance between learned distribution and Gaussian distribution.
+
+{{< figure library="true" src="vae_kl.png" title="Fig 9. Visualization of KL in VAE. Image source: [this paper](https://arxiv.org/pdf/1606.05908.pdf)" lightbox="true" >}}
+During the training-time, a variational autoencoder implemented as a feed-forward neural network, where $P(X|z)$ is Gaussian. Left is without the "reparameterization trick", and right is the with it. Red shows sampling operation is non-differentiable. Blue shows loss layers. The feed-forward behaviour of these networks is identical, but backpropagation can be applied only to the right network. **This KL divergence loss is to promote Gaussian distribution in the latent space. Regularly, there should also be a regularization term (i.e., $l_2$ norm) which is used to avoid overfitting.**
+
+{{< figure library="true" src="conditional_vae_kl.png" title="Fig 10. Visualization of KL in conditional VAE. Image source: [this paper](https://arxiv.org/pdf/1606.05908.pdf)" lightbox="true" >}}
+For a conditional variational autoencoder, we hope the autoencoder could produce some plausible outputs with additional input (aka condition). For example, we want an MINST digit autoencoder could produce a digit just like a particular person's writing or style. In figure 10, left is a training-time conditional variational autoencoder implemented as a feefforward nerual network, following the same notation as Fig 9. Right is same decoder at test time, where $X$ denotes the condition in both training and testing time.
+
+### Reference
+1. https://arxiv.org/pdf/1606.05908.pdf
+2. https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html
