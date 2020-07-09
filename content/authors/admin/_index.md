@@ -57,8 +57,8 @@ social:
   icon_pack: fab
   link: https://github.com/Alibabade
 - icon: cv
-  icon_pack: ai 
-  link: https://drive.google.com/file/d/1DdtNzOsvsnolX_3H1lMup4-DLrqzm0-Q/view?usp=sharing
+  icon_pack: ai
+  link: https://drive.google.com/file/d/1hIHrQZiMRLypaYT_grU8aVdwKA-glSyv/view?usp=sharing
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
