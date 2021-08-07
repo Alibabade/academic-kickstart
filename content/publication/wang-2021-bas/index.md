@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Bas-relief modelling from enriched detail and geometry with deep normal transfer"
-authors: [Meili Wang, Li Wang, Tao Jiang, Nan Xiang, Juncong Lin, Mingqiang Wei, Xiaosong Yang, Taku Komura, Jianjun Zhang]
+authors: [Meili Wang*, Li Wang*, Tao Jiang, Nan Xiang, Juncong Lin, Mingqiang Wei, Xiaosong Yang, Taku Komura, Jianjun Zhang]
 date: 2021-08-07T20:05:48+01:00
 doi: ""
 
@@ -17,7 +17,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Neurocomputing"
-publication_short: ""
+publication_short: "Neurocomputing"
 
 abstract: ""
 
