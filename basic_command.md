@@ -4,6 +4,10 @@ hugo new --kind post content/post/post_name.md
 hugo new --kind project content/project/project_name    
    remove some commits
 git reset --hard HEAD~$num$ #num is how many commits you want to delete
+
+More details can be found：
+https://wowchemy.com/docs/
+
 2. open server for sites
 hugo server
 3. git status
