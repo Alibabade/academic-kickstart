@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD candidate
+role: PhD
 
 # Organizations/Affiliations
 organizations:
@@ -24,19 +24,19 @@ education:
   courses:
   - course: PhD in Computer Science
     institution: Bournemouth University, UK
-    year: present
+    year: Sep 2016 - Sep 2020
   - course: visiting scholar
     institution: University of Malaga, Spain
     year: Oct - Nov 2019
   - course: visiting scholar
     institution: Tsinghua University, China
     year: Apr - Oct 2017
-  - course: MEng in Computer Science
+  - course: M.Eng. in Computer Science
     institution: Jilin University, China
-    year: 2016
-  - course: BSci in Computer Science
+    year: Sep 2013 - Jun 2016
+  - course: B.Sci. in Computer Science
     institution: Jilin University, China
-    year: 2013
+    year: Sep 2009 - Jun 2013
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -46,7 +46,7 @@ social:
 - icon: envelope
   icon_pack: fas
   #link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-  link: "lwang@bournemouth.ac.uk"  # For a direct email link, use "mailto:test@example.org".
+  link: "liwang1991@outlook.com"  # For a direct email link, use "mailto:test@example.org".
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/profile.php?id=100013393752495
@@ -75,4 +75,4 @@ user_groups:
 - Visitors
 ---
 
-I am currently a PhD candidate of Computer Vision and Computer Graphics at National Centre for Computer Animation, Bournemouth University, UK. My research focuses on image/video based neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis using deep learning techniques. I received my M.Eng and B.Sci degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively. Then I got a 4-year PhD scholarship from Bournemouth University and China Scholarship Council.
+I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, UK, 2020. My research focuses on image/video based neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis using deep learning techniques. I received my M.Eng. and B.Sci. degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively.
