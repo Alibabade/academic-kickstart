@@ -17,6 +17,15 @@ hugo server
 7. git clone
 8. git merge		#merge two branches you are working on
 9. git init
-10. git branch 		#list out all the branches.
+10. git branch    #list out all the branches.
 11. git checkout 	#switch to different branches
 12. git reset		#set index to the latest commit that you want to work on with
+13. git rebase    #operates like merge, it is fine rebase your own local branches but don't rebase public branches - master
+             his branch         --AA--BB              AA---BB
+                                |                     |   |
+                                |                     >   >  
+          my branch        A---B---C    ===>  A---B---AA---BB---C
+
+
+14. git pull request   #create a new branch with a commit, but the main branch won't change, if you want to add this commit to main branch,
+                       #you can merge this new branch and master.
