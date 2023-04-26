@@ -14,7 +14,7 @@ role: PhD
 
 # Organizations/Affiliations
 organizations:
-- name: National Centre for Computer Animation, Bournemouth University, UK
+- name: 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -25,10 +25,10 @@ education:
   - course: PhD in Computer Science
     institution: Bournemouth University, UK
     year: Sep 2016 - Sep 2020
-  - course: visiting scholar
+  - course: Visiting Scholar
     institution: University of Malaga, Spain
     year: Oct - Nov 2019
-  - course: visiting scholar
+  - course: Visiting Scholar
     institution: Tsinghua University, China
     year: Apr - Oct 2017
   - course: M.Eng. in Computer Science
@@ -76,3 +76,5 @@ user_groups:
 ---
 
 I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, UK, 2020. My research focuses on image/video based neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis using deep learning techniques. I received my M.Eng. and B.Sci. degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively.
+
+I like to try new things about programming and applications. And I love sharing ideas with people and learning from them as well. I post many things on this website, and hope you'll find something interesting.
