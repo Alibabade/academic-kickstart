@@ -1,6 +1,7 @@
 [submodule "themes/academic"]
 	path = themes/academic
-	url = https://github.com/gcushen/hugo-academic.git
+	#url = https://github.com/gcushen/hugo-academic.git
+	url = https://github.com/wowchemy/wowchemy-hugo-themes
 [submodule "public"]
 	path = public
 	url = https://github.com/Alibabade/Alibabade.github.io.git
