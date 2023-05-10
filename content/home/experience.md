@@ -34,7 +34,7 @@ date_format = "Jan 2006"
   location = "Campobasso, Italy"
   date_start = "2019-09-21"
   date_end = "2019-10-20"
-  description = """Develop a software with User Interface for real-time monitoring and recording sensor data. The software is developed in Python with libraries such as Tkinter, Matplotlib and MongoDB as database, then it's transformed by PyInstaller into a single .EXE file without any python dependencies."""
+  description = """Develop a software with User Interface for real-time monitoring and recording sensor data. The software is developed in Python with libraries such as Tkinter, Matplotlib and MongoDB as database, then it's transformed by PyInstaller into a single .EXE file without any python dependencies"""
 
 [[experience]]
   title = "INTER Machine Learning R&D Engineer"
