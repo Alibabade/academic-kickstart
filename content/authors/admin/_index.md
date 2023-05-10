@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research focuses on image/video based neural style transfer.
+bio: My research focuses on image/video/geometry based neural style transfer.
 
 education:
   courses:
@@ -75,6 +75,6 @@ user_groups:
 - Visitors
 ---
 
-I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, UK, 2020. My research focuses on image/video based neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis using deep learning techniques. I received my M.Eng. and B.Sci. degrees from Department of Computer Science at Jilin University in 2016 and 2013, respectively.
+I am an experienced Machine Learning and Computer Vision Engineer with 6+ years experience (including 3+ years commercial experience). I have managed and completed 7+ projects, which applies cutting-edge machine learning and deep learning models to solve real-world and research cases. I now work as an Independent Computer Vision Engineer, Freelancer and Incubator as well. My work mainly focus on software/system development and image/video/geometry processing. I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, Top1 animation centre in UK, 2020. My research focuses on image, video and geometry using neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis. I received my M.Eng. and B.Sci. degrees in Computer Science at Jilin University in 2016 and 2013, respectively.
 
-I like to try new things about programming and applications. And I love sharing ideas with people and learning from them as well. I post many things on this website, and hope you'll find something interesting.
+I like to get my hands dirty on programming and try new things on up-to-date applications. I love sharing ideas with people and learning from them as well. I post many things on this website, and hope you'll find something interesting.
