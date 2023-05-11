@@ -52,5 +52,5 @@ date_format = "Jan 2006"
   location = "Beijing, China"
   date_start = "2013-01-21"
   date_end = "2013-05-20"
-  description = """• R&D engineer for an intranet office product.\n• Optimize software performance on various Windows/Linux systems (e.g., OpenSUSE, Redhat, CentOS, Debian, Ubuntu and Windows servers), which involves implementing efficient search/sorting algorithms and parallel computing (e.g., C/C++ in CUDA programming and multi-processing etc.)"""
+  description = """1. R&D engineer for an intranet office product.\n 2. Optimize software performance on various Windows/Linux systems (e.g., OpenSUSE, Redhat, CentOS, Debian, Ubuntu and Windows servers), which involves implementing efficient search/sorting algorithms and parallel computing (e.g., C/C++ in CUDA programming and multi-processing etc.)"""
 +++
