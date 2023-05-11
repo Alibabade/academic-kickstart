@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD
+role: Machine Learning and Computer Vision Engineer
 
 # Organizations/Affiliations
 organizations:
