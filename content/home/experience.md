@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   location = "Changchun, China"
   date_start = "2020-09-21"
   date_end = ""
-  description = """1. Design and implement an AI-powered system for video production. This system is implemented in Python and PyTorch with Deep Learning models (e.g., Diffusion Models, Transformers, CNNs, YOLO etc.) and libraries (e.g., OpenCV, FFMPEG etc.).\n 2. Develop and implement  a data collection tool: Image2Dataset. This project involves Web Scraping, Image Classification and Object Detection etc. 3. Develop and implement a 3D geometry texture synthesis framework for geometry processing, which is able to automatically synthesize textures onto arbitrary sufaces. The implementation involves Python, Blender and Differential Renderer (e.g., Soft Rasterizer)"""
+  description = """• Design and implement an AI-powered system for video production. This system is implemented in Python and PyTorch with Deep Learning models (e.g., Diffusion Models, Transformers, CNNs, YOLO etc.) and libraries (e.g., OpenCV, FFMPEG etc.).\n 2. Develop and implement  a data collection tool: Image2Dataset. This project involves Web Scraping, Image Classification and Object Detection etc. 3. Develop and implement a 3D geometry texture synthesis framework for geometry processing, which is able to automatically synthesize textures onto arbitrary sufaces. The implementation involves Python, Blender and Differential Renderer (e.g., Soft Rasterizer)"""
 
 [[experience]]
   title = "INTERN Software Engineer"
