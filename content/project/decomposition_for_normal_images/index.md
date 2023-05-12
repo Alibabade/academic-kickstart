@@ -58,3 +58,8 @@ where $N1=(0, n1)$, $n0=(0,0,1)$ a constant vector, and $quaternion(n2,n0)$ and 
 
 ## Results
 Here is a comparsion between detail information (see \(b\) and \(d\) in Fig 1.) and reconstruction results (see \(c\) and \(f\) in Fig 1.) between value subtraction and vector subtraction.
+
+### Reference
+1. Wang M, Wang L, Jiang T, et al. Bas-relief modelling from enriched detail and geometry with deep normal transfer. Neurocomputing, 2021, 453: 825-838.
+2. Z. Ji, X. Sun, W. Ma, Normal image manipulation for bas-relief generation with hybrid styles, arXiv preprint arXiv:1804.06092.
+3. M. Wei, Y. Tian, W.-M. Pang, C. C. Wang, M.-Y. Pang, J. Wang, J. Qin, P.-A. Heng, Bas-relief modeling from normal layers, IEEE transactions on visualization and computer graphics 25 (4) (2018) 1651–1665.
