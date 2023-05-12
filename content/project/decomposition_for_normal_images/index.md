@@ -16,7 +16,7 @@ external_link: ""
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: "Decomposition for normal images"
-  focal_point: "Center"
+  focal_point: "Left"
   preview_only: false
 
 # Custom links (optional).
@@ -49,7 +49,11 @@ Normal Decomposition is mainly used for manipulating normal information stored i
 People dealing with geometry detail preservation, in general, consider to decompose details from normal images first, then manipulate them before reconstruction. However, detail information obtained by value subtraction is broken (see zoom-in details of \(e\) in Fig 1.), where value subtraction is operated on pixel-level from original normal images and smoothed normal images. In fact, the detail information should be a vector subtraction as the RGB colour of each pixel in a normal image represents a vector. Therefore, to obtain more correct and intact detail information, we should use vector subtraction instead of value subtraction. 
 
 ## Script in Matlab
-[Here]() is a script written in Matlab to decompose normal based on vector subtraction. Additionally, the script also includes a smoothing function that applies DTRF filter to obtain a structure normal image by smoothing the origial normal image.
+[Here](https://github.com/Alibabade/Decomposition-for-Normal-Images) is a script written in Matlab to decompose normal based on vector subtraction. Additionally, the script also includes a smoothing function that applies DTRF filter to obtain a structure normal image by smoothing the origial normal image.
+
+The equation for the vector subtraction is:
+$$n1 - n2 = $quaternion(n2,n0).*N1.*quaternion(n2,n0)^{-1}$$
+where $N1=(0, n1)$, $n0=(0,0,1)$ a constant vector, and $quaternion(n2,n0)$ and $quaternion(n2,n0)^{-1}$ represent the quaternion and inverse_quaternion calculated from the rotation matrix that rotates vector $n2$ to vector $n0$ via z-axis. 
 
 
 ## Results
