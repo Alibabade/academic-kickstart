@@ -40,13 +40,13 @@ url_video: ""
 slides: ""
 ---
 
-This peoject presents a mesh preprocessor tool which works with python and blender. It's capable of processing mesh files in batch manner.
+This project presents a mesh preprocessor tool which works with python and blender. It's capable of processing mesh files in batch manner.
 
 ## Introduction
-The main reason to create such a mesh preprocessor is that preparing mesh files (especially .obj file format) for datasets usually is time-consuming, and it kind of needs tons of manual work. To free hands, a mesh processor tool is presented to do the dirty work for people.
+The main reason to create such a mesh preprocessor is that preparing raw mesh files (especially .obj file format) for datasets usually is time-consuming, and it kind of needs tons of manual work. To free hands, a mesh processor tool is presented to do the dirty work for people.
 
 ## Functions
-A few functions are added in this tool, for example, subdivide mesh into (or closest to) desired vertex number, triangulate the mesh if needed, and extract vertex idxs of arbitrary sub-surfaces from the mesh. 
+A few functions are added in this tool, for example, subdivide mesh into (or closest to) desired vertex number, triangulate the mesh if needed, and extract vertex indices of arbitrary sub-surfaces from the mesh. 
 
 ## Time consumption
 For a computer with i7-6700k cpu and 16GB memory, it will take about ~3 hours when processing over 100 meshes (low poly) plus subdivding them into 50K vertices plus extracting 1K sub-surfaces for each mesh. It will take about ~9 hours when processing over 100 meshes (low poly) plus subdivding them into 150K vertices plus extracting 1K sub-surfaces for each mesh. The time consumption varies on the cpu and memory.
