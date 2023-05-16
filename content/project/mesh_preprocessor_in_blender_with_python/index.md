@@ -39,8 +39,8 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-# Mesh-preprocessor-in-blender-with-python
-This peoject presents a mesh preprocessor tool which works with python and blender. It's capable of processing mesh files in batch.
+
+This peoject presents a mesh preprocessor tool which works with python and blender. It's capable of processing mesh files in batch manner.
 
 ## Introduction
 The main reason to create such a mesh preprocessor is that preparing mesh files (especially .obj file format) for datasets usually is time-consuming, and it kind of needs tons of manual work. To free hands, a mesh processor tool is presented to do the dirty work for people.
@@ -55,13 +55,16 @@ For a computer with i7-6700k cpu and 16GB memory, it will take about ~3 hours wh
 1. inputs are mesh files ending with '.obj', which are original mesh files you find or download online. In this repos, a folder named 'data' contains two examples.
 2. outputs are mesh files ending with '\_tri.obj' which are subdivided and triangulated mesh files, and data files ending with '.npy' under corresponding "vertex_indinces_of_arbitrary_surfaces" which contains a list of numpy arrays of vertex indinces of sub-surfaces from each mesh. 
 
+## Code 
+You can find the code in [here](https://github.com/Alibabade/Mesh-preprocessor-in-blender-with-python).
+
 ## Usage
 1. open blender software, if not installed, then download it from [here](https://www.blender.org/download/). NO installation needed just unzip it.
 2. clone or download the zip file of this repos (then unzip it).
 3. click the "Scripting" tab on the above menu in blender, then click "Open" tab under "Scripting", choose the work path to the mesh_preprocessor.py script in the unzipped repos.
 4. change the variable named "work_path" in the mesh_preprocesser.py. 
 5. click the "Run Script" tab under "Scripting", then you are ready to go.
-
-You could follow the steps in the following picture.
+You can follow the steps to run script in blender as shown in the following image.
 
 {{< figure src="mesh_preprocesser_in_blender.png" title="Fig 1. Steps to run mesh preprocessor in blender." lightbox="true" >}}
+
