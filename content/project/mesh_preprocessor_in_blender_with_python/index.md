@@ -64,6 +64,4 @@ For a computer with i7-6700k cpu and 16GB memory, it will take about ~3 hours wh
 
 You could follow the steps in the following picture.
 
-<div align='center'>
-  <img src='mesh_preprocesser_in_blender.png'>
-</div>
+{{< figure src="mesh_preprocesser_in_blender.png" title="Fig 1. Steps to run mesh preprocessor in blender." lightbox="true" >}}
