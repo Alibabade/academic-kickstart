@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Mesh_preprocesser_in_blender_with_python"
+title: "Mesh_preprocessor_in_blender_with_python"
 summary: ""
 authors: []
 tags: []
