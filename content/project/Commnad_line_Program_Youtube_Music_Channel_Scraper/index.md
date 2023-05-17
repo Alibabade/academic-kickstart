@@ -42,6 +42,8 @@ slides: ""
 
 This program scrapes the given Youtube music channels by fetching infomation of videos, and saving information and videos into local drives. The program is currently only avaiable for downloading artwork images (if applicable), thumbnails, audios (mp3 format) and videos.
 
+{{< video src="youtube_scraper_1080p.mp4" controls="yes" >}}
+
 ## Features
 
 - [x] Automatically Resume Scraping Process
