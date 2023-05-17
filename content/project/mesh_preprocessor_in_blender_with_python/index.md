@@ -15,7 +15,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Steps to run mesh preprocessor in blender"
+  caption: "What does mesh preprocessor do in blender"
   focal_point: "Center"
   preview_only: false
 
