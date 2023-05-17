@@ -46,7 +46,7 @@ This program scrapes the given Youtube music channels by fetching infomation of 
 
 - [x] Automatically Resume Scraping Process
 - [x] Update Channels Scraped
-- [x] Download Images From Various Image Websites (e.g., Artstation, Pixix, Deviantart, Pexels, Unsplash, Flickr)
+- [x] Download Images From Various Image Websites (e.g., Artstation, Pixiv, Deviantart, Pexels, Unsplash, Flickr)
 - [x] Automatically Rename Video Titles (Optional)
 
 
@@ -78,7 +78,7 @@ Setting up flag "--update True" when running program will automatically update t
 
 ### Image Downloader for Various Image Websites
 
-Several downloaders are implemented in "lib/Youtube_Scraper_API.py" file. Currently, this program is able to download images from Websites: Artstation, Pixix, Deviantart, Pexels, Unsplash, Flickr.
+Several downloaders are implemented in "lib/Youtube_Scraper_API.py" file. Currently, this program is able to download images from Websites: Artstation, Pixiv, Deviantart, Pexels, Unsplash, Flickr.
 
 
 ### Automatically Rename Video Titles (Optional)
