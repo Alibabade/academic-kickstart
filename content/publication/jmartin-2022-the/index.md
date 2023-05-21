@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "The Validity of the Energy Expenditure Criteria Based on Open Source Code through two Inertial Sensors"
-authors: [Jaime Martín-Martín, Li Wang, Irene De-Torres, Adrian Escriche-Escuder, Manuel González-Sánchez, Antonio Muro-Culebras, Cristina Roldán-Jiménez, María Ruiz-Muñoz, Fermín Mayoral-Cleries, Attila Biró, Wen Tang, Borjanka Nikolova, Alfredo Salvatore, Antonio I Cuesta-Vargas]
+authors: [Jaime Martín-Martín*, Li Wang*, Irene De-Torres, Adrian Escriche-Escuder, Manuel González-Sánchez, Antonio Muro-Culebras, Cristina Roldán-Jiménez, María Ruiz-Muñoz, Fermín Mayoral-Cleries, Attila Biró, Wen Tang, Borjanka Nikolova, Alfredo Salvatore, Antonio I Cuesta-Vargas]
 date: 2023-04-25T09:03:29+08:00
 doi: ""
 
@@ -19,7 +19,7 @@ publication_types: ["2"]
 publication: "Sensors"
 publication_short: "Sensors"
 
-abstract: ""
+abstract: "Through this study, we developed and validated a system for energy expenditure calculation, which only requires low-cost inertial sensors and open source R software. Five healthy subjects ran at ten different speeds while their kinematic variables were recorded on the thigh and wrist. Two ActiGraph wireless inertial sensors and a low-cost Bluetooth-based inertial sensor (Lis2DH12), assembled by SensorID, were used. Ten energy expenditure equations were automatically calculated in a developed open source R software (our own creation). A correlation analysis was used to compare the results of the energy expenditure equations. A high interclass correlation coefficient of estimated energy expenditure on the thigh and wrist was observed with an Actigraph and Sensor ID accelerometer; the corrected Freedson equation showed the highest values, and the Santos-Lozano vector magnitude equation and Sasaki equation demonstrated the lowest one. Energy expenditure was compared between the wrist and thigh and showed low correlation values. Despite the positive results obtained, it was necessary to design specific equations for the estimation of energy expenditure measured with inertial sensors on the thigh. The use of the same formula equation in two different placements did not report a positive interclass correlation coefficient. "
 
 # Summary. An optional shortened abstract.
 summary: ""
