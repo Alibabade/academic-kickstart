@@ -37,7 +37,7 @@ date_format = "Jan 2006"
   description = """1. Develop a software with User Interface for real-time monitoring and recording sensor data.\n 2. The software is developed in Python with libraries such as Tkinter, Matplotlib and MongoDB as database, then it's transformed by PyInstaller into a single .EXE file without any python dependencies."""
 
 [[experience]]
-  title = "INTER Machine Learning R&D Engineer"
+  title = "INTERN Machine Learning R&D Engineer"
   company = "ITware"
   company_url = ""
   location = "Budapest, Hungary"
@@ -46,7 +46,7 @@ date_format = "Jan 2006"
   description = """1. Research about Recommendation System (RS) in Machine Learning area, which involves SVM, Linear Regression, Decision Tree etc.\n 2. Design a potential customized scheme of RS for the European iGame Project."""
 
 [[experience]]
-  title = "Internship as R&D Engineer"
+  title = "INTERN R&D Engineer"
   company = "IBM(China) Ltd."
   company_url = ""
   location = "Beijing, China"
