@@ -58,7 +58,7 @@ social:
   link: https://github.com/Alibabade
 - icon: cv
   icon_pack: ai
-  link: https://drive.google.com/file/d/1h8ZE4gcKvzt80yw2yJ_MWHV_eGpwZEQl/view?usp=share_link
+  link: https://drive.google.com/file/d/1-R7i6KM5I-6iGxybzYXGwS9v7IGTdhX-/view?usp=sharing
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -75,6 +75,6 @@ user_groups:
 - Visitors
 ---
 
-I am an experienced Machine Learning and Computer Vision Engineer with 6+ years experience (including 3+ years commercial experience). I have managed and completed 7+ projects, which applies cutting-edge machine learning and deep learning models to solve real-world and research cases. I now work as an Independent Computer Vision Engineer, Freelancer and Incubator as well. My work mainly focus on software/system development and image/video/geometry processing. I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, Top1 animation centre in UK, 2020. My research focuses on image, video and geometry using neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis. I received my M.Eng. and B.Sci. degrees in Computer Science at Jilin University in 2016 and 2013, respectively.
+I am an experienced Machine Learning and Computer Vision Engineer with 6+ years experience (including 3+ years commercial experience). I have managed and completed 7+ projects, which applies cutting-edge machine learning and deep learning models to solve real-world and research cases. I now work as an Startup Incubator and Computer Vision Engineer. My work mainly focuses on software/system development and image/video/geometry processing. I obtained my PhD degree on Computer Vision and Deep Learning at National Centre for Computer Animation, Bournemouth University, Top1 animation centre in UK, 2020. My research focuses on image, video and geometry using neural style transfer, in particular, photo style transfer, coherent video style transfer and geometry texture synthesis. I received my M.Eng. and B.Sci. degrees in Computer Science at Jilin University in 2016 and 2013, respectively.
 
 I like to get my hands dirty on programming and try new things on up-to-date applications. I love sharing ideas with people and learning from them as well. I post many things on this website, and hope you'll find something interesting.
