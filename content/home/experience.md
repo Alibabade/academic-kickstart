@@ -20,7 +20,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Computer Vision Engineer"
-  company = "Incubator"
+  company = "Startup Incubator"
   company_url = ""
   location = "Changchun, China"
   date_start = "2020-09-21"
