@@ -19,12 +19,21 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "PostDoc"
+  company = "Zhejiang University"
+  company_url = ""
+  location = "Ningbo"
+  date_start = "2023-10-25"
+  date_end = ""
+  description = """Research on Computer Vision and Deep Learning."""
+
+[[experience]]
   title = "Computer Vision Engineer"
   company = "Startup Incubator"
   company_url = ""
   location = "Bournemouth and Changchun"
   date_start = "2020-09-21"
-  date_end = ""
+  date_end = "2023-06-30"
   description = """1. Design and implement an AI-powered system for video production. This system is implemented in Python and PyTorch with Deep Learning models (e.g., Diffusion Models, Transformers, CNNs, YOLO etc.) and libraries (e.g., OpenCV, FFMPEG etc.).\n 2. Develop and implement  a data collection tool: Image2Dataset. This project involves Web Scraping, Image Classification and Object Detection etc.\n 3. Develop and implement a 3D geometry texture synthesis framework for geometry processing, which is able to automatically synthesize textures onto arbitrary sufaces. The implementation involves Python, Blender and Differential Renderer (e.g., Soft Rasterizer)."""
 
 [[experience]]
