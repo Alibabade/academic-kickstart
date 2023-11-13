@@ -10,8 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Machine Learning and Computer Vision Engineer
-
+role: PostDoc on Computer Vision
 # Organizations/Affiliations
 organizations:
 - name: 
