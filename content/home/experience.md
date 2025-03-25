@@ -20,12 +20,12 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Research Fellow"
-  company = "Zhejiang University"
+  company = "Zhejiang University(Ningbo)"
   company_url = ""
   location = "Ningbo, China"
   date_start = "2023-10-25"
   date_end = ""
-  description = """Researches on Computer Vision, especially Image editing based on Diffusion Models and Multimodal alignment including audios, images and texts."""
+  description = """Researches on Computer Vision, especially Image editing based on Diffusion Models and Multimodal Alignment including audios, images and texts."""
 
 [[experience]]
   title = "Computer Vision Engineer"
