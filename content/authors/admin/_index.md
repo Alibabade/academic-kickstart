@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: PostDoc on Computer Vision
+role: Research Fellow on Computer Vision
 # Organizations/Affiliations
 organizations:
 - name: 
