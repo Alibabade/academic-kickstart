@@ -10,17 +10,19 @@ https://wowchemy.com/docs/
 
 2. open server for sites
 hugo server
-3. git status
-4. git add .
-5. git commit -m info
-6. git push
-7. git clone
-8. git merge		#merge two branches you are working on
-9. git init
-10. git branch    #list out all the branches.
-11. git checkout 	#switch to different branches
-12. git reset		#set index to the latest commit that you want to work on with
-13. git rebase    #operates like merge, it is fine rebase your own local branches but don't rebase public branches - master
+3. bulid public directory
+hugo
+4. git status
+5. git add .
+6. git commit -m info
+7. git push
+8. git clone
+9. git merge		#merge two branches you are working on
+10. git init
+11. git branch    #list out all the branches.
+12. git checkout 	#switch to different branches
+13. git reset		#set index to the latest commit that you want to work on with
+14. git rebase    #operates like merge, it is fine rebase your own local branches but don't rebase public branches - master
              his branch         --AA--BB              AA---BB
                                 |                     |   |
                                 |                     >   >  
